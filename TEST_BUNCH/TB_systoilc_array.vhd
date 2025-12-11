@@ -11,12 +11,10 @@ architecture Behavioral of TB_systolic_2x2 is
     signal CLK   : std_logic := '0';
     signal RST   : std_logic := '0';
     signal EN    : std_logic := '0';
-
     signal A0_in : std_logic_vector(15 downto 0) := (others => '0');
     signal A1_in : std_logic_vector(15 downto 0) := (others => '0');
     signal B0_in : std_logic_vector(15 downto 0) := (others => '0');
     signal B1_in : std_logic_vector(15 downto 0) := (others => '0');
-
     signal C00   : std_logic_vector(31 downto 0);
     signal C01   : std_logic_vector(31 downto 0);
     signal C10   : std_logic_vector(31 downto 0);
@@ -45,7 +43,7 @@ begin
             C01   => C01,
             C10   => C10,
             C11   => C11
-        );
+       );
 
     --------------------------------------------------------------------
     -- Test Process
@@ -61,62 +59,56 @@ begin
 
         RST <= '0';
         EN  <= '1';
-        wait for 10 ns;    -- align to rising edge
-
+        wait for 10 ns; 
+        
         ----------------------------------------------------------------
-        -- MATRIX A and B
-        -- A = | 1 2 |
-        --     | 3 4 |
-        --
-        -- B = | 5 6 |
-        --     | 7 8 |
-        --
-        -- Expected C = A * B =
-        -- | 1*5 + 2*7     1*6 + 2*8 | = | 19   22 |
-        -- | 3*5 + 4*7     3*6 + 4*8 |   | 43   50 |
+        -- MATRIX A (2x2) * MATRIX B (2x2)
+        -- A = [[1, 2], [3, 4]]
+        -- B = [[5, 6], [7, 8]]
         ----------------------------------------------------------------
 
-        ----------------------------------------------------------------
-        -- Cycle 0: Send first column of A and B
-        ----------------------------------------------------------------
-        A0_in <= x"0001";  -- A[0][0]
-        A1_in <= x"0003";  -- A[1][0]
-        B0_in <= x"0005";  -- B[0][0]
-        B1_in <= x"0006";  -- B[0][1]
-        wait until rising_edge(CLK);
-
-        ----------------------------------------------------------------
-        -- Cycle 1: Send second column of A and B
-        ----------------------------------------------------------------
-        A0_in <= x"0002";  -- A[0][1]
-        A1_in <= x"0004";  -- A[1][1]
-        B0_in <= x"0007";  -- B[1][0]
-        B1_in <= x"0008";  -- B[1][1]
-        wait until rising_edge(CLK);
-
-        ----------------------------------------------------------------
-        -- After inputs, stop driving new values
-        ----------------------------------------------------------------
-        A0_in <= (others => '0');
+        -- Cycle 0: מזינים A[0][0] ו-B[0][0]
+        A0_in <= x"0001"; 
+        B0_in <= x"0005"; 
+        
         A1_in <= (others => '0');
+        B1_in <= (others => '0');
+        
+        wait until rising_edge(CLK);
+
+        -- Cycle 1: מזינים A[0][1], B[1][0] וגם A[1][0], B[0][1]
+        A0_in <= x"0002"; 
+        B0_in <= x"0007"; 
+        
+        A1_in <= x"0003"; 
+        B1_in <= x"0006"; 
+        
+        wait until rising_edge(CLK);
+
+        -- Cycle 2: מזינים A[1][1], B[1][1] (השאר אפסים)
+        A0_in <= (others => '0');
         B0_in <= (others => '0');
+        
+        A1_in <= x"0004"; 
+        B1_in <= x"0008"; 
+        
+        wait until rising_edge(CLK);
+
+        -- Cycle 3: סיום הזנה
+        A1_in <= (others => '0');
         B1_in <= (others => '0');
 
         ----------------------------------------------------------------
-        -- Now we wait for pipelining + systolic propagation
-        -- PE latency = 3 cycles
-        -- systolic wave propagation ≈ 2 cycles
-        -- WAIT ~5 cycles total
+        -- Wait for Pipeline computation
+        -- ה-Pipeline מוסיף עוד 2 מחזורי שעון של השהיה בתוך ה-PE
         ----------------------------------------------------------------
-        wait for 50 ns;
-
-        ----------------------------------------------------------------
-        -- Check results in waveform:
-        --   C00 = 19
-        --   C01 = 22
-        --   C10 = 43
-        --   C11 = 50
-        ----------------------------------------------------------------
+        wait for 60 ns;
+        
+        -- Expected Result:
+        -- C00 = 19
+        -- C01 = 22
+        -- C10 = 43
+        -- C11 = 50
 
         wait;
     end process;

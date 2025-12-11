@@ -62,7 +62,7 @@ begin
         end if;
     end process;
 
-    -- יציאות
+    -- יציאות (A_out ו-B_out יוצאים אחרי מחזור אחד, כמו בגרסה הרגילה)
     A_out <= A_reg;
     B_out <= B_reg;
     C     <= ACC;

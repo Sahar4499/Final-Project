@@ -68,8 +68,8 @@ begin
         -- B = [[5, 6], [7, 8]]
         ----------------------------------------------------------------
 
-        -- Cycle 0: מזינים רק את האיברים הראשונים של שורה 0 ועמודה 0 (A00, B00)
-        -- שורה/עמודה 1 מחכות למחזור הבא
+        -- Cycle 0: Feed only the first elements of row 0 and column 0 (A00, B00)
+        --          Row/column 1 are waiting for the next cycle
         A0_in <= x"0001"; -- A[0][0]
         B0_in <= x"0005"; -- B[0][0]
         
@@ -78,8 +78,8 @@ begin
         
         wait until rising_edge(CLK);
 
-        -- Cycle 1: איבר שני של שורה 0 ועמודה 0 (A01, B10)
-        --          איבר ראשון של שורה 1 ועמודה 1 (A10, B01) נכנסים עכשיו!
+        -- Cycle 1: Second element for row 0 and column 0 (A01, B10)
+        --          Also feed the first element for row 1 and column 1 (A10, B01) now
         A0_in <= x"0002"; -- A[0][1]
         B0_in <= x"0007"; -- B[1][0]
         
@@ -88,8 +88,8 @@ begin
         
         wait until rising_edge(CLK);
 
-        -- Cycle 2: סיימנו עם שורה 0 ועמודה 0
-        --          ממשיכים עם איבר שני של שורה 1 ועמודה 1 (A11, B11)
+        -- Cycle 2: Finished with row 0 and column 0
+        --          Continue with the second element for row 1 and column 1 (A11, B11)
         A0_in <= (others => '0');
         B0_in <= (others => '0');
         
@@ -98,7 +98,7 @@ begin
         
         wait until rising_edge(CLK);
 
-        -- Cycle 3: סיימנו להזין הכל
+        -- Cycle 3: Finished feeding all inputs
         A1_in <= (others => '0');
         B1_in <= (others => '0');
 

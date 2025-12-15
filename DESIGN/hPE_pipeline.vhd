@@ -19,20 +19,20 @@ end entity hPE;
 
 architecture Pipeline of hPE is
 
-    -- Stage 1: קלטים רשומים
+    -- Stage 1: Input registers
     signal A_reg  : std_logic_vector(15 downto 0) := (others => '0');
     signal B_reg  : std_logic_vector(15 downto 0) := (others => '0');
 
-    -- תוצאת המכפל (קומבינטיבי) + רשומה
+    -- Multiplier result (combinational) and registered output
     signal mult_comb : std_logic_vector(31 downto 0);
     signal mult_reg  : std_logic_vector(31 downto 0) := (others => '0');
 
-    -- אוגר הצבירה
+    -- Accumulator register
     signal ACC : std_logic_vector(31 downto 0) := (others => '0');
 
 begin
 
-    -- מכפל קומבינטיבי 16x16
+    -- Combinational 16x16 multiplier
     U_MULT : entity work.mult16x16
       port map(
         a => A_reg,
@@ -49,20 +49,21 @@ begin
                 mult_reg <= (others => '0');
                 ACC      <= (others => '0');
             elsif EN = '1' then
-                -- שלב 1: לכידת קלטים
+                -- Stage 1: Capture inputs
                 A_reg <= A;
                 B_reg <= B;
 
-                -- שלב 2: רשימת תוצאת המכפל
+                -- Stage 2: Register multiplier result
                 mult_reg <= mult_comb;
 
-                -- שלב 3: צבירה
+                -- Stage 3: Accumulation
                 ACC <= std_logic_vector(unsigned(ACC) + unsigned(mult_reg));
             end if;
         end if;
     end process;
 
-    -- יציאות (A_out ו-B_out יוצאים אחרי מחזור אחד, כמו בגרסה הרגילה)
+    -- Outputs (A_out and B_out are forwarded after one clock cycle,
+    -- similar to the non-pipelined version)
     A_out <= A_reg;
     B_out <= B_reg;
     C     <= ACC;

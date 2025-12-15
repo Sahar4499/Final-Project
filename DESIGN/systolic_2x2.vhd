@@ -27,7 +27,7 @@ architecture Structural of systolic_2x2 is
 
 begin
 
-    -- שורה 0, עמודה 0
+    -- Row 0, Column 0
     PE00 : entity work.hPE
       port map(
         RST   => RST,
@@ -40,7 +40,7 @@ begin
         B_out => B10
       );
 
-    -- שורה 0, עמודה 1
+    -- Row 0, Column 1
     PE01 : entity work.hPE
       port map(
         RST   => RST,
@@ -53,7 +53,7 @@ begin
         B_out => B11
       );
 
-    -- שורה 1, עמודה 0
+    -- Row 1, Column 0
     PE10 : entity work.hPE
       port map(
         RST   => RST,
@@ -66,7 +66,7 @@ begin
         B_out => open
       );
 
-    -- שורה 1, עמודה 1
+    -- Row 1, Column 1
     PE11 : entity work.hPE
       port map(
         RST   => RST,

@@ -26,6 +26,7 @@ architecture Behavioral of TB_systolic_2x2_checked is
     begin
         return std_logic_vector(to_unsigned(x, 32));
     end function;
+
 begin
     CLK <= not CLK after TCLK/2;
 
@@ -47,20 +48,30 @@ begin
     stim : process
     begin
         -- reset
-        RST <= '1'; EN <= '0';
+        RST <= '1';
+        EN  <= '0';
         wait for 2*TCLK;
-        RST <= '0'; EN <= '1';
+
+        RST <= '0';
+        EN  <= '1';
         wait until rising_edge(CLK);
 
-        -- A = [[1,2],[3,4]], B = [[5,6],[7,8]]
-        -- cycle 0
-        A0_in <= x"0001"; A1_in <= x"0003";
-        B0_in <= x"0005"; B1_in <= x"0006";
+        -- A = [[1,2],[3,4]]
+        -- B = [[5,6],[7,8]]
+        --
+        -- Systolic feeding:
+        -- cycle k=0: A(:,0) and B(0,:)
+        A0_in <= x"0001";  -- A(0,0)
+        A1_in <= x"0003";  -- A(1,0)
+        B0_in <= x"0005";  -- B(0,0)
+        B1_in <= x"0006";  -- B(0,1)
         wait until rising_edge(CLK);
 
-        -- cycle 1
-        A0_in <= x"0002"; A1_in <= x"0004";
-        B0_in <= x"0007"; B1_in <= x"0008";
+        -- cycle k=1: A(:,1) and B(1,:)
+        A0_in <= x"0002";  -- A(0,1)
+        A1_in <= x"0004";  -- A(1,1)
+        B0_in <= x"0007";  -- B(1,0)
+        B1_in <= x"0008";  -- B(1,1)
         wait until rising_edge(CLK);
 
         -- stop driving
@@ -69,8 +80,8 @@ begin
         B0_in <= (others => '0');
         B1_in <= (others => '0');
 
-        -- wait for pipeline + propagation (שמרני)
-        for i in 0 to 7 loop
+        -- wait for PE pipeline + systolic propagation (conservative)
+        for i in 0 to 9 loop
             wait until rising_edge(CLK);
         end loop;
 
@@ -82,4 +93,5 @@ begin
         report "PASS: systolic_2x2 results are correct" severity note;
         wait;
     end process;
+
 end Behavioral;

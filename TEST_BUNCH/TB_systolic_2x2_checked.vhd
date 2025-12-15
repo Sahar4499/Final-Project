@@ -26,6 +26,7 @@ architecture Behavioral of TB_systolic_2x2_checked is
     begin
         return std_logic_vector(to_unsigned(x, 32));
     end function;
+
 begin
     CLK <= not CLK after TCLK/2;
 
@@ -49,37 +50,50 @@ begin
         -- reset
         RST <= '1'; EN <= '0';
         wait for 2*TCLK;
+
         RST <= '0'; EN <= '1';
         wait until rising_edge(CLK);
 
-        -- A = [[1,2],[3,4]], B = [[5,6],[7,8]]
-        -- cycle 0
-        A0_in <= x"0001"; A1_in <= x"0003";
-        B0_in <= x"0005"; B1_in <= x"0006";
+        -- Cycle 0 (skewed feed)
+        A0_in <= x"0001";  -- A(0,0)
+        A1_in <= x"0000";
+        B0_in <= x"0005";  -- B(0,0)
+        B1_in <= x"0000";
         wait until rising_edge(CLK);
 
-        -- cycle 1
-        A0_in <= x"0002"; A1_in <= x"0004";
-        B0_in <= x"0007"; B1_in <= x"0008";
+        -- Cycle 1
+        A0_in <= x"0002";  -- A(0,1)
+        A1_in <= x"0003";  -- A(1,0)
+        B0_in <= x"0007";  -- B(1,0)
+        B1_in <= x"0006";  -- B(0,1)
         wait until rising_edge(CLK);
 
-        -- stop driving
+        -- Cycle 2
+        A0_in <= x"0000";
+        A1_in <= x"0004";  -- A(1,1)
+        B0_in <= x"0000";
+        B1_in <= x"0008";  -- B(1,1)
+        wait until rising_edge(CLK);
+
+        -- flush zeros
         A0_in <= (others => '0');
         A1_in <= (others => '0');
         B0_in <= (others => '0');
         B1_in <= (others => '0');
 
-        -- wait for pipeline + propagation (שמרני)
-        for i in 0 to 7 loop
+        -- wait for PE pipeline + array propagation (safe)
+        for i in 0 to 12 loop
             wait until rising_edge(CLK);
         end loop;
 
+        -- Expected C = [[19,22],[43,50]]
         assert C00 = to_u32(19) report "C00 mismatch" severity failure;
         assert C01 = to_u32(22) report "C01 mismatch" severity failure;
         assert C10 = to_u32(43) report "C10 mismatch" severity failure;
         assert C11 = to_u32(50) report "C11 mismatch" severity failure;
 
-        report "PASS: systolic_2x2 results are correct" severity note;
+        report "PASS: systolic_2x2 skewed feed results are correct" severity note;
         wait;
     end process;
+
 end Behavioral;

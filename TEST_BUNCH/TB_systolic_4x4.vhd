@@ -1,131 +1,107 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
 
-entity TB_systolic_4x4 is
-end TB_systolic_4x4;
+entity systolic_4x4 is
+    port(
+        CLK : in  std_logic;
+        RST : in  std_logic;
+        EN  : in  std_logic;
 
-architecture Behavioral of TB_systolic_4x4 is
+        A0_in : in  std_logic_vector(15 downto 0);
+        A1_in : in  std_logic_vector(15 downto 0);
+        A2_in : in  std_logic_vector(15 downto 0);
+        A3_in : in  std_logic_vector(15 downto 0);
 
-    signal CLK : std_logic := '0';
-    signal RST : std_logic := '0';
-    signal EN  : std_logic := '0';
+        B0_in : in  std_logic_vector(15 downto 0);
+        B1_in : in  std_logic_vector(15 downto 0);
+        B2_in : in  std_logic_vector(15 downto 0);
+        B3_in : in  std_logic_vector(15 downto 0);
 
-    signal A0_in, A1_in, A2_in, A3_in : std_logic_vector(15 downto 0);
-    signal B0_in, B1_in, B2_in, B3_in : std_logic_vector(15 downto 0);
+        C00 : out std_logic_vector(31 downto 0);
+        C01 : out std_logic_vector(31 downto 0);
+        C02 : out std_logic_vector(31 downto 0);
+        C03 : out std_logic_vector(31 downto 0);
 
-    signal C_out : std_logic_vector(511 downto 0);
+        C10 : out std_logic_vector(31 downto 0);
+        C11 : out std_logic_vector(31 downto 0);
+        C12 : out std_logic_vector(31 downto 0);
+        C13 : out std_logic_vector(31 downto 0);
 
-    constant TCLK : time := 10 ns;
+        C20 : out std_logic_vector(31 downto 0);
+        C21 : out std_logic_vector(31 downto 0);
+        C22 : out std_logic_vector(31 downto 0);
+        C23 : out std_logic_vector(31 downto 0);
+
+        C30 : out std_logic_vector(31 downto 0);
+        C31 : out std_logic_vector(31 downto 0);
+        C32 : out std_logic_vector(31 downto 0);
+        C33 : out std_logic_vector(31 downto 0);
+
+        C_out : out std_logic_vector(511 downto 0)
+    );
+end entity systolic_4x4;
+
+architecture Structural of systolic_4x4 is
+
+    type slv16_a_bus is array (0 to 3, 0 to 4) of std_logic_vector(15 downto 0);
+    type slv16_b_bus is array (0 to 4, 0 to 3) of std_logic_vector(15 downto 0);
+    type slv32_array is array (0 to 3, 0 to 3) of std_logic_vector(31 downto 0);
+
+    signal A_bus : slv16_a_bus;
+    signal B_bus : slv16_b_bus;
+    signal C_mat : slv32_array;
 
 begin
 
-    CLK <= not CLK after TCLK/2;
+    A_bus(0,0) <= A0_in;
+    A_bus(1,0) <= A1_in;
+    A_bus(2,0) <= A2_in;
+    A_bus(3,0) <= A3_in;
 
-    DUT : entity work.systolic_4x4
-        port map(
-            CLK   => CLK,
-            RST   => RST,
-            EN    => EN,
-            A0_in => A0_in,
-            A1_in => A1_in,
-            A2_in => A2_in,
-            A3_in => A3_in,
-            B0_in => B0_in,
-            B1_in => B1_in,
-            B2_in => B2_in,
-            B3_in => B3_in,
-            C_out => C_out
-        );
+    B_bus(0,0) <= B0_in;
+    B_bus(0,1) <= B1_in;
+    B_bus(0,2) <= B2_in;
+    B_bus(0,3) <= B3_in;
 
-    stim : process
-    begin
-        -- reset
-        RST <= '1';
-        EN  <= '0';
-        A0_in <= (others => '0');
-        A1_in <= (others => '0');
-        A2_in <= (others => '0');
-        A3_in <= (others => '0');
-        B0_in <= (others => '0');
-        B1_in <= (others => '0');
-        B2_in <= (others => '0');
-        B3_in <= (others => '0');
+    gen_i : for i in 0 to 3 generate
+        gen_j : for j in 0 to 3 generate
+            PE : entity work.hPE
+                port map(
+                    RST   => RST,
+                    CLK   => CLK,
+                    EN    => EN,
+                    A     => A_bus(i,j),
+                    B     => B_bus(i,j),
+                    C     => C_mat(i,j),
+                    A_out => A_bus(i,j+1),
+                    B_out => B_bus(i+1,j)
+                );
+        end generate;
+    end generate;
 
-        wait for 2*TCLK;
-        RST <= '0';
-        EN  <= '1';
-        wait until rising_edge(CLK);
+    C00 <= C_mat(0,0);  C01 <= C_mat(0,1);  C02 <= C_mat(0,2);  C03 <= C_mat(0,3);
+    C10 <= C_mat(1,0);  C11 <= C_mat(1,1);  C12 <= C_mat(1,2);  C13 <= C_mat(1,3);
+    C20 <= C_mat(2,0);  C21 <= C_mat(2,1);  C22 <= C_mat(2,2);  C23 <= C_mat(2,3);
+    C30 <= C_mat(3,0);  C31 <= C_mat(3,1);  C32 <= C_mat(3,2);  C33 <= C_mat(3,3);
 
-        -- cycle 0
-        A0_in <= x"0001";
-        A1_in <= x"0002";
-        A2_in <= x"0003";
-        A3_in <= x"0004";
+    C_out( 31 downto   0) <= C_mat(0,0);
+    C_out( 63 downto  32) <= C_mat(0,1);
+    C_out( 95 downto  64) <= C_mat(0,2);
+    C_out(127 downto  96) <= C_mat(0,3);
 
-        B0_in <= x"0001";
-        B1_in <= x"0002";
-        B2_in <= x"0003";
-        B3_in <= x"0004";
+    C_out(159 downto 128) <= C_mat(1,0);
+    C_out(191 downto 160) <= C_mat(1,1);
+    C_out(223 downto 192) <= C_mat(1,2);
+    C_out(255 downto 224) <= C_mat(1,3);
 
-        wait until rising_edge(CLK);
+    C_out(287 downto 256) <= C_mat(2,0);
+    C_out(319 downto 288) <= C_mat(2,1);
+    C_out(351 downto 320) <= C_mat(2,2);
+    C_out(383 downto 352) <= C_mat(2,3);
 
-        -- cycle 1
-        A0_in <= x"0002";
-        A1_in <= x"0003";
-        A2_in <= x"0004";
-        A3_in <= x"0005";
+    C_out(415 downto 384) <= C_mat(3,0);
+    C_out(447 downto 416) <= C_mat(3,1);
+    C_out(479 downto 448) <= C_mat(3,2);
+    C_out(511 downto 480) <= C_mat(3,3);
 
-        B0_in <= x"0002";
-        B1_in <= x"0003";
-        B2_in <= x"0004";
-        B3_in <= x"0005";
-
-        wait until rising_edge(CLK);
-
-        -- cycle 2
-        A0_in <= x"0003";
-        A1_in <= x"0004";
-        A2_in <= x"0005";
-        A3_in <= x"0006";
-
-        B0_in <= x"0003";
-        B1_in <= x"0004";
-        B2_in <= x"0005";
-        B3_in <= x"0006";
-
-        wait until rising_edge(CLK);
-
-        -- cycle 3
-        A0_in <= x"0004";
-        A1_in <= x"0005";
-        A2_in <= x"0006";
-        A3_in <= x"0007";
-
-        B0_in <= x"0004";
-        B1_in <= x"0005";
-        B2_in <= x"0006";
-        B3_in <= x"0007";
-
-        wait until rising_edge(CLK);
-
-        -- stop driving
-        A0_in <= (others => '0');
-        A1_in <= (others => '0');
-        A2_in <= (others => '0');
-        A3_in <= (others => '0');
-        B0_in <= (others => '0');
-        B1_in <= (others => '0');
-        B2_in <= (others => '0');
-        B3_in <= (others => '0');
-
-        -- wait for pipeline + systolic propagation
-        for i in 0 to 15 loop
-            wait until rising_edge(CLK);
-        end loop;
-
-        report "TB_systolic_4x4 completed - check waveform" severity note;
-        wait;
-    end process;
-
-end Behavioral;
+end architecture Structural;

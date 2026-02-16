@@ -1,0 +1,15 @@
+read_verilog top.v
+hierarchy -check -top top
+
+proc
+opt
+fsm
+opt
+techmap
+opt
+
+abc -liberty ./OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+
+clean
+write_verilog -noattr top_synth.v
+stat

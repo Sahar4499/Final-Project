@@ -1,0 +1,8 @@
+ghdl --std=08 hPE.vhd
+hierarchy -check -top hPE
+
+proc; opt; fsm; opt; techmap; opt
+abc -liberty ./OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+clean
+write_verilog -noattr hPE_synth.v
+stat

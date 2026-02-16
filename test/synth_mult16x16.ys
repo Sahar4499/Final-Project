@@ -1,0 +1,8 @@
+ghdl --std=08 mult16x16.vhd
+hierarchy -check -top mult16x16
+
+proc; opt; fsm; opt; techmap; opt
+abc -liberty ./OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+clean
+write_verilog -noattr mult16x16_synth.v
+stat

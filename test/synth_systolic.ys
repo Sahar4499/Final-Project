@@ -1,0 +1,15 @@
+ghdl --std=08 hPE.vhd mult16x16.vhd systolic_4x4.vhd
+hierarchy -check -top systolic_4x4
+
+proc
+opt
+fsm
+opt
+techmap
+opt
+
+abc -liberty ./OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+
+clean
+write_verilog -noattr systolic_4x4_synth.v
+stat

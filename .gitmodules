@@ -1,0 +1,3 @@
+[submodule "asic_45/flow/OpenROAD-flow-scripts"]
+	path = asic_45/flow/OpenROAD-flow-scripts
+	url = https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts.git

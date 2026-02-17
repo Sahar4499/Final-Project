@@ -1,0 +1,389 @@
+module systolic_4x4(CLK, RST, EN, A0_in, A1_in, A2_in, A3_in, B0_in, B1_in, B2_in, B3_in, C00, C01, C02, C03, C10, C11, C12, C13, C20, C21
+, C22, C23, C30, C31, C32, C33);
+  input CLK;
+  wire CLK;
+  input RST;
+  wire RST;
+  input EN;
+  wire EN;
+  input [15:0] A0_in;
+  wire [15:0] A0_in;
+  input [15:0] A1_in;
+  wire [15:0] A1_in;
+  input [15:0] A2_in;
+  wire [15:0] A2_in;
+  input [15:0] A3_in;
+  wire [15:0] A3_in;
+  input [15:0] B0_in;
+  wire [15:0] B0_in;
+  input [15:0] B1_in;
+  wire [15:0] B1_in;
+  input [15:0] B2_in;
+  wire [15:0] B2_in;
+  input [15:0] B3_in;
+  wire [15:0] B3_in;
+  output [31:0] C00;
+  wire [31:0] C00;
+  output [31:0] C01;
+  wire [31:0] C01;
+  output [31:0] C02;
+  wire [31:0] C02;
+  output [31:0] C03;
+  wire [31:0] C03;
+  output [31:0] C10;
+  wire [31:0] C10;
+  output [31:0] C11;
+  wire [31:0] C11;
+  output [31:0] C12;
+  wire [31:0] C12;
+  output [31:0] C13;
+  wire [31:0] C13;
+  output [31:0] C20;
+  wire [31:0] C20;
+  output [31:0] C21;
+  wire [31:0] C21;
+  output [31:0] C22;
+  wire [31:0] C22;
+  output [31:0] C23;
+  wire [31:0] C23;
+  output [31:0] C30;
+  wire [31:0] C30;
+  output [31:0] C31;
+  wire [31:0] C31;
+  output [31:0] C32;
+  wire [31:0] C32;
+  output [31:0] C33;
+  wire [31:0] C33;
+  wire [319:0] a_bus;
+  wire [319:0] b_bus;
+  wire [511:0] c_mat;
+  wire [15:0] gen_i_n1_gen_j_n1_pe_a_out;
+  wire [15:0] gen_i_n1_gen_j_n1_pe_b_out;
+  wire [31:0] gen_i_n1_gen_j_n1_pe_c;
+  wire [15:0] gen_i_n1_gen_j_n2_pe_a_out;
+  wire [15:0] gen_i_n1_gen_j_n2_pe_b_out;
+  wire [31:0] gen_i_n1_gen_j_n2_pe_c;
+  wire [15:0] gen_i_n1_gen_j_n3_pe_a_out;
+  wire [15:0] gen_i_n1_gen_j_n3_pe_b_out;
+  wire [31:0] gen_i_n1_gen_j_n3_pe_c;
+  wire [15:0] gen_i_n1_gen_j_n4_pe_a_out;
+  wire [15:0] gen_i_n1_gen_j_n4_pe_b_out;
+  wire [31:0] gen_i_n1_gen_j_n4_pe_c;
+  wire [15:0] gen_i_n2_gen_j_n1_pe_a_out;
+  wire [15:0] gen_i_n2_gen_j_n1_pe_b_out;
+  wire [31:0] gen_i_n2_gen_j_n1_pe_c;
+  wire [15:0] gen_i_n2_gen_j_n2_pe_a_out;
+  wire [15:0] gen_i_n2_gen_j_n2_pe_b_out;
+  wire [31:0] gen_i_n2_gen_j_n2_pe_c;
+  wire [15:0] gen_i_n2_gen_j_n3_pe_a_out;
+  wire [15:0] gen_i_n2_gen_j_n3_pe_b_out;
+  wire [31:0] gen_i_n2_gen_j_n3_pe_c;
+  wire [15:0] gen_i_n2_gen_j_n4_pe_a_out;
+  wire [15:0] gen_i_n2_gen_j_n4_pe_b_out;
+  wire [31:0] gen_i_n2_gen_j_n4_pe_c;
+  wire [15:0] gen_i_n3_gen_j_n1_pe_a_out;
+  wire [15:0] gen_i_n3_gen_j_n1_pe_b_out;
+  wire [31:0] gen_i_n3_gen_j_n1_pe_c;
+  wire [15:0] gen_i_n3_gen_j_n2_pe_a_out;
+  wire [15:0] gen_i_n3_gen_j_n2_pe_b_out;
+  wire [31:0] gen_i_n3_gen_j_n2_pe_c;
+  wire [15:0] gen_i_n3_gen_j_n3_pe_a_out;
+  wire [15:0] gen_i_n3_gen_j_n3_pe_b_out;
+  wire [31:0] gen_i_n3_gen_j_n3_pe_c;
+  wire [15:0] gen_i_n3_gen_j_n4_pe_a_out;
+  wire [15:0] gen_i_n3_gen_j_n4_pe_b_out;
+  wire [31:0] gen_i_n3_gen_j_n4_pe_c;
+  wire [15:0] gen_i_n4_gen_j_n1_pe_a_out;
+  wire [15:0] gen_i_n4_gen_j_n1_pe_b_out;
+  wire [31:0] gen_i_n4_gen_j_n1_pe_c;
+  wire [15:0] gen_i_n4_gen_j_n2_pe_a_out;
+  wire [15:0] gen_i_n4_gen_j_n2_pe_b_out;
+  wire [31:0] gen_i_n4_gen_j_n2_pe_c;
+  wire [15:0] gen_i_n4_gen_j_n3_pe_a_out;
+  wire [15:0] gen_i_n4_gen_j_n3_pe_b_out;
+  wire [31:0] gen_i_n4_gen_j_n3_pe_c;
+  wire [15:0] gen_i_n4_gen_j_n4_pe_a_out;
+  wire [15:0] gen_i_n4_gen_j_n4_pe_b_out;
+  wire [31:0] gen_i_n4_gen_j_n4_pe_c;
+  wire [31:0] n100_o;
+  wire [31:0] n101_o;
+  wire [31:0] n102_o;
+  wire [31:0] n103_o;
+  wire [31:0] n104_o;
+  wire [31:0] n105_o;
+  wire [31:0] n106_o;
+  wire [31:0] n107_o;
+  wire [31:0] n108_o;
+  wire [31:0] n109_o;
+  wire [31:0] n110_o;
+  wire [31:0] n111_o;
+  wire [319:0] n112_o;
+  wire [319:0] n113_o;
+  wire [511:0] n114_o;
+  wire [15:0] n16_o;
+  wire [15:0] n17_o;
+  wire [15:0] n21_o;
+  wire [15:0] n22_o;
+  wire [15:0] n26_o;
+  wire [15:0] n27_o;
+  wire [15:0] n31_o;
+  wire [15:0] n32_o;
+  wire [15:0] n36_o;
+  wire [15:0] n37_o;
+  wire [15:0] n41_o;
+  wire [15:0] n42_o;
+  wire [15:0] n46_o;
+  wire [15:0] n47_o;
+  wire [15:0] n51_o;
+  wire [15:0] n52_o;
+  wire [15:0] n56_o;
+  wire [15:0] n57_o;
+  wire [15:0] n61_o;
+  wire [15:0] n62_o;
+  wire [15:0] n66_o;
+  wire [15:0] n67_o;
+  wire [15:0] n71_o;
+  wire [15:0] n72_o;
+  wire [15:0] n76_o;
+  wire [15:0] n77_o;
+  wire [15:0] n81_o;
+  wire [15:0] n82_o;
+  wire [15:0] n86_o;
+  wire [15:0] n87_o;
+  wire [15:0] n91_o;
+  wire [15:0] n92_o;
+  wire [31:0] n96_o;
+  wire [31:0] n97_o;
+  wire [31:0] n98_o;
+  wire [31:0] n99_o;
+  hpe gen_i_n1_gen_j_n1_pe (
+    .a(A0_in),
+    .a_out(gen_i_n1_gen_j_n1_pe_a_out),
+    .b(B0_in),
+    .b_out(gen_i_n1_gen_j_n1_pe_b_out),
+    .c(gen_i_n1_gen_j_n1_pe_c),
+    .clk(CLK),
+    .en(EN),
+    .rst(RST)
+  );
+  hpe gen_i_n1_gen_j_n2_pe (
+    .a(gen_i_n1_gen_j_n1_pe_a_out),
+    .a_out(gen_i_n1_gen_j_n2_pe_a_out),
+    .b(B1_in),
+    .b_out(gen_i_n1_gen_j_n2_pe_b_out),
+    .c(gen_i_n1_gen_j_n2_pe_c),
+    .clk(CLK),
+    .en(EN),
+    .rst(RST)
+  );
+  hpe gen_i_n1_gen_j_n3_pe (
+    .a(gen_i_n1_gen_j_n2_pe_a_out),
+    .a_out(gen_i_n1_gen_j_n3_pe_a_out),
+    .b(B2_in),
+    .b_out(gen_i_n1_gen_j_n3_pe_b_out),
+    .c(gen_i_n1_gen_j_n3_pe_c),
+    .clk(CLK),
+    .en(EN),
+    .rst(RST)
+  );
+  hpe gen_i_n1_gen_j_n4_pe (
+    .a(gen_i_n1_gen_j_n3_pe_a_out),
+    .a_out(gen_i_n1_gen_j_n4_pe_a_out),
+    .b(B3_in),
+    .b_out(gen_i_n1_gen_j_n4_pe_b_out),
+    .c(gen_i_n1_gen_j_n4_pe_c),
+    .clk(CLK),
+    .en(EN),
+    .rst(RST)
+  );
+  hpe gen_i_n2_gen_j_n1_pe (
+    .a(A1_in),
+    .a_out(gen_i_n2_gen_j_n1_pe_a_out),
+    .b(gen_i_n1_gen_j_n1_pe_b_out),
+    .b_out(gen_i_n2_gen_j_n1_pe_b_out),
+    .c(gen_i_n2_gen_j_n1_pe_c),
+    .clk(CLK),
+    .en(EN),
+    .rst(RST)
+  );
+  hpe gen_i_n2_gen_j_n2_pe (
+    .a(gen_i_n2_gen_j_n1_pe_a_out),
+    .a_out(gen_i_n2_gen_j_n2_pe_a_out),
+    .b(gen_i_n1_gen_j_n2_pe_b_out),
+    .b_out(gen_i_n2_gen_j_n2_pe_b_out),
+    .c(gen_i_n2_gen_j_n2_pe_c),
+    .clk(CLK),
+    .en(EN),
+    .rst(RST)
+  );
+  hpe gen_i_n2_gen_j_n3_pe (
+    .a(gen_i_n2_gen_j_n2_pe_a_out),
+    .a_out(gen_i_n2_gen_j_n3_pe_a_out),
+    .b(gen_i_n1_gen_j_n3_pe_b_out),
+    .b_out(gen_i_n2_gen_j_n3_pe_b_out),
+    .c(gen_i_n2_gen_j_n3_pe_c),
+    .clk(CLK),
+    .en(EN),
+    .rst(RST)
+  );
+  hpe gen_i_n2_gen_j_n4_pe (
+    .a(gen_i_n2_gen_j_n3_pe_a_out),
+    .a_out(gen_i_n2_gen_j_n4_pe_a_out),
+    .b(gen_i_n1_gen_j_n4_pe_b_out),
+    .b_out(gen_i_n2_gen_j_n4_pe_b_out),
+    .c(gen_i_n2_gen_j_n4_pe_c),
+    .clk(CLK),
+    .en(EN),
+    .rst(RST)
+  );
+  hpe gen_i_n3_gen_j_n1_pe (
+    .a(A2_in),
+    .a_out(gen_i_n3_gen_j_n1_pe_a_out),
+    .b(gen_i_n2_gen_j_n1_pe_b_out),
+    .b_out(gen_i_n3_gen_j_n1_pe_b_out),
+    .c(gen_i_n3_gen_j_n1_pe_c),
+    .clk(CLK),
+    .en(EN),
+    .rst(RST)
+  );
+  hpe gen_i_n3_gen_j_n2_pe (
+    .a(gen_i_n3_gen_j_n1_pe_a_out),
+    .a_out(gen_i_n3_gen_j_n2_pe_a_out),
+    .b(gen_i_n2_gen_j_n2_pe_b_out),
+    .b_out(gen_i_n3_gen_j_n2_pe_b_out),
+    .c(gen_i_n3_gen_j_n2_pe_c),
+    .clk(CLK),
+    .en(EN),
+    .rst(RST)
+  );
+  hpe gen_i_n3_gen_j_n3_pe (
+    .a(gen_i_n3_gen_j_n2_pe_a_out),
+    .a_out(gen_i_n3_gen_j_n3_pe_a_out),
+    .b(gen_i_n2_gen_j_n3_pe_b_out),
+    .b_out(gen_i_n3_gen_j_n3_pe_b_out),
+    .c(gen_i_n3_gen_j_n3_pe_c),
+    .clk(CLK),
+    .en(EN),
+    .rst(RST)
+  );
+  hpe gen_i_n3_gen_j_n4_pe (
+    .a(gen_i_n3_gen_j_n3_pe_a_out),
+    .a_out(gen_i_n3_gen_j_n4_pe_a_out),
+    .b(gen_i_n2_gen_j_n4_pe_b_out),
+    .b_out(gen_i_n3_gen_j_n4_pe_b_out),
+    .c(gen_i_n3_gen_j_n4_pe_c),
+    .clk(CLK),
+    .en(EN),
+    .rst(RST)
+  );
+  hpe gen_i_n4_gen_j_n1_pe (
+    .a(A3_in),
+    .a_out(gen_i_n4_gen_j_n1_pe_a_out),
+    .b(gen_i_n3_gen_j_n1_pe_b_out),
+    .b_out(gen_i_n4_gen_j_n1_pe_b_out),
+    .c(gen_i_n4_gen_j_n1_pe_c),
+    .clk(CLK),
+    .en(EN),
+    .rst(RST)
+  );
+  hpe gen_i_n4_gen_j_n2_pe (
+    .a(gen_i_n4_gen_j_n1_pe_a_out),
+    .a_out(gen_i_n4_gen_j_n2_pe_a_out),
+    .b(gen_i_n3_gen_j_n2_pe_b_out),
+    .b_out(gen_i_n4_gen_j_n2_pe_b_out),
+    .c(gen_i_n4_gen_j_n2_pe_c),
+    .clk(CLK),
+    .en(EN),
+    .rst(RST)
+  );
+  hpe gen_i_n4_gen_j_n3_pe (
+    .a(gen_i_n4_gen_j_n2_pe_a_out),
+    .a_out(gen_i_n4_gen_j_n3_pe_a_out),
+    .b(gen_i_n3_gen_j_n3_pe_b_out),
+    .b_out(gen_i_n4_gen_j_n3_pe_b_out),
+    .c(gen_i_n4_gen_j_n3_pe_c),
+    .clk(CLK),
+    .en(EN),
+    .rst(RST)
+  );
+  hpe gen_i_n4_gen_j_n4_pe (
+    .a(gen_i_n4_gen_j_n3_pe_a_out),
+    .a_out(gen_i_n4_gen_j_n4_pe_a_out),
+    .b(gen_i_n3_gen_j_n4_pe_b_out),
+    .b_out(gen_i_n4_gen_j_n4_pe_b_out),
+    .c(gen_i_n4_gen_j_n4_pe_c),
+    .clk(CLK),
+    .en(EN),
+    .rst(RST)
+  );
+  assign n114_o = { gen_i_n1_gen_j_n1_pe_c, gen_i_n1_gen_j_n2_pe_c, gen_i_n1_gen_j_n3_pe_c, gen_i_n1_gen_j_n4_pe_c, gen_i_n2_gen_j_n1_pe_c, gen_i_n2_gen_j_n2_pe_c, gen_i_n2_gen_j_n3_pe_c, gen_i_n2_gen_j_n4_pe_c, gen_i_n3_gen_j_n1_pe_c, gen_i_n3_gen_j_n2_pe_c, gen_i_n3_gen_j_n3_pe_c, gen_i_n3_gen_j_n4_pe_c, gen_i_n4_gen_j_n1_pe_c, gen_i_n4_gen_j_n2_pe_c, gen_i_n4_gen_j_n3_pe_c, gen_i_n4_gen_j_n4_pe_c };
+  assign n113_o = { B0_in, B1_in, B2_in, B3_in, gen_i_n1_gen_j_n1_pe_b_out, gen_i_n1_gen_j_n2_pe_b_out, gen_i_n1_gen_j_n3_pe_b_out, gen_i_n1_gen_j_n4_pe_b_out, gen_i_n2_gen_j_n1_pe_b_out, gen_i_n2_gen_j_n2_pe_b_out, gen_i_n2_gen_j_n3_pe_b_out, gen_i_n2_gen_j_n4_pe_b_out, gen_i_n3_gen_j_n1_pe_b_out, gen_i_n3_gen_j_n2_pe_b_out, gen_i_n3_gen_j_n3_pe_b_out, gen_i_n3_gen_j_n4_pe_b_out, gen_i_n4_gen_j_n1_pe_b_out, gen_i_n4_gen_j_n2_pe_b_out, gen_i_n4_gen_j_n3_pe_b_out, gen_i_n4_gen_j_n4_pe_b_out };
+  assign n112_o = { A0_in, gen_i_n1_gen_j_n1_pe_a_out, gen_i_n1_gen_j_n2_pe_a_out, gen_i_n1_gen_j_n3_pe_a_out, gen_i_n1_gen_j_n4_pe_a_out, A1_in, gen_i_n2_gen_j_n1_pe_a_out, gen_i_n2_gen_j_n2_pe_a_out, gen_i_n2_gen_j_n3_pe_a_out, gen_i_n2_gen_j_n4_pe_a_out, A2_in, gen_i_n3_gen_j_n1_pe_a_out, gen_i_n3_gen_j_n2_pe_a_out, gen_i_n3_gen_j_n3_pe_a_out, gen_i_n3_gen_j_n4_pe_a_out, A3_in, gen_i_n4_gen_j_n1_pe_a_out, gen_i_n4_gen_j_n2_pe_a_out, gen_i_n4_gen_j_n3_pe_a_out, gen_i_n4_gen_j_n4_pe_a_out };
+  assign n111_o = gen_i_n4_gen_j_n4_pe_c;
+  assign n110_o = gen_i_n4_gen_j_n3_pe_c;
+  assign n109_o = gen_i_n4_gen_j_n2_pe_c;
+  assign n108_o = gen_i_n4_gen_j_n1_pe_c;
+  assign n107_o = gen_i_n3_gen_j_n4_pe_c;
+  assign n106_o = gen_i_n3_gen_j_n3_pe_c;
+  assign n105_o = gen_i_n3_gen_j_n2_pe_c;
+  assign n104_o = gen_i_n3_gen_j_n1_pe_c;
+  assign n103_o = gen_i_n2_gen_j_n4_pe_c;
+  assign n102_o = gen_i_n2_gen_j_n3_pe_c;
+  assign n101_o = gen_i_n2_gen_j_n2_pe_c;
+  assign n100_o = gen_i_n2_gen_j_n1_pe_c;
+  assign n99_o = gen_i_n1_gen_j_n4_pe_c;
+  assign n98_o = gen_i_n1_gen_j_n3_pe_c;
+  assign n97_o = gen_i_n1_gen_j_n2_pe_c;
+  assign n96_o = gen_i_n1_gen_j_n1_pe_c;
+  assign n92_o = gen_i_n3_gen_j_n4_pe_b_out;
+  assign n91_o = gen_i_n4_gen_j_n3_pe_a_out;
+  assign n87_o = gen_i_n3_gen_j_n3_pe_b_out;
+  assign n86_o = gen_i_n4_gen_j_n2_pe_a_out;
+  assign n82_o = gen_i_n3_gen_j_n2_pe_b_out;
+  assign n81_o = gen_i_n4_gen_j_n1_pe_a_out;
+  assign n77_o = gen_i_n3_gen_j_n1_pe_b_out;
+  assign n76_o = A3_in;
+  assign n72_o = gen_i_n2_gen_j_n4_pe_b_out;
+  assign n71_o = gen_i_n3_gen_j_n3_pe_a_out;
+  assign n67_o = gen_i_n2_gen_j_n3_pe_b_out;
+  assign n66_o = gen_i_n3_gen_j_n2_pe_a_out;
+  assign n62_o = gen_i_n2_gen_j_n2_pe_b_out;
+  assign n61_o = gen_i_n3_gen_j_n1_pe_a_out;
+  assign n57_o = gen_i_n2_gen_j_n1_pe_b_out;
+  assign n56_o = A2_in;
+  assign n52_o = gen_i_n1_gen_j_n4_pe_b_out;
+  assign n51_o = gen_i_n2_gen_j_n3_pe_a_out;
+  assign n47_o = gen_i_n1_gen_j_n3_pe_b_out;
+  assign n46_o = gen_i_n2_gen_j_n2_pe_a_out;
+  assign n42_o = gen_i_n1_gen_j_n2_pe_b_out;
+  assign n41_o = gen_i_n2_gen_j_n1_pe_a_out;
+  assign n37_o = gen_i_n1_gen_j_n1_pe_b_out;
+  assign n36_o = A1_in;
+  assign n32_o = B3_in;
+  assign n31_o = gen_i_n1_gen_j_n3_pe_a_out;
+  assign n27_o = B2_in;
+  assign n26_o = gen_i_n1_gen_j_n2_pe_a_out;
+  assign n22_o = B1_in;
+  assign n21_o = gen_i_n1_gen_j_n1_pe_a_out;
+  assign n17_o = B0_in;
+  assign n16_o = A0_in;
+  assign c_mat = { gen_i_n1_gen_j_n1_pe_c, gen_i_n1_gen_j_n2_pe_c, gen_i_n1_gen_j_n3_pe_c, gen_i_n1_gen_j_n4_pe_c, gen_i_n2_gen_j_n1_pe_c, gen_i_n2_gen_j_n2_pe_c, gen_i_n2_gen_j_n3_pe_c, gen_i_n2_gen_j_n4_pe_c, gen_i_n3_gen_j_n1_pe_c, gen_i_n3_gen_j_n2_pe_c, gen_i_n3_gen_j_n3_pe_c, gen_i_n3_gen_j_n4_pe_c, gen_i_n4_gen_j_n1_pe_c, gen_i_n4_gen_j_n2_pe_c, gen_i_n4_gen_j_n3_pe_c, gen_i_n4_gen_j_n4_pe_c };
+  assign b_bus = { B0_in, B1_in, B2_in, B3_in, gen_i_n1_gen_j_n1_pe_b_out, gen_i_n1_gen_j_n2_pe_b_out, gen_i_n1_gen_j_n3_pe_b_out, gen_i_n1_gen_j_n4_pe_b_out, gen_i_n2_gen_j_n1_pe_b_out, gen_i_n2_gen_j_n2_pe_b_out, gen_i_n2_gen_j_n3_pe_b_out, gen_i_n2_gen_j_n4_pe_b_out, gen_i_n3_gen_j_n1_pe_b_out, gen_i_n3_gen_j_n2_pe_b_out, gen_i_n3_gen_j_n3_pe_b_out, gen_i_n3_gen_j_n4_pe_b_out, gen_i_n4_gen_j_n1_pe_b_out, gen_i_n4_gen_j_n2_pe_b_out, gen_i_n4_gen_j_n3_pe_b_out, gen_i_n4_gen_j_n4_pe_b_out };
+  assign a_bus = { A0_in, gen_i_n1_gen_j_n1_pe_a_out, gen_i_n1_gen_j_n2_pe_a_out, gen_i_n1_gen_j_n3_pe_a_out, gen_i_n1_gen_j_n4_pe_a_out, A1_in, gen_i_n2_gen_j_n1_pe_a_out, gen_i_n2_gen_j_n2_pe_a_out, gen_i_n2_gen_j_n3_pe_a_out, gen_i_n2_gen_j_n4_pe_a_out, A2_in, gen_i_n3_gen_j_n1_pe_a_out, gen_i_n3_gen_j_n2_pe_a_out, gen_i_n3_gen_j_n3_pe_a_out, gen_i_n3_gen_j_n4_pe_a_out, A3_in, gen_i_n4_gen_j_n1_pe_a_out, gen_i_n4_gen_j_n2_pe_a_out, gen_i_n4_gen_j_n3_pe_a_out, gen_i_n4_gen_j_n4_pe_a_out };
+  assign C33 = gen_i_n4_gen_j_n4_pe_c;
+  assign C32 = gen_i_n4_gen_j_n3_pe_c;
+  assign C31 = gen_i_n4_gen_j_n2_pe_c;
+  assign C30 = gen_i_n4_gen_j_n1_pe_c;
+  assign C23 = gen_i_n3_gen_j_n4_pe_c;
+  assign C22 = gen_i_n3_gen_j_n3_pe_c;
+  assign C21 = gen_i_n3_gen_j_n2_pe_c;
+  assign C20 = gen_i_n3_gen_j_n1_pe_c;
+  assign C13 = gen_i_n2_gen_j_n4_pe_c;
+  assign C12 = gen_i_n2_gen_j_n3_pe_c;
+  assign C11 = gen_i_n2_gen_j_n2_pe_c;
+  assign C10 = gen_i_n2_gen_j_n1_pe_c;
+  assign C03 = gen_i_n1_gen_j_n4_pe_c;
+  assign C02 = gen_i_n1_gen_j_n3_pe_c;
+  assign C01 = gen_i_n1_gen_j_n2_pe_c;
+  assign C00 = gen_i_n1_gen_j_n1_pe_c;
+endmodule

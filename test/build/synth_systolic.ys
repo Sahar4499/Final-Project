@@ -1,0 +1,7 @@
+read_verilog /mnt/c/Users/sahar/Final-Project/test/build/systolic_4x4_from_vhdl.v
+hierarchy -check -top systolic_4x4
+proc; opt; fsm; opt; techmap; opt
+abc -liberty /mnt/c/Users/sahar/Final-Project/test/OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+clean
+write_verilog -noattr /mnt/c/Users/sahar/Final-Project/test/build/systolic_4x4_synth.v
+stat

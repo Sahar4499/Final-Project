@@ -1,0 +1,224 @@
+[08/01 08:19:47      0s] 
+[08/01 08:19:47      0s] Cadence Innovus(TM) Implementation System.
+[08/01 08:19:47      0s] Copyright 2025 Cadence Design Systems, Inc. All rights reserved worldwide.
+[08/01 08:19:47      0s] 
+[08/01 08:19:47      0s] Version:	v25.11-s102_1, built Wed Aug 27 13:03:08 PDT 2025
+[08/01 08:19:47      0s] Options:	
+[08/01 08:19:47      0s] Date:		Sat Aug  1 08:19:47 2026
+[08/01 08:19:47      0s] Host:		ip-10-10-71-30.il-central-1.compute.internal (x86_64 w/Linux 4.18.0-553.79.1.el8_10.x86_64) (1core*2cpus*Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz 55296KB)
+[08/01 08:19:47      0s] OS:		Rocky Linux 8.10 (Green Obsidian)
+[08/01 08:19:47      0s] 
+[08/01 08:19:47      0s] License:
+[08/01 08:19:47      0s] 		[08:19:47.251369] Configured Lic search path (25.01-s002): 5280@ip-10-10-99-197.il-central-1.compute.internal
+
+[08/01 08:19:47      0s] 		invs	Innovus Implementation System	25.1	checkout succeeded
+[08/01 08:19:47      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[08/01 08:19:48      1s] 
+[08/01 08:19:48      1s] **Info: Common UI will be the default UI for innovus in the next major release. Please use -legacy_ui when invoking innovus if you wish to continue to use legacy UI.
+[08/01 08:20:02     13s] Memory management switch to non-aggressive memory release mode.
+[08/01 08:20:02     13s] 
+[08/01 08:20:02     13s] OS Mmap count monitoring thread starts. Limit of OS Mmap count is 65530
+[08/01 08:20:02     13s] 
+[08/01 08:20:05     15s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v25.11-s102_1 (64bit) 08/27/2025 13:03 (Linux 4.18.0-305.el8.x86_64)
+[08/01 08:20:09     18s] @(#)CDS: NanoRoute 25.11-s102_1 NR250730-0928/25_11-UB (database version 18.20.674) {superthreading v2.20}
+[08/01 08:20:09     18s] @(#)CDS: AAE 25.11-s028 (64bit) 08/27/2025 (Linux 4.18.0-305.el8.x86_64)
+[08/01 08:20:09     18s] @(#)CDS: CTE 25.11-s034_1 () Aug 18 2025 08:55:47 ( )
+[08/01 08:20:09     18s] @(#)CDS: SYNTECH 25.11-s013_1 () Jul 30 2025 05:18:51 ( )
+[08/01 08:20:09     18s] @(#)CDS: CPE v25.11-s029
+[08/01 08:20:09     18s] @(#)CDS: IQuantus/TQuantus 24.1.0-s290 (64bit) Sun Jul 20 21:40:56 PDT 2025 (Linux 4.18.0-305.el8.x86_64)
+[08/01 08:20:09     18s] @(#)CDS: OA 22.62-p010 Tue Jun 10 08:32:29 2025
+[08/01 08:20:09     18s] @(#)CDS: SGN 23.10-d005 (03-Oct-2023) (64 bit executable, TkQt5.15.9)
+[08/01 08:20:09     18s] @(#)CDS: RCDB 11.15.0
+[08/01 08:20:09     18s] @(#)CDS: STYLUS 25.10-b003_1 (03/20/2025 14:55 PDT)
+[08/01 08:20:09     18s] @(#)CDS: IntegrityPlanner-25.11-186 (25.11) (2025-07-16 18:29:01+0800)
+[08/01 08:20:09     18s] @(#)CDS: SYNTHESIS_ENGINE 25.11-s095
+[08/01 08:20:09     18s] @(#)CDS: TCDB v25.10-b001
+[08/01 08:20:09     18s] Create and set the environment variable TMPDIR to /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/innovus_temp_26036_c37bdefb-f6f1-4f63-a87b-f19303356734_ip-10-10-71-30.il-central-1.compute.internal_primovs_9CQ8bO.
+
+[08/01 08:20:09     18s] The soft stacksize limit is either up to the hard limit or larger than 0.2% of RAM. No change is needed.
+[08/01 08:20:12     20s] Info: Process UID = 26036 / c37bdefb-f6f1-4f63-a87b-f19303356734 / tu4EGMDg3S
+[08/01 08:20:14     22s] 
+[08/01 08:20:14     22s] **INFO:  MMMC transition support version v31-84 
+[08/01 08:20:14     22s] 
+[08/01 08:20:14     22s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[08/01 08:20:14     22s] <CMD> suppressMessage ENCEXT-2799
+[08/01 08:20:15     22s] <CMD> getVersion
+[08/01 08:20:15     23s] [INFO] Loading PVS 24.12 fill procedures
+[08/01 08:20:15     23s] <CMD> win
+[08/01 08:21:35     25s] <CMD> set init_lef_file {
+    /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/lef/gsclib045_tech.lef
+    /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/lef/gsclib045_macro.lef
+}
+[08/01 08:21:48     25s] <CMD> set init_verilog ~/RTL_to_GDSII_Project/Final-Project/version3_sv/synthesis/multiplier_netlist.v
+[08/01 08:22:00     26s] <CMD> set init_top_cell booth_multiplier_8x8
+[08/01 08:22:26     26s] <CMD> init_design
+[08/01 08:22:26     26s] 
+[08/01 08:22:26     26s] Loading LEF file /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/lef/gsclib045_tech.lef ...
+[08/01 08:22:26     26s] Set DBUPerIGU to M2 pitch 400.
+[08/01 08:22:26     26s] 
+[08/01 08:22:26     26s] Loading LEF file /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/lef/gsclib045_macro.lef ...
+[08/01 08:22:27     26s] **WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[08/01 08:22:27     26s] Type 'man IMPLF-200' for more detail.
+[08/01 08:22:27     26s] 
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+[08/01 08:22:27     26s] *** End library_loading (cpu=0.00min, real=0.00min, mem=0.0M, fe_cpu=0.45min, fe_real=2.67min, fe_mem=1959.6M) ***
+[08/01 08:22:27     26s] #% Begin Load netlist data ... (date=08/01 08:22:27, mem=1958.7M)
+[08/01 08:22:27     26s] *** Begin netlist parsing (mem=1958.7M) ***
+[08/01 08:22:27     26s] Created 0 new cells from 0 timing libraries.
+[08/01 08:22:27     26s] Reading netlist ...
+[08/01 08:22:27     26s] Backslashed names will retain backslash and a trailing blank character.
+[08/01 08:22:27     26s] Reading verilog netlist '~/RTL_to_GDSII_Project/Final-Project/version3_sv/synthesis/multiplier_netlist.v'
+[08/01 08:22:27     26s] 
+[08/01 08:22:27     26s] *** Memory Usage v#1 (Current mem = 1963.562M, initial mem = 907.520M) ***
+[08/01 08:22:27     26s] *** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1963.6M) ***
+[08/01 08:22:27     26s] #% End Load netlist data ... (date=08/01 08:22:27, total cpu=0:00:00.0, real=0:00:00.0, peak res=1963.9M, current mem=1963.9M)
+[08/01 08:22:27     26s] Set top cell to booth_multiplier_8x8.
+[08/01 08:22:27     27s] Hooked 0 DB cells to tlib cells.
+[08/01 08:22:27     27s] Ending "BindLib:" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1970.2M, current mem=1970.2M)
+[08/01 08:22:27     27s] Starting recursive module instantiation check.
+[08/01 08:22:27     27s] No recursion found.
+[08/01 08:22:27     27s] Building hierarchical netlist for Cell booth_multiplier_8x8 ...
+[08/01 08:22:27     27s] ***** UseNewTieNetMode *****.
+[08/01 08:22:27     27s] *** Netlist is unique.
+[08/01 08:22:27     27s] Setting Std. cell height to 3420 DBU (smallest netlist inst).
+[08/01 08:22:27     27s] ** info: there are 584 modules.
+[08/01 08:22:27     27s] ** info: there are 188 stdCell insts.
+[08/01 08:22:27     27s] ** info: there are 188 stdCell insts with at least one signal pin.
+[08/01 08:22:27     27s] 
+[08/01 08:22:27     27s] *** Memory Usage v#1 (Current mem = 1998.965M, initial mem = 907.520M) ***
+[08/01 08:22:27     27s] **WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[08/01 08:22:27     27s] Type 'man IMPFP-3961' for more detail.
+[08/01 08:22:27     27s] **WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[08/01 08:22:27     27s] Type 'man IMPFP-3961' for more detail.
+[08/01 08:22:27     27s] Start create_tracks
+[08/01 08:22:27     27s] Extraction setup Started for TopCell booth_multiplier_8x8 
+[08/01 08:22:27     27s] 
+[08/01 08:22:27     27s] *** Summary of all messages that are not suppressed in this session:
+[08/01 08:22:27     27s] Severity  ID               Count  Summary                                  
+[08/01 08:22:27     27s] WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[08/01 08:22:27     27s] WARNING   IMPFP-3961           2  The techSite '%s' has no related standar...
+[08/01 08:22:27     27s] *** Message Summary: 3 warning(s), 0 error(s)
+[08/01 08:22:27     27s] 
+[08/01 08:23:04     28s] <CMD> floorPlan -r 1.0 0.6 5.0 5.0 5.0 5.0
+[08/01 08:23:04     28s] Adjusting coreMargin bottom  to finFet grid (PlacementGrid) : after adjusting :5.13
+[08/01 08:23:04     28s] Adjusting coreMargin top     to finFet grid (PlacementGrid) : after adjusting :5.13
+[08/01 08:23:04     28s] Adjusting core size to PlacementGrid : width :26.6 height : 25.65
+[08/01 08:23:04     28s] **WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[08/01 08:23:04     28s] Type 'man IMPFP-3961' for more detail.
+[08/01 08:23:04     28s] **WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[08/01 08:23:04     28s] Type 'man IMPFP-3961' for more detail.
+[08/01 08:23:04     28s] Start create_tracks
+[08/01 08:23:04     28s] **WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+[08/01 08:23:19     28s] <CMD> fit
+[08/01 08:23:45     29s] <CMD> addRing -nets {VDD VSS} -type core_ring -follow core -layer {top Metal4 bottom Metal4 left Metal3 right Metal3} -width {2.0 2.0} -spacing {1.0 1.0} -offset {2.0 2.0}
+[08/01 08:23:45     29s] #% Begin addRing (date=08/01 08:23:45, mem=2297.7M)
+[08/01 08:23:45     29s] **ERROR: (IMPPP-4029):	Unexpected value for the option '-width'. "-width {value | {top value bottom value left value right value}}"
+[08/01 08:23:45     29s] #% End addRing (date=08/01 08:23:45, total cpu=0:00:00.0, real=0:00:00.0, peak res=2297.7M, current mem=2296.7M)
+[08/01 08:24:03     29s] <CMD> globalNetConnect VDD -type pin -pin VDD -all
+[08/01 08:24:03     29s] 
+[08/01 08:24:03     29s] Usage: globalNetConnect [-help] [<globalNetName>] [-all] [-autoTie] [-disconnect] [-hierarchicalInstance <string>]
+[08/01 08:24:03     29s]                         [-instanceBasename <string>] [-net <string>] [-netlistOverride] [-nonHierarchical] [-override] [-pin <string>]
+[08/01 08:24:03     29s]                         [-powerDomain <string>] [-region {x1 y1 x2 y2}] [-singleInstance <string>] [-type {pgpin tiehi tielo net}] [-verbose]
+[08/01 08:24:03     29s] 
+[08/01 08:24:03     29s] **ERROR: (IMPTCM-23):	"pin" is not a valid enum for "-type", the allowed values are {pgpin tiehi tielo net}.
+[08/01 08:24:03     29s] 
+[08/01 08:24:03     29s] <CMD> globalNetConnect VSS -type pin -pin VSS -all
+[08/01 08:24:03     29s] 
+[08/01 08:24:03     29s] Usage: globalNetConnect [-help] [<globalNetName>] [-all] [-autoTie] [-disconnect] [-hierarchicalInstance <string>]
+[08/01 08:24:03     29s]                         [-instanceBasename <string>] [-net <string>] [-netlistOverride] [-nonHierarchical] [-override] [-pin <string>]
+[08/01 08:24:03     29s]                         [-powerDomain <string>] [-region {x1 y1 x2 y2}] [-singleInstance <string>] [-type {pgpin tiehi tielo net}] [-verbose]
+[08/01 08:24:03     29s] 
+[08/01 08:24:03     29s] **ERROR: (IMPTCM-23):	"pin" is not a valid enum for "-type", the allowed values are {pgpin tiehi tielo net}.
+[08/01 08:24:03     29s] 
+[08/01 08:24:03     29s] <CMD> globalNetConnect VDD -type tiehi -all
+[08/01 08:24:03     29s] **ERROR: (IMPDB-1216):	The global net 'VDD' specified in the global net connection(GNC) rule doesn't exist in the design.
+[08/01 08:24:03     29s] Type 'man IMPDB-1216' for more detail.
+[08/01 08:24:04     29s] <CMD> globalNetConnect VSS -type tielo -all
+[08/01 08:24:04     29s] **ERROR: (IMPDB-1216):	The global net 'VSS' specified in the global net connection(GNC) rule doesn't exist in the design.
+[08/01 08:24:04     29s] Type 'man IMPDB-1216' for more detail.
+[08/01 08:24:41     30s] <CMD> globalNetConnect VDD! -type pgpin -pin VDD -all
+[08/01 08:24:41     30s] **ERROR: (IMPDB-1216):	The global net 'VDD!' specified in the global net connection(GNC) rule doesn't exist in the design.
+[08/01 08:24:41     30s] Type 'man IMPDB-1216' for more detail.
+[08/01 08:24:41     30s] <CMD> globalNetConnect VSS! -type pgpin -pin VSS -all
+[08/01 08:24:41     30s] **ERROR: (IMPDB-1216):	The global net 'VSS!' specified in the global net connection(GNC) rule doesn't exist in the design.
+[08/01 08:24:41     30s] Type 'man IMPDB-1216' for more detail.
+[08/01 08:24:41     30s] <CMD> globalNetConnect VDD! -type tiehi -all
+[08/01 08:24:41     30s] **ERROR: (IMPDB-1216):	The global net 'VDD!' specified in the global net connection(GNC) rule doesn't exist in the design.
+[08/01 08:24:41     30s] Type 'man IMPDB-1216' for more detail.
+[08/01 08:24:41     30s] <CMD> globalNetConnect VSS! -type tielo -all
+[08/01 08:24:41     30s] **ERROR: (IMPDB-1216):	The global net 'VSS!' specified in the global net connection(GNC) rule doesn't exist in the design.
+[08/01 08:24:41     30s] Type 'man IMPDB-1216' for more detail.
+[08/01 08:24:50     30s] <CMD> globalNetConnect VDD! -type pgpin -pin VDD -all
+[08/01 08:24:50     30s] **ERROR: (IMPDB-1216):	The global net 'VDD!' specified in the global net connection(GNC) rule doesn't exist in the design.
+[08/01 08:24:50     30s] Type 'man IMPDB-1216' for more detail.
+[08/01 08:24:50     30s] <CMD> globalNetConnect VSS! -type pgpin -pin VSS -all
+[08/01 08:24:50     30s] **ERROR: (IMPDB-1216):	The global net 'VSS!' specified in the global net connection(GNC) rule doesn't exist in the design.
+[08/01 08:24:50     30s] Type 'man IMPDB-1216' for more detail.
+[08/01 08:24:50     30s] <CMD> globalNetConnect VDD! -type tiehi -all
+[08/01 08:24:50     30s] **ERROR: (IMPDB-1216):	The global net 'VDD!' specified in the global net connection(GNC) rule doesn't exist in the design.
+[08/01 08:24:50     30s] Type 'man IMPDB-1216' for more detail.
+[08/01 08:24:51     30s] <CMD> globalNetConnect VSS! -type tielo -all
+[08/01 08:24:51     30s] **ERROR: (IMPDB-1216):	The global net 'VSS!' specified in the global net connection(GNC) rule doesn't exist in the design.
+[08/01 08:24:51     30s] Type 'man IMPDB-1216' for more detail.
+[08/01 08:25:22     31s] invalid command name "query_db"
+[08/01 08:25:49     32s] invalid command name "create_net"
+[08/01 08:25:50     32s] invalid command name "create_net"
+[08/01 08:26:29     33s] <CMD> globalNetConnect VDD -type pgpin -pin VDD -all
+[08/01 08:26:29     33s] **ERROR: (IMPDB-1216):	The global net 'VDD' specified in the global net connection(GNC) rule doesn't exist in the design.
+[08/01 08:26:29     33s] Type 'man IMPDB-1216' for more detail.
+[08/01 08:26:29     33s] <CMD> globalNetConnect VSS -type pgpin -pin VSS -all
+[08/01 08:26:29     33s] **ERROR: (IMPDB-1216):	The global net 'VSS' specified in the global net connection(GNC) rule doesn't exist in the design.
+[08/01 08:26:29     33s] Type 'man IMPDB-1216' for more detail.
+[08/01 08:26:29     33s] <CMD> globalNetConnect VDD -type tiehi -all
+[08/01 08:26:29     33s] **ERROR: (IMPDB-1216):	The global net 'VDD' specified in the global net connection(GNC) rule doesn't exist in the design.
+[08/01 08:26:29     33s] Type 'man IMPDB-1216' for more detail.
+[08/01 08:26:36     33s] <CMD> globalNetConnect VSS -type tielo -all
+[08/01 08:26:36     33s] **ERROR: (IMPDB-1216):	The global net 'VSS' specified in the global net connection(GNC) rule doesn't exist in the design.
+[08/01 08:26:36     33s] Type 'man IMPDB-1216' for more detail.
+[08/01 08:27:09     34s] **ERROR: (IMPDBTCL-247):	'init_pwr_net' is not a recognized object or root attribute. Run 'help root:' to get a list of all root attributes, or 'man get_db' for more information about accessing objects and attributes.
+[08/01 08:27:09     34s] 
+[08/01 08:27:11     34s] **ERROR: (IMPDBTCL-247):	'init_gnd_net' is not a recognized object or root attribute. Run 'help root:' to get a list of all root attributes, or 'man get_db' for more information about accessing objects and attributes.
+[08/01 08:27:11     34s] 
+[08/01 08:27:39     34s] **ERROR: (IMPDBTCL-275):	Two values are provided to set_db. Check the command if you forgot '.' at the beginning of the chain.
+[08/01 08:27:39     34s] 
+[08/01 08:27:39     34s] **ERROR: (IMPDBTCL-275):	Two values are provided to set_db. Check the command if you forgot '.' at the beginning of the chain.
+[08/01 08:27:39     34s] 
+[08/01 08:28:12     35s] **ERROR: (IMPDBTCL-259):	Invalid value '' is provided for attribute 'design_process_node'. The value must be a 'int' type. 
+[08/01 08:28:12     35s] 
+[08/01 08:28:24     35s] <CMD> set init_pwr_net VDD
+[08/01 08:28:24     35s] <CMD> set init_gnd_net VSS
+[08/01 08:28:52     36s] <CMD> init_design
+[08/01 08:28:52     36s] **ERROR: (IMPSYT-7329):	Cannot load design with init_design, after design is already in memory.  This command is skipped.
+
+[08/01 08:29:18     37s] <CMD> globalNetConnect VDD -type pgpin -pin VDD -all
+[08/01 08:29:18     37s] **ERROR: (IMPDB-1216):	The global net 'VDD' specified in the global net connection(GNC) rule doesn't exist in the design.
+[08/01 08:29:18     37s] Type 'man IMPDB-1216' for more detail.
+[08/01 08:29:18     37s] <CMD> globalNetConnect VSS -type pgpin -pin VSS -all
+[08/01 08:29:18     37s] **ERROR: (IMPDB-1216):	The global net 'VSS' specified in the global net connection(GNC) rule doesn't exist in the design.
+[08/01 08:29:18     37s] Type 'man IMPDB-1216' for more detail.
+[08/01 08:29:18     37s] <CMD> globalNetConnect VDD -type tiehi -all
+[08/01 08:29:18     37s] **ERROR: (IMPDB-1216):	The global net 'VDD' specified in the global net connection(GNC) rule doesn't exist in the design.
+[08/01 08:29:18     37s] Type 'man IMPDB-1216' for more detail.
+[08/01 08:29:20     37s] <CMD> globalNetConnect VSS -type tielo -all
+[08/01 08:29:20     37s] **ERROR: (IMPDB-1216):	The global net 'VSS' specified in the global net connection(GNC) rule doesn't exist in the design.
+[08/01 08:29:20     37s] Type 'man IMPDB-1216' for more detail.
+[08/01 08:30:11     38s] 
+[08/01 08:30:11     38s] *** Memory Usage v#1 (Current mem = 2294.285M, initial mem = 907.520M) ***
+[08/01 08:30:11     38s] 
+[08/01 08:30:11     38s] *** Summary of all messages that are not suppressed in this session:
+[08/01 08:30:11     38s] Severity  ID               Count  Summary                                  
+[08/01 08:30:11     38s] WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[08/01 08:30:11     38s] WARNING   IMPFP-325            1  Floorplan of the design is resized. All ...
+[08/01 08:30:11     38s] WARNING   IMPFP-3961           4  The techSite '%s' has no related standar...
+[08/01 08:30:11     38s] ERROR     IMPDBTCL-259         1  Invalid value '%s' is provided for attri...
+[08/01 08:30:11     38s] ERROR     IMPDBTCL-275         2  Two values are provided to set_db. Check...
+[08/01 08:30:11     38s] ERROR     IMPDBTCL-247         2  '%s' is not a recognized object or root ...
+[08/01 08:30:11     38s] ERROR     IMPSYT-7329          1  Cannot load design with init_design, aft...
+[08/01 08:30:11     38s] ERROR     IMPDB-1216          18  The global net '%s' specified in the glo...
+[08/01 08:30:11     38s] ERROR     IMPPP-4029           1  Unexpected value for the option '%s'. "%...
+[08/01 08:30:11     38s] ERROR     IMPTCM-23            2  "%s" is not a valid enum for "%s", the a...
+[08/01 08:30:11     38s] *** Message Summary: 6 warning(s), 27 error(s)
+[08/01 08:30:11     38s] 
+[08/01 08:30:11     38s] --- Ending "Innovus" (totcpu=0:00:38.3, real=0:10:24, mem=2294.3M) ---

@@ -1,0 +1,302 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2025 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v25.11-s102_1, built Wed Aug 27 13:03:08 PDT 2025
+Options:	
+Date:		Sat Aug  1 07:43:57 2026
+Host:		ip-10-10-71-30.il-central-1.compute.internal (x86_64 w/Linux 4.18.0-553.79.1.el8_10.x86_64) (1core*2cpus*Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz 55296KB)
+OS:		Rocky Linux 8.10 (Green Obsidian)
+
+License:
+		[07:43:57.251345] Configured Lic search path (25.01-s002): 5280@ip-10-10-99-197.il-central-1.compute.internal
+
+		invs	Innovus Implementation System	25.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+
+**Info: Common UI will be the default UI for innovus in the next major release. Please use -legacy_ui when invoking innovus if you wish to continue to use legacy UI.
+The soft stacksize limit is either up to the hard limit or larger than 0.2% of RAM. No change is needed.
+Info: Process UID = 23270 / b25e7135-412a-4a75-ac86-26c738d17dab / jEInizFeoU
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+[INFO] Loading PVS 24.12 fill procedures
+<CMD> win
+<CMD> encMessage warning 0
+Suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> is_common_ui_mode
+<CMD> restoreDesign /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/innovus/systolic_array_2x2.enc.dat systolic_array_2x2
+#% Begin load design ... (date=08/01 07:46:00, mem=1955.4M)
+Loading design 'systolic_array_2x2' saved by 'Innovus' '25.11-s102_1' on 'Sat Jul 18 15:08:19 2026'.
+
+Loading LEF file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/innovus/systolic_array_2x2.enc.dat/libs/lef/gsclib045_tech.lef ...
+Set DBUPerIGU to M2 pitch 400.
+
+Loading LEF file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/innovus/systolic_array_2x2.enc.dat/libs/lef/gsclib045_lvt_macro.lef ...
+**WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNALVT' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+*** End library_loading (cpu=0.00min, real=0.00min, mem=0.0M, fe_cpu=0.55min, fe_real=2.08min, fe_mem=1969.8M) ***
+% Begin Load netlist data ... (date=08/01 07:46:02, mem=1969.9M)
+*** Begin netlist parsing (mem=1969.9M) ***
+Created 0 new cells from 0 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilogBinary netlist '/data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/innovus/systolic_array_2x2.enc.dat/systolic_array_2x2.v.bin'
+
+*** Memory Usage v#1 (Current mem = 1974.316M, initial mem = 907.762M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1974.3M) ***
+% End Load netlist data ... (date=08/01 07:46:02, total cpu=0:00:00.0, real=0:00:00.0, peak res=1974.8M, current mem=1974.6M)
+Top level cell is systolic_array_2x2.
+Hooked 0 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell systolic_array_2x2 ...
+***** UseNewTieNetMode *****.
+*** Netlist is unique.
+** info: there are 492 modules.
+** info: there are 1003 stdCell insts.
+** info: there are 1003 stdCell insts with at least one signal pin.
+
+*** Memory Usage v#1 (Current mem = 2007.293M, initial mem = 907.762M) ***
+*info: set bottom ioPad orient R0
+**WARN: (IMPFP-3961):	The techSite 'CoreSiteDouble' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Start create_tracks
+Loading preference file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/innovus/systolic_array_2x2.enc.dat/gui.pref.tcl ...
+Change floorplan default-technical-site to 'CoreSite'.
+Reading floorplan file - /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/innovus/systolic_array_2x2.enc.dat/systolic_array_2x2.fp.gz (mem = 2286.0M).
+% Begin Load floorplan data ... (date=08/01 07:46:02, mem=2285.1M)
+*info: reset 1152 existing net BottomPreferredLayer and AvoidDetour
+Deleting old partition specification.
+Set FPlanBox to (0 0 176000 126540)
+**WARN: (IMPFP-3961):	The techSite 'CoreSiteDouble' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+ ... processed partition successfully.
+Reading binary special route file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/innovus/systolic_array_2x2.enc.dat/systolic_array_2x2.fp.spr.gz (Created by Innovus v25.11-s102_1 on Sat Jul 18 15:08:18 2026, version: 1)
+Convert 0 swires and 0 svias from compressed groups
+0 swires and 0 svias were compressed
+0 swires and 0 svias were decompressed from small or sparse groups
+Ending "Read special route file" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2286.3M, current mem=2286.3M)
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+% End Load floorplan data ... (date=08/01 07:46:02, total cpu=0:00:00.0, real=0:00:00.0, peak res=2287.4M, current mem=2287.4M)
+% Begin Load SymbolTable ... (date=08/01 07:46:02, mem=2287.6M)
+Reading congestion map file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/innovus/systolic_array_2x2.enc.dat/systolic_array_2x2.route.congmap.gz ...
+% End Load SymbolTable ... (date=08/01 07:46:03, total cpu=0:00:00.0, real=0:00:00.0, peak res=2288.1M, current mem=2288.1M)
+Loading place ...
+% Begin Load placement data ... (date=08/01 07:46:03, mem=2288.4M)
+Reading placement file - /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/innovus/systolic_array_2x2.enc.dat/systolic_array_2x2.place.gz.
+** Reading stdCellPlacement_binary (Created by Innovus v25.11-s102_1 on Sat Jul 18 15:08:18 2026, version# 2) ...
+Read Views for adaptive view pruning ...
+Read 0 views from Binary DB for adaptive view pruning
+*** Completed restorePlace (cpu=0:00:00.0 real=0:00:00.0 mem=2288.4M) ***
+Total net length = 1.150e+00 (5.750e-01 5.750e-01) (ext = 9.800e-02)
+% End Load placement data ... (date=08/01 07:46:03, total cpu=0:00:00.0, real=0:00:00.0, peak res=2288.7M, current mem=2288.7M)
+% Begin Load routing data ... (date=08/01 07:46:03, mem=2288.7M)
+Reading routing file - /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/innovus/systolic_array_2x2.enc.dat/systolic_array_2x2.route.gz.
+Reading Innovus routing data (Created by Innovus v25.11-s102_1 on Sat Jul 18 15:08:18 2026 Format: 23.1) ...
+*** Total 1152 nets are successfully restored.
+*** Completed restoreRoute (cpu=0:00:00.0 real=0:00:00.0 mem=2289.8M) ***
+% End Load routing data ... (date=08/01 07:46:03, total cpu=0:00:00.0, real=0:00:00.0, peak res=2289.8M, current mem=2289.1M)
+TAT_INFO: ::restoreCongMap REAL = 1 : CPU = 0 : MEM = 0.
+Reading property file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/innovus/systolic_array_2x2.enc.dat/systolic_array_2x2.prop
+*** Completed restoreProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2291.9M) ***
+Extraction setup Started for TopCell systolic_array_2x2 
+% Begin Loading timing constraints ... (date=08/01 07:46:05, mem=2293.4M)
+% End Loading timing constraints ... (date=08/01 07:46:05, total cpu=0:00:00.0, real=0:00:00.0, peak res=2293.4M, current mem=2293.4M)
+Start generating vias ..
+#Skip building auto via since it is not turned on.
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+Via generation completed.
+Extraction setup Started for TopCell systolic_array_2x2 
+% Begin Load power constraints ... (date=08/01 07:46:05, mem=2297.7M)
+% End Load power constraints ... (date=08/01 07:46:05, total cpu=0:00:00.0, real=0:00:00.0, peak res=2298.3M, current mem=2298.3M)
+**WARN: (IMPSYT-709):	Innovus use the Multi-Mode/Multi-Corner (MMMC) architecture exclusively for 
+configuration and control of some software features. The current configuration is
+obsoleted, please migrate your design to an MMMC style configuration. You can refer to
+the What's New document for this release for additional information on the
+11.1 migration to MMMC. In addition, you can run restoreDesign with the
+-showEolWarnings option to identify specific command and configuration
+options that will no longer be supported.
+% Begin load AAE data ... (date=08/01 07:46:05, mem=2297.3M)
+% End load AAE data ... (date=08/01 07:46:05, total cpu=0:00:00.0, real=0:00:00.0, peak res=2297.3M, current mem=2297.3M)
+Total number of combinational cells: 0
+Total number of sequential cells: 0
+Total number of tristate cells: 0
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers:
+Total number of usable buffers: 0
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters:
+Total number of usable inverters: 0
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells:
+Total number of identified usable delay cells: 0
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+No delay cells were detected in the set of buffers. Buffers will be used to fix hold violations.
+#% End load design ... (date=08/01 07:46:05, total cpu=0:00:04.0, real=0:00:05.0, peak res=2301.6M, current mem=2298.3M)
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPFP-3961           6  The techSite '%s' has no related standar...
+WARNING   IMPSYT-709           1  Innovus use the Multi-Mode/Multi-Corner ...
+*** Message Summary: 8 warning(s), 0 error(s)
+
+
+
+ERROR : The MMMC configuration specified is incomplete  - a set_analysis_view command
+       was not found in the configuration. The software requires at least 1 setup
+       and 1 hold analysis view to be defined.  You should remedy this problem and
+       restart the software.
+
+<CMD> setDrawView fplan
+<CMD> encMessage warning 1
+Un-suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> gui_select -rect {-4.52150 50.69150 3.35000 51.10550}
+<CMD> zoomBox -11.54150 11.83900 76.97950 62.12300
+<CMD> zoomBox -5.79650 26.91100 48.56700 57.79200
+<CMD> zoomBox -9.30900 17.69750 65.93450 60.43950
+<CMD> zoomBox -30.21300 -37.13350 169.29350 76.19550
+<CMD> zoomBox -36.13550 -52.66900 198.57800 80.65950
+<CMD> zoomBox -15.10450 -12.39250 7.91050 -20.13050
+<CMD> fit
+<CMD> fit
+<CMD> selectObject Module pe_00_u_mult
+<CMD> gui_select -rect {-5.45350 29.04600 14.53500 32.77400}
+<CMD> deselectAll
+<CMD> selectObject Module pe_00_u_mult
+<CMD> deselectAll
+<CMD> selectObject Module pe_00_u_mult
+<CMD> zoomBox -8.31200 3.00400 95.83000 62.16150
+<CMD> zoomBox -24.86850 -34.74350 209.84250 98.58350
+<CMD> zoomBox -30.12050 -46.71750 246.01000 110.13750
+<CMD> zoomBox -43.56900 -77.37850 338.61900 139.72250
+<CMD> zoomBox -52.74850 -95.67950 396.88500 159.73350
+<CMD> zoomBox -63.54700 -117.21000 465.43350 183.27600
+<CMD> zoomBox -76.64600 -141.51400 545.68400 211.99900
+<CMD> deselectAll
+<CMD> selectObject Module pe_10_u_mult
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> zoomBox -332.04200 -204.35200 529.31400 284.93900
+<CMD> zoomBox -236.51650 -116.97400 292.46500 183.51250
+<CMD> zoomBox -109.92750 -1.18250 -21.40500 49.10250
+<CMD> deselectAll
+<CMD> selectObject Module pe_01_u_mult
+<CMD> panPage 1 0
+<CMD> panPage 0 1
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> deselectAll
+<CMD> selectObject Module pe_00_u_mult
+<CMD> zoomBox -33.32000 7.26100 70.82400 66.41950
+<CMD> panPage -1 0
+<CMD> gui_select -rect {-43.43500 51.63000 3.04700 23.28300}
+<CMD> deselectAll
+<CMD> gui_select -rect {-6.46050 28.56500 17.48450 42.56250}
+<CMD> deselectAll
+<CMD> selectObject Module pe_00_u_mult
+<CMD> gui_select -rect {-33.75100 48.28450 1.19850 23.01900}
+<CMD> deselectAll
+<CMD> gui_select -rect {-12.53500 33.05450 17.92450 50.39750}
+<CMD> deselectAll
+<CMD> encMessage warning 0
+Suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> is_common_ui_mode
+<CMD> restoreDesign /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/innovus/systolic_array_2x2.enc.dat systolic_array_2x2
+#% Begin load design ... (date=08/01 07:48:59, mem=2321.4M)
+
+
+ERROR: **ERROR: (IMPIMEX-7031):	restoreDesign more than once in the same Innovus session is dangerous and not recommended. Some internal state of applications or global settings cannot be reset, so it's not reliable enough in real flow. If you are just experimenting and/or debugging and accept the risks, you can set the global restore_db_stop_at_design_in_memory to 0 and try again.
+
+
+**ERROR: (IMPIMEX-7031):	restoreDesign more than once in the same Innovus session is dangerous and not recommended. Some internal state of applications or global settings cannot be reset, so it's not reliable enough in real flow. If you are just experimenting and/or debugging and accept the risks, you can set the global restore_db_stop_at_design_in_memory to 0 and try again.
+
+    while executing
+"error $catchMsg"
+    (procedure "restoreDesign" line 36)
+
+
+
+ERROR : The MMMC configuration specified is incomplete  - a set_analysis_view command
+       was not found in the configuration. The software requires at least 1 setup
+       and 1 hold analysis view to be defined.  You should remedy this problem and
+       restart the software.
+
+**ERROR: (IMPSYT-6300):	Failed to execute command 'source'. For more details, refer to error message: **ERROR: (IMPIMEX-7031):	restoreDesign more than once in the same Innovus session is dangerous and not recommended. Some internal state of applications or global settings cannot be reset, so it's not reliable enough in real flow. If you are just experimenting and/or debugging and accept the risks, you can set the global restore_db_stop_at_design_in_memory to 0 and try again.
+
+<CMD> encMessage warning 1
+Un-suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> encMessage warning 0
+Suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> is_common_ui_mode
+<CMD> restoreDesign /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/innovus/systolic_array_2x2.enc.dat systolic_array_2x2
+% Begin load design ... (date=08/01 07:49:02, mem=2321.7M)
+
+
+ERROR: **ERROR: (IMPIMEX-7031):	restoreDesign more than once in the same Innovus session is dangerous and not recommended. Some internal state of applications or global settings cannot be reset, so it's not reliable enough in real flow. If you are just experimenting and/or debugging and accept the risks, you can set the global restore_db_stop_at_design_in_memory to 0 and try again.
+
+
+**ERROR: (IMPIMEX-7031):	restoreDesign more than once in the same Innovus session is dangerous and not recommended. Some internal state of applications or global settings cannot be reset, so it's not reliable enough in real flow. If you are just experimenting and/or debugging and accept the risks, you can set the global restore_db_stop_at_design_in_memory to 0 and try again.
+
+    while executing
+"error $catchMsg"
+    (procedure "restoreDesign" line 36)
+
+
+
+ERROR : The MMMC configuration specified is incomplete  - a set_analysis_view command
+       was not found in the configuration. The software requires at least 1 setup
+       and 1 hold analysis view to be defined.  You should remedy this problem and
+       restart the software.
+
+**ERROR: (IMPSYT-6300):	Failed to execute command 'source'. For more details, refer to error message: **ERROR: (IMPIMEX-7031):	restoreDesign more than once in the same Innovus session is dangerous and not recommended. Some internal state of applications or global settings cannot be reset, so it's not reliable enough in real flow. If you are just experimenting and/or debugging and accept the risks, you can set the global restore_db_stop_at_design_in_memory to 0 and try again.
+
+<CMD> encMessage warning 1
+Un-suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+
+--------------------------------------------------------------------------------
+Exiting Innovus on Sat Aug  1 07:49:16 2026
+  Total CPU time:     0:01:04
+  Total real time:    0:05:27
+  Peak memory (main): 2328.11MB
+
+
+*** Memory Usage v#1 (Current mem = 2328.109M, initial mem = 907.762M) ***
+*** Message Summary: 8 warning(s), 6 error(s)
+
+--- Ending "Innovus" (totcpu=0:01:03, real=0:05:19, mem=2328.1M) ---

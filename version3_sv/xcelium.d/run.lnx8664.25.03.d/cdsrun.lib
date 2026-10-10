@@ -1,0 +1,3 @@
+SOFTINCLUDE /tools/cadence/XCELIUM/25.03.006/tools/inca/files/cds.lib
+include ../../../../../../../../tech/cadence/gpdk45/gpdk045_v_6_0/cds.lib
+define worklib ../worklib

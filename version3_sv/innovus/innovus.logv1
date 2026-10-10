@@ -1,0 +1,71 @@
+[07/18 13:44:48      0s] 
+[07/18 13:44:48      0s] Cadence Innovus(TM) Implementation System.
+[07/18 13:44:48      0s] Copyright 2025 Cadence Design Systems, Inc. All rights reserved worldwide.
+[07/18 13:44:48      0s] 
+[07/18 13:44:48      0s] Version:	v25.11-s102_1, built Wed Aug 27 13:03:08 PDT 2025
+[07/18 13:44:48      0s] Options:	
+[07/18 13:44:48      0s] Date:		Sat Jul 18 13:44:48 2026
+[07/18 13:44:48      0s] Host:		ip-10-10-235-35.il-central-1.compute.internal (x86_64 w/Linux 4.18.0-553.79.1.el8_10.x86_64) (1core*2cpus*Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz 55296KB)
+[07/18 13:44:48      0s] OS:		Rocky Linux 8.10 (Green Obsidian)
+[07/18 13:44:48      0s] 
+[07/18 13:44:48      0s] License:
+[07/18 13:44:48      0s] 		[13:44:48.251329] Configured Lic search path (25.01-s002): 5280@ip-10-10-99-197.il-central-1.compute.internal
+
+[07/18 13:44:48      0s] 		invs	Innovus Implementation System	25.1	checkout succeeded
+[07/18 13:44:48      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[07/18 13:44:48      0s] 
+[07/18 13:44:48      0s] **Info: Common UI will be the default UI for innovus in the next major release. Please use -legacy_ui when invoking innovus if you wish to continue to use legacy UI.
+[07/18 13:45:01      0s] Memory management switch to non-aggressive memory release mode.
+[07/18 13:45:01      0s] 
+[07/18 13:45:01      0s] OS Mmap count monitoring thread starts. Limit of OS Mmap count is 65530
+[07/18 13:45:01      0s] 
+[07/18 13:45:05      0s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v25.11-s102_1 (64bit) 08/27/2025 13:03 (Linux 4.18.0-305.el8.x86_64)
+[07/18 13:45:09      0s] @(#)CDS: NanoRoute 25.11-s102_1 NR250730-0928/25_11-UB (database version 18.20.674) {superthreading v2.20}
+[07/18 13:45:09      0s] @(#)CDS: AAE 25.11-s028 (64bit) 08/27/2025 (Linux 4.18.0-305.el8.x86_64)
+[07/18 13:45:09      0s] @(#)CDS: CTE 25.11-s034_1 () Aug 18 2025 08:55:47 ( )
+[07/18 13:45:09      0s] @(#)CDS: SYNTECH 25.11-s013_1 () Jul 30 2025 05:18:51 ( )
+[07/18 13:45:09      0s] @(#)CDS: CPE v25.11-s029
+[07/18 13:45:09      0s] @(#)CDS: IQuantus/TQuantus 24.1.0-s290 (64bit) Sun Jul 20 21:40:56 PDT 2025 (Linux 4.18.0-305.el8.x86_64)
+[07/18 13:45:09      0s] @(#)CDS: OA 22.62-p010 Tue Jun 10 08:32:29 2025
+[07/18 13:45:09      0s] @(#)CDS: SGN 23.10-d005 (03-Oct-2023) (64 bit executable, TkQt5.15.9)
+[07/18 13:45:09      0s] @(#)CDS: RCDB 11.15.0
+[07/18 13:45:09      0s] @(#)CDS: STYLUS 25.10-b003_1 (03/20/2025 14:55 PDT)
+[07/18 13:45:09      0s] @(#)CDS: IntegrityPlanner-25.11-186 (25.11) (2025-07-16 18:29:01+0800)
+[07/18 13:45:09      0s] @(#)CDS: SYNTHESIS_ENGINE 25.11-s095
+[07/18 13:45:09      0s] @(#)CDS: TCDB v25.10-b001
+[07/18 13:45:09      0s] Create and set the environment variable TMPDIR to /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/innovus/innovus_temp_39065_928e4a5a-5002-405b-a99b-e8b138329fe8_ip-10-10-235-35.il-central-1.compute.internal_primovs_TIbvw7.
+
+[07/18 13:45:09      0s] The soft stacksize limit is either up to the hard limit or larger than 0.2% of RAM. No change is needed.
+[07/18 13:45:11      0s] Info: Process UID = 39065 / 928e4a5a-5002-405b-a99b-e8b138329fe8 / 3z7Vtjn51P
+[07/18 13:45:14      0s] 
+[07/18 13:45:14      0s] **INFO:  MMMC transition support version v31-84 
+[07/18 13:45:14      0s] 
+[07/18 13:45:14      0s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[07/18 13:45:14      0s] <CMD> suppressMessage ENCEXT-2799
+[07/18 13:45:14      0s] <CMD> getVersion
+[07/18 13:45:14      0s] [INFO] Loading PVS 24.12 fill procedures
+[07/18 13:45:14      0s] <CMD> win
+[07/18 13:45:31      0s] <CMD> set init_verilog ../synthesis/systolic_array_netlist.v
+[07/18 13:45:31      0s] <CMD> set init_top_cell systolic_array_2x2
+[07/18 13:45:31      0s] <CMD> set init_pwr_net VDD
+[07/18 13:45:31      0s] <CMD> set init_gnd_net VSS
+[07/18 13:45:31      0s] <CMD> set init_lef_file { /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045_lvt/lef/gsclib045_lvt.lef }
+[07/18 13:45:31      0s] <CMD> set init_mmmc_file ../scripts/mmmc.tcl
+[07/18 13:45:31      0s] <CMD> init_design
+[07/18 13:45:31      0s] #% Begin Load MMMC data ... (date=07/18 13:45:31, mem=1945.5M)
+[07/18 13:45:31      0s] #% End Load MMMC data ... (date=07/18 13:45:31, total cpu=0:00:00.0, real=0:00:00.0, peak res=1946.9M, current mem=1946.9M)
+[07/18 13:45:31      0s] **ERROR: (IMPSYT-16038):	The specified file '/tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045_lvt/lef/gsclib045_lvt.lef' could not be found. Check your file system, correct the file name.
+[07/18 13:45:31      0s] **ERROR: (IMPIMEX-7327):	The file '/tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045_lvt/lef/gsclib045_lvt.lef' from the init_lef_file variable does not exist or does not have read permissions, so it can't be loaded. If the missing file has LEF data needed by the netlist, a fatal error may occur later when reading the netlist. You should correct the filename to avoid this warning message. 
+[07/18 13:45:31      0s] Note, the setImportMode -treatUndefinedCellAsBbox option controls if an undefined modules is treated as a black-boxes, and setCheckMode -tapeOut controls if an undefined module (not converted to a blackbox) is treated as a fatal error or empty module when reading the netlist.
+[07/18 13:45:31      0s] 
+[07/18 13:47:01      0s] 
+[07/18 13:47:01      0s] *** Summary of all messages that are not suppressed in this session:
+[07/18 13:47:01      0s] Severity  ID               Count  Summary                                  
+[07/18 13:47:01      0s] ERROR     IMPSYT-6729          1  %s                                       
+[07/18 13:47:01      0s] ERROR     IMPSYT-16038         1  The specified file '%s' could not be fou...
+[07/18 13:47:01      0s] ERROR     IMPIMEX-7327         1  The file '%s' from the init_lef_file var...
+[07/18 13:47:01      0s] *** Message Summary: 0 warning(s), 3 error(s)
+[07/18 13:47:01      0s] 
+[07/18 13:47:01      0s] 
+[07/18 13:47:01      0s] *** Memory Usage v#1 (Current mem = 1945.898M, initial mem = 916.836M) ***
+[07/18 13:47:01      0s] --- Ending "Innovus" (totcpu=0:00:00.0, real=0:02:13, mem=1945.9M) ---

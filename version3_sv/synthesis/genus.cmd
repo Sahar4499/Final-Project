@@ -1,0 +1,8 @@
+# Cadence Genus(TM) Synthesis Solution, Version 25.11-s095_1, built Aug 12 2025 10:59:05
+
+# Date: Sat Jul 18 07:32:31 2026
+# Host: ip-10-10-235-35.il-central-1.compute.internal (x86_64 w/Linux 4.18.0-553.79.1.el8_10.x86_64) (1core*2cpus*1physical cpu*Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz 55296KB)
+# OS:   Rocky Linux 8.10 (Green Obsidian)
+
+source ../scripts/run_synth.tcl
+exit

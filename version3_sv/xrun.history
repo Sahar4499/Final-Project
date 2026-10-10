@@ -1,0 +1,10 @@
+#e1(01Aug2026:09:46:24): source ./xcelium.d/env.d/env.history.01Aug2026_09_46_24
+s1(01Aug2026:09:46:24):  xrun tb_booth_multiplier_8x8.sv booth_multiplier_8x8.sv -access +r 
+#e2(01Aug2026:09:48:36): source ./xcelium.d/env.d/env.history.01Aug2026_09_48_36
+s2(01Aug2026:09:48:36):  xrun tb_booth_multiplier_8x8.sv booth_multiplier_8x8.sv -access +r 
+#e3(01Aug2026:09:49:22): source ./xcelium.d/env.d/env.history.01Aug2026_09_49_22
+s3(01Aug2026:09:49:22):  xrun tb_booth_multiplier_8x8.sv booth_multiplier_8x8.sv booth_encoder.sv booth_partial_product_8bit.sv csa_layer_32bit.sv full_adder.sv ripple_adder_32bit.sv -access +r 
+#e4(01Aug2026:09:50:16): source ./xcelium.d/env.d/env.history.01Aug2026_09_50_16
+s4(01Aug2026:09:50:16):  xrun tb_booth_multiplier_8x8.sv booth_multiplier_8x8.sv booth_encoder.sv booth_partial_product_8bit.sv booth_bit_cell.sv csa_layer_32bit.sv full_adder.sv ripple_adder_32bit.sv -access +r 
+#e5(10Aug2026:16:59:48): source ./xcelium.d/env.d/env.history.10Aug2026_16_59_48
+s5(10Aug2026:16:59:48):  xrun tb_booth_multiplier_8x8.sv booth_bit_cell.sv booth_encoder.sv booth_multiplier_8x8.sv booth_partial_product_8bit.sv csa_layer_32bit.sv full_adder.sv mult16x16_hierarchical.sv mult8x8.sv pe.sv ripple_adder_32bit.sv systolic_array_2x2.sv tb_booth_multiplier_8x8.sv -access +r 

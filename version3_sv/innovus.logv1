@@ -1,0 +1,61 @@
+[08/01 07:51:04      0s] 
+[08/01 07:51:04      0s] Cadence Innovus(TM) Implementation System.
+[08/01 07:51:04      0s] Copyright 2025 Cadence Design Systems, Inc. All rights reserved worldwide.
+[08/01 07:51:04      0s] 
+[08/01 07:51:04      0s] Version:	v25.11-s102_1, built Wed Aug 27 13:03:08 PDT 2025
+[08/01 07:51:04      0s] Options:	
+[08/01 07:51:04      0s] Date:		Sat Aug  1 07:51:04 2026
+[08/01 07:51:04      0s] Host:		ip-10-10-71-30.il-central-1.compute.internal (x86_64 w/Linux 4.18.0-553.79.1.el8_10.x86_64) (1core*2cpus*Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz 55296KB)
+[08/01 07:51:04      0s] OS:		Rocky Linux 8.10 (Green Obsidian)
+[08/01 07:51:04      0s] 
+[08/01 07:51:04      0s] License:
+[08/01 07:51:04      0s] 		[07:51:04.251273] Configured Lic search path (25.01-s002): 5280@ip-10-10-99-197.il-central-1.compute.internal
+
+[08/01 07:51:04      0s] 		invs	Innovus Implementation System	25.1	checkout succeeded
+[08/01 07:51:04      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[08/01 07:51:04      0s] 
+[08/01 07:51:04      0s] **Info: Common UI will be the default UI for innovus in the next major release. Please use -legacy_ui when invoking innovus if you wish to continue to use legacy UI.
+[08/01 07:51:17     13s] Memory management switch to non-aggressive memory release mode.
+[08/01 07:51:17     13s] 
+[08/01 07:51:17     13s] OS Mmap count monitoring thread starts. Limit of OS Mmap count is 65530
+[08/01 07:51:17     13s] 
+[08/01 07:51:19     15s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v25.11-s102_1 (64bit) 08/27/2025 13:03 (Linux 4.18.0-305.el8.x86_64)
+[08/01 07:51:23     18s] @(#)CDS: NanoRoute 25.11-s102_1 NR250730-0928/25_11-UB (database version 18.20.674) {superthreading v2.20}
+[08/01 07:51:23     18s] @(#)CDS: AAE 25.11-s028 (64bit) 08/27/2025 (Linux 4.18.0-305.el8.x86_64)
+[08/01 07:51:23     18s] @(#)CDS: CTE 25.11-s034_1 () Aug 18 2025 08:55:47 ( )
+[08/01 07:51:23     18s] @(#)CDS: SYNTECH 25.11-s013_1 () Jul 30 2025 05:18:51 ( )
+[08/01 07:51:23     18s] @(#)CDS: CPE v25.11-s029
+[08/01 07:51:23     18s] @(#)CDS: IQuantus/TQuantus 24.1.0-s290 (64bit) Sun Jul 20 21:40:56 PDT 2025 (Linux 4.18.0-305.el8.x86_64)
+[08/01 07:51:23     18s] @(#)CDS: OA 22.62-p010 Tue Jun 10 08:32:29 2025
+[08/01 07:51:23     18s] @(#)CDS: SGN 23.10-d005 (03-Oct-2023) (64 bit executable, TkQt5.15.9)
+[08/01 07:51:23     18s] @(#)CDS: RCDB 11.15.0
+[08/01 07:51:23     18s] @(#)CDS: STYLUS 25.10-b003_1 (03/20/2025 14:55 PDT)
+[08/01 07:51:23     18s] @(#)CDS: IntegrityPlanner-25.11-186 (25.11) (2025-07-16 18:29:01+0800)
+[08/01 07:51:23     18s] @(#)CDS: SYNTHESIS_ENGINE 25.11-s095
+[08/01 07:51:23     18s] @(#)CDS: TCDB v25.10-b001
+[08/01 07:51:23     18s] Create and set the environment variable TMPDIR to /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/innovus_temp_23831_70b60bfc-af76-43cf-86ab-15880d44512b_ip-10-10-71-30.il-central-1.compute.internal_primovs_Q6ROLw.
+
+[08/01 07:51:23     18s] The soft stacksize limit is either up to the hard limit or larger than 0.2% of RAM. No change is needed.
+[08/01 07:51:25     19s] Info: Process UID = 23831 / 70b60bfc-af76-43cf-86ab-15880d44512b / 0AJitpWOvy
+[08/01 07:51:27     22s] 
+[08/01 07:51:27     22s] **INFO:  MMMC transition support version v31-84 
+[08/01 07:51:27     22s] 
+[08/01 07:51:27     22s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[08/01 07:51:27     22s] <CMD> suppressMessage ENCEXT-2799
+[08/01 07:51:27     22s] <CMD> getVersion
+[08/01 07:51:28     22s] [INFO] Loading PVS 24.12 fill procedures
+[08/01 07:51:28     22s] <CMD> win
+[08/01 07:54:57     27s] <CMD> zoomBox 0.02900 0.05300 0.10100 0.09400
+[08/01 07:54:57     27s] <CMD> zoomBox 0.03200 0.06000 0.08500 0.09000
+[08/01 07:57:36     52s] 
+--------------------------------------------------------------------------------
+Exiting Innovus on Sat Aug  1 07:57:36 2026
+  Total CPU time:     0:00:52
+  Total real time:    0:06:33
+  Peak memory (main): 1966.91MB
+
+[08/01 07:57:36     52s] 
+[08/01 07:57:36     52s] *** Memory Usage v#1 (Current mem = 1966.895M, initial mem = 917.254M) ***
+[08/01 07:57:36     52s] *** Message Summary: 0 warning(s), 0 error(s)
+[08/01 07:57:36     52s] 
+[08/01 07:57:36     52s] --- Ending "Innovus" (totcpu=0:00:52.8, real=0:06:32, mem=1967.0M) ---

@@ -1,0 +1,46 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2025 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v25.11-s102_1, built Wed Aug 27 13:03:08 PDT 2025
+Options:	
+Date:		Sat Jul 18 13:44:48 2026
+Host:		ip-10-10-235-35.il-central-1.compute.internal (x86_64 w/Linux 4.18.0-553.79.1.el8_10.x86_64) (1core*2cpus*Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz 55296KB)
+OS:		Rocky Linux 8.10 (Green Obsidian)
+
+License:
+		[13:44:48.251329] Configured Lic search path (25.01-s002): 5280@ip-10-10-99-197.il-central-1.compute.internal
+
+		invs	Innovus Implementation System	25.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+
+**Info: Common UI will be the default UI for innovus in the next major release. Please use -legacy_ui when invoking innovus if you wish to continue to use legacy UI.
+The soft stacksize limit is either up to the hard limit or larger than 0.2% of RAM. No change is needed.
+Info: Process UID = 39065 / 928e4a5a-5002-405b-a99b-e8b138329fe8 / 3z7Vtjn51P
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+[INFO] Loading PVS 24.12 fill procedures
+<CMD> win
+<CMD> set init_verilog ../synthesis/systolic_array_netlist.v
+<CMD> set init_top_cell systolic_array_2x2
+<CMD> set init_pwr_net VDD
+<CMD> set init_gnd_net VSS
+<CMD> set init_lef_file { /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045_lvt/lef/gsclib045_lvt.lef }
+<CMD> set init_mmmc_file ../scripts/mmmc.tcl
+<CMD> init_design
+#% Begin Load MMMC data ... (date=07/18 13:45:31, mem=1945.5M)
+#% End Load MMMC data ... (date=07/18 13:45:31, total cpu=0:00:00.0, real=0:00:00.0, peak res=1946.9M, current mem=1946.9M)
+typical_rc
+**ERROR: (IMPSYT-16038):	The specified file '/tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045_lvt/lef/gsclib045_lvt.lef' could not be found. Check your file system, correct the file name.
+**ERROR: (IMPIMEX-7327):	The file '/tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045_lvt/lef/gsclib045_lvt.lef' from the init_lef_file variable does not exist or does not have read permissions, so it can't be loaded. If the missing file has LEF data needed by the netlist, a fatal error may occur later when reading the netlist. You should correct the filename to avoid this warning message. 
+Note, the setImportMode -treatUndefinedCellAsBbox option controls if an undefined modules is treated as a black-boxes, and setCheckMode -tapeOut controls if an undefined module (not converted to a blackbox) is treated as a fatal error or empty module when reading the netlist.
+
+*** Message Summary: 0 warning(s), 3 error(s)
+
+
+*** Memory Usage v#1 (Current mem = 1945.898M, initial mem = 916.836M) ***
+--- Ending "Innovus" (totcpu=0:00:00.0, real=0:02:13, mem=1945.9M) ---

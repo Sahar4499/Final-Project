@@ -1,0 +1,19 @@
+VERSION {1.0}
+PTDEF {instance} {pin} {cell} {edge} {clock_edge} {clock} {phase}
+BANNER
+  {Module} {systolic_array_2x2}
+  {Timing} {LATE}
+  {Slew Propagation} {WORST}
+  {Operating Condition} {PVT_1P32V_0C}
+  {PVT Mode} {max}
+  {Tree Type} {worst_case}
+  {Process} {1.000}
+  {Voltage} {1.320}
+  {Temperature} {0.000}
+  {time unit} {1.000 ns}
+  {capacitance unit} {1.000 pF}
+  {resistance unit} {1.000 kOhm}
+  {TOOL} {v25.11-s102_1 ((64bit) 08/27/2025 13:03 (Linux 4.18.0-305.el8.x86_64))}
+  {DATE} {July 18, 2026}
+END_BANNER
+

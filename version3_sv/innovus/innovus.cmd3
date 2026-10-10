@@ -1,0 +1,231 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Sat Jul 18 16:30:35 2026                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v25.11-s102_1 (64bit) 08/27/2025 13:03 (Linux 4.18.0-305.el8.x86_64)
+#@(#)CDS: NanoRoute 25.11-s102_1 NR250730-0928/25_11-UB (database version 18.20.674) {superthreading v2.20}
+#@(#)CDS: AAE 25.11-s028 (64bit) 08/27/2025 (Linux 4.18.0-305.el8.x86_64)
+#@(#)CDS: CTE 25.11-s034_1 () Aug 18 2025 08:55:47 ( )
+#@(#)CDS: SYNTECH 25.11-s013_1 () Jul 30 2025 05:18:51 ( )
+#@(#)CDS: CPE v25.11-s029
+#@(#)CDS: IQuantus/TQuantus 24.1.0-s290 (64bit) Sun Jul 20 21:40:56 PDT 2025 (Linux 4.18.0-305.el8.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+win
+freeDesign
+save_global Right_Default.globals
+set init_gnd_net VSS
+set init_lef_file {/tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/lef/gsclib045_tech.lef /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/lef/gsclib045_macro.lef /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/lef/gsclib045_multibitsDFF.lef /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045_lvt/lef/gsclib045_lvt_macro.lef}
+set init_verilog ../synthesis/systolic_array_netlist.v
+set init_mmmc_file ../scripts/mmmc.tcl
+set init_top_cell systolic_array_2x2
+set init_pwr_net VDD
+init_design
+verifyConnectivity -type all
+getIoFlowFlag
+setIoFlowFlag 0
+floorPlan -site CoreSite -r 0.95530726257 0.6 5 5 5 5
+uiSetTool select
+getIoFlowFlag
+fit
+setIoFlowFlag 0
+floorPlan -site CoreSite -r 0.916071428571 0.59871 5.0 5.13 5.0 5.13
+uiSetTool select
+getIoFlowFlag
+fit
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top Metal1 bottom Metal1 left Metal2 right Metal2} -width {top 1 bottom 1 left 1 right 1} -spacing {top 1 bottom 1 left 1 right 1} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top Metal1 bottom Metal1 left Metal2 right Metal2} -width {top 1 bottom 1 left 1 right 1} -spacing {top 1 bottom 1 left 1 right 1} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { Metal1(1) Metal10(10) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal11(11) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { Metal1(1) Metal11(11) }
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { Metal1(1) Metal10(10) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal11(11) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { Metal1(1) Metal11(11) }
+getDesignMode -user -bottomRoutingLayer
+getDesignMode -user -topRoutingLayer
+setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setNanoRouteMode -quiet -drouteAutoStop 0
+setNanoRouteMode -quiet -drouteEndIteration default
+setNanoRouteMode -quiet -drouteFixAntenna 0
+setNanoRouteMode -quiet -droutePostRouteSwapVia {}
+setNanoRouteMode -quiet -droutePostRouteSpreadWire 1
+setNanoRouteMode -quiet -droutePostRouteWidenWireRule LEFSpecialRouteSpec
+setNanoRouteMode -quiet -drouteUseMultiCutViaEffort {}
+setNanoRouteMode -quiet -drouteOnGridOnly 0
+setNanoRouteMode -quiet -routeIgnoreAntennaTopCellPin 0
+setNanoRouteMode -quiet -timingEngine {}
+setUsefulSkewMode -noBoundary false -maxAllowedDelay 1
+setPlaceMode -reset
+setPlaceMode -congEffort auto -timingDriven 1 -clkGateAware 1 -powerDriven 0 -ignoreScan 1 -reorderScan 1 -ignoreSpare 0 -placeIOPins 1 -moduleAwareSpare 0 -maxRouteLayer 6 -preserveRouting 1 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
+setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setNanoRouteMode -quiet -drouteEndIteration default
+setUsefulSkewMode -noBoundary false -maxAllowedDelay 1
+setPlaceMode -fp false
+place_design
+setPlaceMode -fp false
+place_design
+zoomBox -36.84250 3.37350 108.36050 70.52500
+zoomBox -26.56300 8.59750 96.85950 65.67650
+zoomBox -53.53650 -2.36450 117.29150 76.63800
+getCTSMode -obs_engine -quiet
+getCTSMode -obs_engine -quiet
+getCTSMode -obs_engine -quiet
+create_ccopt_clock_tree_spec -file ccopt.spec
+get_ccopt_clock_trees
+ccopt_check_and_flatten_ilms_no_restore
+set_ccopt_property cts_is_sdc_clock_root -pin clk true
+create_ccopt_clock_tree -name clk -source clk -no_skew_group
+set_ccopt_property clock_period -pin clk 1
+set_ccopt_property timing_connectivity_info {}
+create_ccopt_skew_group -name clk/my_constraints -sources clk -auto_sinks
+set_ccopt_property include_source_latency -skew_group clk/my_constraints true
+set_ccopt_property extracted_from_clock_name -skew_group clk/my_constraints clk
+set_ccopt_property extracted_from_constraint_mode_names -skew_group clk/my_constraints {my_constraints  }
+set_ccopt_property extracted_from_delay_corners -skew_group clk/my_constraints dc_fast
+check_ccopt_clock_tree_convergence
+get_ccopt_property auto_design_state_for_ilms
+ccopt_design
+report_ccopt_clock_trees
+timeDesign -postCTS
+report_timing
+optDesign -preCTS
+timeDesign -preCTS
+saveDesign systolic_array_2x2_new -tcon -libs
+saveDesign systolic_array_2x2_new -tcon -libs
+zoomBox -18.10400 14.30000 88.97900 62.81750
+zoomBox 3.65650 24.46400 69.41900 54.26000
+zoomBox 13.26700 28.95300 60.78050 50.48050
+zoomBox 23.55800 32.50150 52.73750 45.72250
+zoomBox 29.87650 34.65200 47.79800 42.77200
+zoomBox 32.66750 35.60150 45.61600 41.46850
+selectWire 39.8600 35.0150 39.9400 40.2250 4 clk
+zoomBox 34.79600 36.73300 44.15200 40.97200
+zoomBox 36.35650 37.63300 43.11600 40.69550
+zoomBox 37.48050 38.30350 42.36400 40.51600
+zoomBox 38.64100 38.99100 41.64100 40.35050
+zoomBox 39.36450 39.41350 41.20750 40.24850
+pan -0.00450 0.36400
+fit
+deselectAll
+create_ccopt_clock_tree_spec
+delete_ccopt_clock_tree_spec
+create_ccopt_clock_tree_spec -file ccopt.spec
+get_ccopt_clock_trees
+ccopt_check_and_flatten_ilms_no_restore
+set_ccopt_property cts_is_sdc_clock_root -pin clk true
+create_ccopt_clock_tree -name clk -source clk -no_skew_group
+set_ccopt_property source_latency -delay_corner dc_fast -late -rise -clock_tree clk -0.002
+set_ccopt_property source_latency -delay_corner dc_fast -late -fall -clock_tree clk -0.002
+set_ccopt_property clock_period -pin clk 1
+set_ccopt_property timing_connectivity_info {}
+create_ccopt_skew_group -name clk/my_constraints -sources clk -auto_sinks
+set_ccopt_property include_source_latency -skew_group clk/my_constraints true
+set_ccopt_property extracted_from_clock_name -skew_group clk/my_constraints clk
+set_ccopt_property extracted_from_constraint_mode_names -skew_group clk/my_constraints {my_constraints  }
+set_ccopt_property extracted_from_delay_corners -skew_group clk/my_constraints dc_fast
+check_ccopt_clock_tree_convergence
+get_ccopt_property auto_design_state_for_ilms
+ccopt_design
+clock_opt_design
+report_ccopt_clock_trees
+timeDesign -postCTS
+routeDesign
+timeDesign -postRoute
+setAnalysisMode -analysisType onChipVariation -cppr both
+timeDesign -postRoute
+set_verify_drc_mode -check_only default
+zoomBox -36.62200 5.56200 111.58850 89.75250
+zoomBox -10.51650 26.26650 80.50350 77.97000
+zoomBox 5.45550 39.27000 61.35400 71.02300
+zoomBox 14.05050 48.22250 48.37900 67.72250
+zoomBox 19.35400 53.68550 40.43750 65.66200
+zoomBox 22.60650 57.03450 35.55450 64.38950
+zoomBox 24.50700 58.10300 33.86250 63.41750
+zoomBox 26.32800 59.21950 32.07400 62.48350
+zoomBox 27.37300 59.96550 30.90250 61.97050
+zoomBox 27.99550 60.43950 30.16350 61.67100
+zoomBox 28.27000 60.64800 29.83700 61.53800
+zoomBox 28.60750 60.79300 29.42500 61.25750
+zoomBox 28.70450 60.88550 29.20750 61.17100
+zoomBox 28.74250 60.91250 29.17000 61.15550
+pan -0.00200 32.22700
+pan -0.01400 32.29600
+zoomBox 28.63650 61.00250 29.22900 61.33900
+zoomBox 28.43250 60.93050 29.39800 61.47900
+pan 0.03200 32.38050
+zoomBox 28.37150 60.76350 29.50800 61.40900
+verify_drc
+setLayerPreference violation -isVisible 1
+violationBrowser -all -no_display_false -displayByLayer
+violationBrowserClose
+set_verify_drc_mode -check_only default
+zoomBox 28.10350 60.55150 29.95450 61.60300
+zoomBox 27.81150 60.35650 30.37400 61.81200
+zoomBox 27.40600 60.08900 30.95300 62.10400
+zoomBox 27.14750 59.91950 31.32150 62.29050
+zoomBox 26.48600 59.48750 32.26300 62.76900
+zoomBox 26.06550 59.21250 32.86200 63.07300
+zoomBox 24.30350 58.06050 35.37100 64.34750
+zoomBox 21.84000 57.30200 37.15900 66.00400
+zoomBox 16.27450 55.57650 41.21950 69.74650
+zoomBox 7.24900 52.76250 47.86800 75.83600
+pan 9.16750 38.23450
+zoomBox 16.41600 41.41150 64.20350 68.55700
+zoomBox 11.89900 39.07550 68.11950 71.01150
+pan 20.10300 26.51100
+zoomBox 41.44900 44.44150 82.06800 67.51500
+zoomBox 51.65500 51.52950 76.60000 65.69950
+zoomBox 57.94400 55.89100 73.26350 64.59300
+zoomBox 60.72150 57.81700 71.79000 64.10450
+zoomBox 62.60100 59.30650 69.39900 63.16800
+zoomBox 63.74050 60.14000 67.91550 62.51150
+zoomBox 64.35900 60.46850 67.37650 62.18250
+gui_select -rect {64.92800 61.27700 65.56800 61.10100}
+pan -1.01500 -3.64850
+zoomBox 62.83200 60.21500 67.00850 62.58750
+zoomBox 60.94250 59.76750 67.74400 63.63100
+zoomBox 60.08400 59.55300 68.08600 64.09850
+zoomBox 57.88550 59.00450 68.96200 65.29650
+zoomBox 56.98000 58.77000 70.01100 66.17200
+zoomBox 56.15950 58.20600 71.49050 66.91450
+setLayerPreference violation -isVisible 1
+violationBrowser -all -no_display_false -displayByLayer
+violationBrowserClose
+set_verify_drc_mode -check_only default -report v_report.rpt
+verify_drc
+zoomBox 59.84800 62.91900 65.63100 66.20400
+deleteRouteBlk
+sroute -connect corePin -layerChangePossible 1 -blockPinConnect all -allowJogging 1 -crossoverViaBottomLayer M1 -crossoverViaTopLayer M2
+zoomBox 58.28150 61.62050 67.69800 66.96950
+zoomBox 55.69400 59.07150 71.02750 67.78150
+zoomBox 53.11000 56.53900 74.33350 68.59500
+saveDesign systolic_array_2x2_new -tcon -libs
+saveDesign systolic_array_2x2_new -tcon -libs
+win off

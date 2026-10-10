@@ -1,0 +1,13 @@
+# Cadence Genus & Innovus ignored files
+*.log
+*.cmd
+*.logv
+*.log.gz
+*.rpt
+*.vcd
+*.gds
+*.sdf
+*.spef
+synthesis/
+innovus/
+fv/

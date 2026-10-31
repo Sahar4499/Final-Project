@@ -1,0 +1,62 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2025 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v25.11-s102_1, built Wed Aug 27 13:03:08 PDT 2025
+Options:	
+Date:		Sat Oct 10 11:01:16 2026
+Host:		ip-10-10-84-131.il-central-1.compute.internal (x86_64 w/Linux 4.18.0-553.79.1.el8_10.x86_64) (1core*2cpus*Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz 55296KB)
+OS:		Rocky Linux 8.10 (Green Obsidian)
+
+License:
+		[11:01:17.251225] Configured Lic search path (25.01-s002): 5280@ip-10-10-99-197.il-central-1.compute.internal
+
+		invs	Innovus Implementation System	25.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+
+**Info: Common UI will be the default UI for innovus in the next major release. Please use -legacy_ui when invoking innovus if you wish to continue to use legacy UI.
+The soft stacksize limit is either up to the hard limit or larger than 0.2% of RAM. No change is needed.
+Info: Process UID = 33222 / 62521c16-a119-43c2-b09d-de4705575255 / bWS6LoIMM9
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+[INFO] Loading PVS 24.12 fill procedures
+<CMD> win
+<CMD> read_db booth_multiplier_final_routed.dat
+#% Begin load design ... (date=10/10 11:01:59, mem=1934.1M)
+Loading design 'booth_multiplier_8x8' saved by 'Innovus' '25.11-s102_1' on 'Sat Aug 1 08:38:57 2026'.
+% Begin Load MMMC data ... (date=10/10 11:02:01, mem=1937.0M)
+**ERROR: (IMPIMEX-7047):	In the legacy environment, you cannot use eval_common_ui {read_db legacy.dat} to load a design using MMMC1 format. You should either use saveDesign -mmmc2 to save and convert it to MMMC2, or use Stylus read_db to auto-convert the MMMC1 DB to an MMMC2 DB when reading it into Stylus.
+
+
+ERROR: 
+
+
+    while executing
+"error $catchMsg"
+    (procedure "restoreDesign" line 36)
+
+
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     IMPIMEX-7047         1  In the legacy environment, you cannot us...
+*** Message Summary: 0 warning(s), 1 error(s)
+
+
+<CMD> report_timing > innovus_timing_report.rpt
+**ERROR: (TCLCMD-119):	No module selected
+
+<CMD> report_power > innovus_power_report.rpt
+env CDS_WORKAREA is set to /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv
+**ERROR: Design must be in memory before running "buildTimingGraph"
+** ERROR: (VOLTUS_POWR-2022):   Please load design before executing this command 'report_power'.
+
+*** Message Summary: 0 warning(s), 2 error(s)
+
+
+*** Memory Usage v#1 (Current mem = 1941.590M, initial mem = 908.457M) ***
+--- Ending "Innovus" (totcpu=0:00:27.9, real=0:00:55.0, mem=1941.6M) ---

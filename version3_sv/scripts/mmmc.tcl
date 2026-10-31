@@ -14,7 +14,7 @@ create_rc_corner -name rc_typ -T 25
 
 create_delay_corner -name dc_fast -library_set fast_lib -rc_corner rc_typ
 
-create_constraint_mode -name my_constraints -sdc_files { ../synthesis/systolic_array_constraints.sdc }
+create_constraint_mode -name my_constraints -sdc_files { booth.sdc }
 
 create_analysis_view -name av_fast -delay_corner dc_fast -constraint_mode my_constraints
 

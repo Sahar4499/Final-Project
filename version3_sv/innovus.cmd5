@@ -1,0 +1,276 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Sat Oct 10 10:09:15 2026                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v25.11-s102_1 (64bit) 08/27/2025 13:03 (Linux 4.18.0-305.el8.x86_64)
+#@(#)CDS: NanoRoute 25.11-s102_1 NR250730-0928/25_11-UB (database version 18.20.674) {superthreading v2.20}
+#@(#)CDS: AAE 25.11-s028 (64bit) 08/27/2025 (Linux 4.18.0-305.el8.x86_64)
+#@(#)CDS: CTE 25.11-s034_1 () Aug 18 2025 08:55:47 ( )
+#@(#)CDS: SYNTECH 25.11-s013_1 () Jul 30 2025 05:18:51 ( )
+#@(#)CDS: CPE v25.11-s029
+#@(#)CDS: IQuantus/TQuantus 24.1.0-s290 (64bit) Sun Jul 20 21:40:56 PDT 2025 (Linux 4.18.0-305.el8.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+win
+restoreDesign booth_multiplier_final_routed booth_multiplier_8x8
+read_db booth_multiplier_final_routed.dat
+zoomBox -0.38900 1.26100 37.11700 34.83700
+zoomBox 2.50050 3.85200 34.38050 32.39150
+zoomBox -3.88300 -1.49350 40.24150 38.00750
+zoomBox -12.71900 -8.88250 48.35350 45.79050
+zoomBox -5.58450 -5.43400 46.32700 41.03800
+zoomBox 0.43950 -2.50250 44.56400 36.99850
+pan -2.39750 -2.65650
+panCenter 30.17950 16.39200
+pan -9.64700 -8.67850
+fit
+fit
+ui_view_box
+ui_view_box
+ui_view_box
+ui_view_box
+pan 10.36775 -10.36775
+zoomBox -5.32250 -6.52500 65.17850 27.05100
+pan 5.44650 8.27100
+zoomBox -25.79850 -1.03600 57.14350 34.47500
+zoomBox -35.47550 -8.34350 62.10350 33.43400
+gui_select -rect {43.05450 15.27350 46.87400 12.39700}
+fit
+setLayerPreference node_floorplan -isSelectable 0
+setLayerPreference node_floorplan -isSelectable 1
+setLayerPreference node_floorplan -isSelectable 0
+setLayerPreference node_floorplan -isSelectable 1
+setLayerPreference node_floorplan -isVisible 1
+setLayerPreference node_floorplan -isVisible 0
+setLayerPreference node_floorplan -isVisible 1
+setLayerPreference node_net -isSelectable 0
+setLayerPreference node_net -isSelectable 1
+setLayerPreference node_net -isVisible 0
+setLayerPreference node_cell -isVisible 1
+setLayerPreference node_cell -isVisible 0
+setLayerPreference node_floorplan -isSelectable 0
+setLayerPreference node_floorplan -isVisible 0
+setLayerPreference node_floorplan -isVisible 1
+setLayerPreference node_floorplan -isVisible 0
+setLayerPreference node_floorplan -isVisible 1
+ui_view_box
+ui_view_box
+pan -11.5326875 0
+setLayerPreference node_cell -isVisible 1
+setLayerPreference node_cell -isSelectable 1
+zoomBox -23.48450 3.18600 43.17550 31.72600
+zoomBox -11.80550 7.51800 36.35750 28.13850
+zoomBox -3.26600 9.84800 31.53200 24.74650
+fit
+setLayerPreference node_cell -isSelectable 0
+setLayerPreference node_cell -isVisible 0
+setLayerPreference node_floorplan -isSelectable 1
+setLayerPreference node_route -isSelectable 0
+setLayerPreference node_route -isVisible 0
+setLayerPreference node_layer -isSelectable 0
+setLayerPreference node_layer -isVisible 0
+setLayerPreference node_layer -isVisible 1
+setLayerPreference node_route -isVisible 1
+setLayerPreference node_layer -isSelectable 1
+setLayerPreference node_route -isSelectable 1
+setLayerPreference node_track -isVisible 1
+setLayerPreference node_track -isVisible 0
+setLayerPreference node_track -isVisible 1
+setLayerPreference node_overlay -isVisible 1
+setLayerPreference congestH -color {#000066 #0000c9 #0053ff #00fcfa #00a953 #53a900 #f9fc00 #ff5300 #ff5858 #ffffff}
+setLayerPreference congestV -color {#000066 #0000c9 #0053ff #00fcfa #00a953 #53a900 #f9fc00 #ff5300 #ff5858 #ffffff}
+fit
+setLayerPreference node_overlay -isVisible 0
+setLayerPreference node_track -isVisible 0
+setLayerPreference node_partition -isVisible 0
+setLayerPreference node_floorplan -isVisible 0
+setLayerPreference node_row -isVisible 1
+setLayerPreference node_blockage -isVisible 1
+setLayerPreference node_inst -isVisible 0
+setLayerPreference node_inst -isVisible 1
+setLayerPreference node_inst -isVisible 0
+setLayerPreference node_inst -isVisible 1
+setLayerPreference node_inst -isVisible 0
+setLayerPreference node_module -isVisible 0
+setLayerPreference node_module -isVisible 1
+setLayerPreference node_blockage -isVisible 0
+setLayerPreference node_blockage -isVisible 1
+setLayerPreference node_floorplan -isVisible 1
+setLayerPreference node_inst -isVisible 1
+setLayerPreference stdCell -isVisible 0
+setLayerPreference stdCell -isVisible 1
+setLayerPreference stdCell -isVisible 0
+setLayerPreference stdCell -isVisible 1
+setLayerPreference areaIo -isVisible 0
+setLayerPreference areaIo -isVisible 1
+setLayerPreference areaIo -isVisible 0
+setLayerPreference spareCell -isVisible 0
+setLayerPreference spareCell -isVisible 1
+setLayerPreference blackBox -isVisible 0
+setLayerPreference spareCell -isVisible 0
+setLayerPreference io -isVisible 0
+setLayerPreference phyCell -isVisible 0
+setLayerPreference coverCell -isVisible 0
+setLayerPreference stdCell -isVisible 0
+setLayerPreference block -isVisible 0
+setLayerPreference block -isVisible 1
+setLayerPreference stdCell -isVisible 1
+setLayerPreference instanceCell -isVisible 1
+fit
+setLayerPreference node_bump -isVisible 0
+setLayerPreference node_route -isVisible 0
+setLayerPreference node_route -isVisible 1
+setLayerPreference node_bump -isVisible 1
+setLayerPreference node_bump -isSelectable 0
+setLayerPreference node_route -isSelectable 0
+setLayerPreference node_route -isSelectable 1
+setLayerPreference node_bump -isSelectable 1
+setLayerPreference node_gird -isVisible 1
+setLayerPreference node_gird -isVisible 0
+setLayerPreference instanceCell -isVisible 0
+fit
+fit
+zoomBox -16.35700 -1.25000 42.68700 27.29000
+zoomBox -22.58550 -1.85900 59.13700 37.64300
+zoomBox -16.25750 -1.16600 42.78650 27.37400
+zoomBox -7.12650 -0.06300 19.07250 12.60050
+zoomBox -4.31950 0.28000 11.77000 8.05700
+pan -0.51350 1.23550
+zoomBox -3.46250 -2.50750 8.16250 3.11150
+zoomBox -2.03700 -1.42750 4.03200 1.50600
+zoomBox -1.59650 -1.09500 2.78850 1.02450
+zoomBox -1.03200 -0.67850 1.66150 0.62350
+zoomBox -0.66750 -0.41850 0.98750 0.38150
+zoomBox -0.43550 -0.25550 0.58150 0.23600
+zoomBox -0.26000 -0.13200 0.27200 0.12500
+zoomBox -0.16800 -0.06700 0.11050 0.06750
+zoomBox -0.13450 -0.04150 0.03700 0.04150
+gui_select -rect {-0.08450 -0.00100 -0.07200 0.00000}
+selectObject IO_Pin {a[7]}
+gui_select -rect {-0.06700 -0.00050 -0.06350 -0.00050}
+deselectAll
+selectObject IO_Pin {p[15]}
+deselectAll
+selectObject IO_Pin {a[7]}
+deselectAll
+selectObject IO_Pin {a[7]}
+deselectAll
+fit
+ui_view_box
+ui_view_box
+pan -10.2150625 0
+setLayerPreference instanceCell -isVisible 1
+setLayerPreference violation -isVisible 0
+setLayerPreference violation -isVisible 1
+setLayerPreference node_cell -isVisible 1
+setLayerPreference node_partition -isVisible 1
+setLayerPreference node_overlay -isVisible 1
+fit
+setLayerPreference node_track -isVisible 1
+setLayerPreference node_gird -isVisible 1
+setLayerPreference node_net -isVisible 1
+setLayerPreference node_gird -isVisible 0
+ui_view_box
+ui_view_box
+ui_view_box
+ui_view_box
+pan -10.2150625 -10.2150625
+setLayerPreference node_layer -isVisible 0
+setLayerPreference node_layer -isVisible 1
+fit
+setLayerPreference node_bump -isVisible 0
+setLayerPreference node_bump -isVisible 1
+setLayerPreference node_track -isVisible 0
+ui_view_box
+ui_view_box
+pan -10.2150625 0
+verifyConnectivity -type all -report lvs_report.rpt
+assignIoPins
+globalNetConnect VDD -type pgpin -pin VDD -inst *
+globalNetConnect VSS -type pgpin -pin VSS -inst *
+sroute
+verifyConnectivity -type all -report lvs_report.rpt
+zoomBox -17.24250 3.70050 41.80150 32.24050
+zoomBox -20.87150 0.29800 48.59250 33.87450
+routeDesign
+zoomBox -30.65000 -0.21000 51.07250 39.29200
+zoomBox -41.90950 -1.14000 54.23500 45.33300
+verifyConnectivity -type all -report lvs_report.rpt
+verifyConnectivity -type all -report lvs_report.rpt
+zoomBox -47.80700 -5.26350 65.30400 49.41050
+pan 4.30050 37.24500
+setLayerPreference violation -isVisible 0
+zoomBox -27.78400 -6.95700 68.36050 39.51600
+zoomBox -16.74000 -4.35250 64.98250 35.14950
+pan -1.22050 15.10600
+pan -2.27450 15.05050
+pan -0.11100 18.26800
+setLayerPreference node_misc -isSelectable 0
+setLayerPreference node_misc -isSelectable 1
+setLayerPreference node_bump -isSelectable 0
+setLayerPreference node_layer -isSelectable 0
+setLayerPreference node_bump -isSelectable 1
+setLayerPreference node_layer -isSelectable 1
+setLayerPreference node_route -isSelectable 0
+setLayerPreference node_route -isSelectable 1
+setLayerPreference node_net -isSelectable 0
+setLayerPreference node_net -isSelectable 1
+setLayerPreference node_net -isVisible 0
+setLayerPreference node_route -isVisible 0
+setLayerPreference node_route -isVisible 1
+setLayerPreference node_net -isVisible 1
+setLayerPreference node_overlay -isVisible 0
+setLayerPreference node_overlay -isVisible 1
+fit
+setLayerPreference node_gird -isVisible 1
+setLayerPreference node_track -isVisible 1
+report_timing > innovus_timing_report.rpt
+report_power > innovus_power_report.rpt
+report_area > innovus_area_report.rpt
+summaryReport -noHtml -outfile innovus_summary.rpt
+create_library_set -name fast_lib -timing { \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_basicCells.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_extvdd1v2.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_multibitsDFF.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_extvdd1v0.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045_lvt/timing/fast_vdd1v2_basicCells_lvt.lib \
+}
+create_rc_corner -name rc_typ -T 25
+create_delay_corner -name dc_fast -library_set fast_lib -rc_corner rc_typ
+create_constraint_mode -name my_constraints -sdc_files { ../synthesis/systolic_array_constraints.sdc }
+read_db booth_multiplier_final_routed.dat
+create_library_set -name fast_lib -timing { \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_basicCells.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_extvdd1v2.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_multibitsDFF.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_extvdd1v0.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045_lvt/timing/fast_vdd1v2_basicCells_lvt.lib \
+}
+create_rc_corner -name rc_typ -T 25
+create_delay_corner -name dc_fast -library_set fast_lib -rc_corner rc_typ
+create_constraint_mode -name my_constraints -sdc_files { ../synthesis/systolic_array_constraints.sdc }
+report_timing > innovus_timing_report.rpt
+report_power > innovus_power_report.rpt
+report_area > innovus_area_report.rpt
+summaryReport -noHtml -outfile innovus_summary.rpt
+read_db booth_multiplier_final_routed.dat
+create_library_set -name fast_lib -timing { \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_basicCells.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_extvdd1v2.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_multibitsDFF.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_extvdd1v0.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045_lvt/timing/fast_vdd1v2_basicCells_lvt.lib \
+}
+create_rc_corner -name rc_typ -T 25
+create_delay_corner -name dc_fast -library_set fast_lib -rc_corner rc_typ
+create_constraint_mode -name my_constraints -sdc_files { ../synthesis/systolic_array_constraints.sdc }
+all_constraint_modes
+set_interactive_constraint_modes $mode
+set_max_delay 5.0 -from [all_inputs] -to [all_outputs]
+report_timing > innovus_timing_report.rpt
+report_power > innovus_power_report.rpt

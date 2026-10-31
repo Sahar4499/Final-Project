@@ -1,0 +1,530 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2025 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v25.11-s102_1, built Wed Aug 27 13:03:08 PDT 2025
+Options:	
+Date:		Sat Oct 10 10:50:22 2026
+Host:		ip-10-10-84-131.il-central-1.compute.internal (x86_64 w/Linux 4.18.0-553.79.1.el8_10.x86_64) (1core*2cpus*Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz 55296KB)
+OS:		Rocky Linux 8.10 (Green Obsidian)
+
+License:
+		[10:50:22.251217] Configured Lic search path (25.01-s002): 5280@ip-10-10-99-197.il-central-1.compute.internal
+
+		invs	Innovus Implementation System	25.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+
+**Info: Common UI will be the default UI for innovus in the next major release. Please use -legacy_ui when invoking innovus if you wish to continue to use legacy UI.
+The soft stacksize limit is either up to the hard limit or larger than 0.2% of RAM. No change is needed.
+Info: Process UID = 31642 / 9b1258f1-1111-4b7c-9365-f81b7f879b45 / 8NX0eDEWWv
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+[INFO] Loading PVS 24.12 fill procedures
+<CMD> win
+<CMD> read_db booth_multiplier_final_routed.dat
+#% Begin load design ... (date=10/10 10:51:04, mem=1939.3M)
+Loading design 'booth_multiplier_8x8' saved by 'Innovus' '25.11-s102_1' on 'Sat Aug 1 08:38:57 2026'.
+
+Loading LEF file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/libs/lef/gsclib045_tech.lef ...
+Set DBUPerIGU to M2 pitch 400.
+
+Loading LEF file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/libs/lef/gsclib045_macro.lef ...
+**WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+*** End library_loading (cpu=0.00min, real=0.00min, mem=0.0M, fe_cpu=0.45min, fe_real=0.73min, fe_mem=1952.9M) ***
+% Begin Load netlist data ... (date=10/10 10:51:06, mem=1953.1M)
+*** Begin netlist parsing (mem=1953.1M) ***
+Created 0 new cells from 0 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilogBinary netlist '/data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.v.bin'
+
+*** Memory Usage v#1 (Current mem = 1957.664M, initial mem = 909.344M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1957.7M) ***
+% End Load netlist data ... (date=10/10 10:51:06, total cpu=0:00:00.0, real=0:00:00.0, peak res=1957.9M, current mem=1957.8M)
+Set top cell to booth_multiplier_8x8.
+Hooked 0 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell booth_multiplier_8x8 ...
+***** UseNewTieNetMode *****.
+*** Netlist is unique.
+** info: there are 584 modules.
+** info: there are 188 stdCell insts.
+** info: there are 188 stdCell insts with at least one signal pin.
+
+*** Memory Usage v#1 (Current mem = 1991.309M, initial mem = 909.344M) ***
+*info: set bottom ioPad orient R0
+**WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Start create_tracks
+Loading preference file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/gui.pref.tcl ...
+Change floorplan default-technical-site to 'CoreSite'.
+Reading floorplan file - /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.fp.gz (mem = 2269.9M).
+% Begin Load floorplan data ... (date=10/10 10:51:06, mem=2270.1M)
+*info: reset 231 existing net BottomPreferredLayer and AvoidDetour
+Deleting old partition specification.
+Set FPlanBox to (0 0 73200 71820)
+**WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+ ... processed partition successfully.
+Reading binary special route file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.fp.spr.gz (Created by Innovus v25.11-s102_1 on Sat Aug  1 08:38:56 2026, version: 1)
+Convert 0 swires and 0 svias from compressed groups
+0 swires and 0 svias were compressed
+0 swires and 0 svias were decompressed from small or sparse groups
+Ending "Read special route file" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2271.3M, current mem=2271.3M)
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+% End Load floorplan data ... (date=10/10 10:51:07, total cpu=0:00:00.1, real=0:00:01.0, peak res=2272.5M, current mem=2272.5M)
+% Begin Load SymbolTable ... (date=10/10 10:51:07, mem=2272.8M)
+Reading congestion map file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.route.congmap.gz ...
+Suppress "**WARN ..." messages.
+Un-suppress "**WARN ..." messages.
+% End Load SymbolTable ... (date=10/10 10:51:07, total cpu=0:00:00.0, real=0:00:00.0, peak res=2273.6M, current mem=2273.6M)
+Loading place ...
+% Begin Load placement data ... (date=10/10 10:51:07, mem=2273.8M)
+Reading placement file - /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.place.gz.
+** Reading stdCellPlacement_binary (Created by Innovus v25.11-s102_1 on Sat Aug  1 08:38:56 2026, version# 2) ...
+Read Views for adaptive view pruning ...
+Read 0 views from Binary DB for adaptive view pruning
+*** Completed restorePlace (cpu=0:00:00.0 real=0:00:00.0 mem=2274.2M) ***
+Total net length = 1.275e+03 (6.444e+02 6.310e+02) (ext = 2.808e+02)
+% End Load placement data ... (date=10/10 10:51:07, total cpu=0:00:00.0, real=0:00:00.0, peak res=2274.7M, current mem=2274.6M)
+Reading PG file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.pg.gz, version#2, (Created by Innovus v25.11-s102_1 on       Sat Aug  1 08:38:56 2026)
+*** Completed restorePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=2274.9M) ***
+% Begin Load routing data ... (date=10/10 10:51:07, mem=2274.9M)
+Reading routing file - /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.route.gz.
+Reading Innovus routing data (Created by Innovus v25.11-s102_1 on Sat Aug  1 08:38:56 2026 Format: 23.1) ...
+*** Total 231 nets are successfully restored.
+*** Completed restoreRoute (cpu=0:00:00.0 real=0:00:00.0 mem=2276.0M) ***
+% End Load routing data ... (date=10/10 10:51:07, total cpu=0:00:00.0, real=0:00:00.0, peak res=2276.0M, current mem=2275.4M)
+TAT_INFO: ::restoreCongMap REAL = 0 : CPU = 0 : MEM = 0.
+Reading property file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.prop
+*** Completed restoreProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2278.6M) ***
+Reading dirtyarea snapshot file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.db.da.gz (Create by Innovus v25.11-s102_1 on Sat Aug  1 08:38:56 2026, version: 8).
+Extraction setup Started for TopCell booth_multiplier_8x8 
+% Begin Loading timing constraints ... (date=10/10 10:51:09, mem=2280.7M)
+% End Loading timing constraints ... (date=10/10 10:51:09, total cpu=0:00:00.0, real=0:00:00.0, peak res=2280.7M, current mem=2280.7M)
+Start generating vias ..
+#Skip building auto via since it is not turned on.
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+Via generation completed.
+Extraction setup Started for TopCell booth_multiplier_8x8 
+% Begin Load power constraints ... (date=10/10 10:51:09, mem=2285.4M)
+% End Load power constraints ... (date=10/10 10:51:10, total cpu=0:00:00.0, real=0:00:00.0, peak res=2286.0M, current mem=2286.0M)
+**WARN: (IMPSYT-709):	Innovus use the Multi-Mode/Multi-Corner (MMMC) architecture exclusively for 
+configuration and control of some software features. The current configuration is
+obsoleted, please migrate your design to an MMMC style configuration. You can refer to
+the What's New document for this release for additional information on the
+11.1 migration to MMMC. In addition, you can run restoreDesign with the
+-showEolWarnings option to identify specific command and configuration
+options that will no longer be supported.
+% Begin load AAE data ... (date=10/10 10:51:10, mem=2286.0M)
+% End load AAE data ... (date=10/10 10:51:10, total cpu=0:00:00.0, real=0:00:00.0, peak res=2286.0M, current mem=2286.0M)
+Total number of combinational cells: 0
+Total number of sequential cells: 0
+Total number of tristate cells: 0
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers:
+Total number of usable buffers: 0
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters:
+Total number of usable inverters: 0
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells:
+Total number of identified usable delay cells: 0
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+No delay cells were detected in the set of buffers. Buffers will be used to fix hold violations.
+#% End load design ... (date=10/10 10:51:10, total cpu=0:00:04.9, real=0:00:06.0, peak res=2289.4M, current mem=2287.0M)
+
+
+ERROR : The MMMC configuration specified is incomplete  - a set_analysis_view command
+       was not found in the configuration. The software requires at least 1 setup
+       and 1 hold analysis view to be defined.  You should remedy this problem and
+       restart the software.
+
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPFP-3961           4  The techSite '%s' has no related standar...
+WARNING   IMPSYT-709           1  Innovus use the Multi-Mode/Multi-Corner ...
+*** Message Summary: 6 warning(s), 0 error(s)
+
+<CMD> create_library_set -name fast_lib -timing { \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_basicCells.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_extvdd1v2.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_multibitsDFF.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_extvdd1v0.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045_lvt/timing/fast_vdd1v2_basicCells_lvt.lib \
+}
+<CMD> create_rc_corner -name rc_typ -T 25
+<CMD> create_delay_corner -name dc_fast -library_set fast_lib -rc_corner rc_typ
+<CMD> create_constraint_mode -name my_constraints -sdc_files { ../synthesis/systolic_array_constraints.sdc }
+**ERROR: (TCLCMD-989):	cannot open SDC file '../synthesis/systolic_array_constraints.sdc' for mode 'my_constraints'
+
+<CMD> create_library_set -name fast_lib -timing { \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_basicCells.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_extvdd1v2.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_multibitsDFF.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_extvdd1v0.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045_lvt/timing/fast_vdd1v2_basicCells_lvt.lib \
+}
+<CMD> create_rc_corner -name rc_typ -T 25
+Extraction setup Started for TopCell booth_multiplier_8x8 
+<CMD> create_delay_corner -name dc_fast -library_set fast_lib -rc_corner rc_typ
+Extraction setup Started for TopCell booth_multiplier_8x8 
+<CMD> create_constraint_mode -name my_constraints -sdc_files { booth.sdc }
+<CMD> create_analysis_view -name av_fast -delay_corner dc_fast -constraint_mode my_constraints
+<CMD> set_analysis_view -setup { av_fast } -hold { av_fast }
+**ERROR: (TCLCMD-1239):	The software has been initialized without timing library information into a physical-only mode of operation. Access to timing analysis related commands and functionality is not available in this mode.  To operate the software with full functionality you must exit or issue the freeDesign command - then reinitialize the system with a design configuration that includes a valid timing library configuration.
+{}
+<CMD> report_timing > innovus_timing_report.rpt
+AAE_INFO: opIsDesignInPostRouteState() is 1
+AAE DB initialization (MEM=2323.050781 CPU=0:00:00.0 REAL=0:00:00.0) 
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: booth_multiplier_8x8
+# Design Mode: 90nm
+# Analysis Mode: Non-MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Extraction called for design 'booth_multiplier_8x8' of instances=188 and nets=231 using extraction engine 'preRoute' .
+**WARN: (IMPEXT-3530):	The process node is not set. Use the command setDesignMode -process <process node> prior to extraction for maximum accuracy and optimal automatic threshold setting.
+Type 'man IMPEXT-3530' for more detail.
+PreRoute RC Extraction called for design booth_multiplier_8x8.
+**WARN: (IMPEXT-6197):	The Cap table file is not specified. This will result in lower parasitic accuracy when using preRoute extraction or postRoute extraction with effort level 'low'. It is recommended to generate the Cap table file using the 'generateCapTbl' command and specify it before extraction using 'create_rc_corner/update_rc_corner -cap_table'.
+Type 'man IMPEXT-6197' for more detail.
+RCMode: PreRoute
+Capacitance Scaling Factor   : 1.00000
+Resistance Scaling Factor    : 1.00000
+Clock Cap Scaling Factor    : 1.00000
+Clock Res Scaling Factor     : 1.00000
+Shrink Factor                : 1.00000
+PreRoute extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Updating RC Grid density data for preRoute extraction ...
+PreRoute RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 2324.355M)
+Calculate delays in BcWc mode...
+**ERROR: (IMPDC-634):	Failed to build the timing graph since timing library files have not yet been loaded. To resolve this, check that timing library files have been correctly specified in the loaded design database.
+Start delay calculation (fullDC) (1 T). (MEM=2447.29)
+**WARN: (IMPEXT-2882):	Unable to find the resistance for via 'M2_M1_1x2_HV_N' in Cap table or LEF or OA files. The default value of 4.0 ohms is being assigned. To avoid this, check the Cap table and LEF and OA files, provide the resistance and read the files again.
+**WARN: (IMPEXT-2882):	Unable to find the resistance for via 'M3_M2_2x1_VH_E' in Cap table or LEF or OA files. The default value of 4.0 ohms is being assigned. To avoid this, check the Cap table and LEF and OA files, provide the resistance and read the files again.
+**WARN: (IMPEXT-2883):	The resistance extracted for a wire belonging to net n_203 is 0 ohms. Therefore, a small value of 0.1 ohms is assigned to it.
+**WARN: (IMPEXT-2883):	The resistance extracted for a wire belonging to net n_203 is 0 ohms. Therefore, a small value of 0.1 ohms is assigned to it.
+Total number of fetched objects 229
+End delay calculation. (MEM=2472.01 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=2472 CPU=0:00:00.2 REAL=0:00:00.0)
+<CMD> report_power > innovus_power_report.rpt
+env CDS_WORKAREA is set to /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv
+Set Default Frequency 100MHz.
+
+Begin Power Analysis
+
+
+Power Net Detected:
+        Voltage	    Name
+             0V	    VSS
+           3.3V	    VDD
+
+Warning:
+  There are 1 power/gnd nets that are not connected
+VDD ...
+Use 'globalNetConnect' to define rail connections.
+[PowermeterNetlistLib::InfoMergingRails]
+** WARN:  (VOLTUS_POWR-2035): There are 1 power/gnd nets that are not connected
+VDD ...
+Use 'globalNetConnect' to define rail connections.
+
+
+
+Begin Processing Timing Library for Power Calculation
+
+**ERROR: (IMPCTE-348):	Timing library is not loaded yet.
+**ERROR: (IMPCTE-348):	Timing library is not loaded yet.
+Ended Processing Timing Library for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2475.02MB/4868.40MB/2475.02MB)
+
+
+
+Begin Processing Power Net/Grid for Power Calculation
+
+Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2475.02MB/4868.40MB/2475.02MB)
+
+Begin Processing Timing Window Data for Power Calculation
+
+**ERROR: (IMPCTE-348):	Timing library is not loaded yet.
+**ERROR: (IMPCTE-348):	Timing library is not loaded yet.
+Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2475.02MB/4868.40MB/2475.02MB)
+
+Begin Processing User Attributes
+
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2475.02MB/4868.40MB/2475.02MB)
+
+Begin Processing Signal Activity
+
+** INFO:  (VOLTUS_POWR-1356): No default input activity has been set. Defaulting to 0.2.
+Use 'set_default_switching_activity -input_activity' command to change the default activity value.
+
+
+Starting Building Netlist
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT)
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 10%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 20%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 30%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 40%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 50%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 60%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 70%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 80%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 90%
+
+Finished Building Netlist
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT)
+
+Starting Levelizing
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT)
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 10%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 20%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 30%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 40%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 50%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 60%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 70%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 80%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 90%
+
+Finished Levelizing
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT)
+
+Starting Activity Propagation
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT)
+
+Finished Activity Propagation
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT)
+Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2475.61MB/4868.40MB/2475.61MB)
+
+Begin Power Computation
+
+      ----------------------------------------------------------
+      # of cell(s) missing both power/leakage table: 0
+      # of cell(s) missing power table: 0
+      # of cell(s) missing leakage table: 0
+      ----------------------------------------------------------
+
+
+
+Starting Calculating power
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT)
+ ... Calculating switching power
+  instance g8271__2398 is not connected to any rail
+  instance g8272__5107 is not connected to any rail
+  instance g8274__4319 is not connected to any rail
+  instance g8276__5526 is not connected to any rail
+  instance g8278__3680 is not connected to any rail
+  only first five unconnected instances are listed...
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 10%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 20%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 30%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 40%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 50%
+ ... Calculating internal and leakage power
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 60%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 70%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 80%
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT): 90%
+
+Finished Calculating power
+2026-Oct-10 10:52:21 (2026-Oct-10 10:52:21 GMT)
+      # of MSMV cell(s) missing power_level: 0
+Ended Power Computation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2475.61MB/4868.40MB/2475.61MB)
+
+Begin Processing User Attributes
+
+Begin Processing set_power
+Ended Processing set_power: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=2475.61MB/4868.40MB/2475.61MB)
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2475.61MB/4868.40MB/2475.61MB)
+
+Ended Power Analysis: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2475.61MB/4868.40MB/2475.61MB)
+
+Begin Boundary Leakage Calculation
+Ended Boundary Leakage Calculation: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=2476.13MB/4868.40MB/2476.13MB)
+Begin Static Power Report Generation
+*----------------------------------------------------------------------------------------
+*	Innovus 25.11-s102_1 (64bit) 08/27/2025 13:03 (Linux 4.18.0-305.el8.x86_64)
+*	
+*
+* 	Date & Time:	2026-Oct-10 10:52:22 (2026-Oct-10 10:52:22 GMT)
+*
+*----------------------------------------------------------------------------------------
+*
+*	Design: booth_multiplier_8x8
+*
+*	Liberty Libraries used:
+*
+*	Parasitic Files used:
+*
+*	Power Units = 1mW
+*
+*	Time Units = 1e-09 secs
+*
+*       report_power
+*
+-----------------------------------------------------------------------------------------
+  188 instances have no static power
+** WARN:  (VOLTUS_POWR-2152): Instance g8271__2398 (NOR2BX1) has no static power. This might be because either the duty cycle and activity of all the connected nets
+is 0 or the instance is connected to power off rails. If this is not the expected behaviour and static power is required, ensure that the instance is connected
+to power on rails and that the duty cycle and activity of at least one net is not 0.
+
+** WARN:  (VOLTUS_POWR-2152): Instance g8272__5107 (XNOR2X1) has no static power. This might be because either the duty cycle and activity of all the connected nets
+is 0 or the instance is connected to power off rails. If this is not the expected behaviour and static power is required, ensure that the instance is connected
+to power on rails and that the duty cycle and activity of at least one net is not 0.
+
+** WARN:  (VOLTUS_POWR-2152): Instance g8273__6260 (AOI21XL) has no static power. This might be because either the duty cycle and activity of all the connected nets
+is 0 or the instance is connected to power off rails. If this is not the expected behaviour and static power is required, ensure that the instance is connected
+to power on rails and that the duty cycle and activity of at least one net is not 0.
+
+** WARN:  (VOLTUS_POWR-2152): Instance g8274__4319 (XNOR2X1) has no static power. This might be because either the duty cycle and activity of all the connected nets
+is 0 or the instance is connected to power off rails. If this is not the expected behaviour and static power is required, ensure that the instance is connected
+to power on rails and that the duty cycle and activity of at least one net is not 0.
+
+** WARN:  (VOLTUS_POWR-2152): Instance g8275__8428 (AO21X1) has no static power. This might be because either the duty cycle and activity of all the connected nets
+is 0 or the instance is connected to power off rails. If this is not the expected behaviour and static power is required, ensure that the instance is connected
+to power on rails and that the duty cycle and activity of at least one net is not 0.
+
+** WARN:  (VOLTUS_POWR-2152): Instance g8276__5526 (XNOR2X1) has no static power. This might be because either the duty cycle and activity of all the connected nets
+is 0 or the instance is connected to power off rails. If this is not the expected behaviour and static power is required, ensure that the instance is connected
+to power on rails and that the duty cycle and activity of at least one net is not 0.
+
+** WARN:  (VOLTUS_POWR-2152): Instance g8277__6783 (NOR2XL) has no static power. This might be because either the duty cycle and activity of all the connected nets
+is 0 or the instance is connected to power off rails. If this is not the expected behaviour and static power is required, ensure that the instance is connected
+to power on rails and that the duty cycle and activity of at least one net is not 0.
+
+** WARN:  (VOLTUS_POWR-2152): Instance g8278__3680 (XNOR2X1) has no static power. This might be because either the duty cycle and activity of all the connected nets
+is 0 or the instance is connected to power off rails. If this is not the expected behaviour and static power is required, ensure that the instance is connected
+to power on rails and that the duty cycle and activity of at least one net is not 0.
+
+** WARN:  (VOLTUS_POWR-2152): Instance g8279__1617 (NOR2XL) has no static power. This might be because either the duty cycle and activity of all the connected nets
+is 0 or the instance is connected to power off rails. If this is not the expected behaviour and static power is required, ensure that the instance is connected
+to power on rails and that the duty cycle and activity of at least one net is not 0.
+
+** WARN:  (VOLTUS_POWR-2152): Instance g8280__2802 (XNOR2X1) has no static power. This might be because either the duty cycle and activity of all the connected nets
+is 0 or the instance is connected to power off rails. If this is not the expected behaviour and static power is required, ensure that the instance is connected
+to power on rails and that the duty cycle and activity of at least one net is not 0.
+
+** WARN:  (VOLTUS_POWR-2152): Instance g8281__1705 (NAND2BXL) has no static power. This might be because either the duty cycle and activity of all the connected nets
+is 0 or the instance is connected to power off rails. If this is not the expected behaviour and static power is required, ensure that the instance is connected
+to power on rails and that the duty cycle and activity of at least one net is not 0.
+
+** WARN:  (VOLTUS_POWR-2152): Instance g8282__5122 (NOR2XL) has no static power. This might be because either the duty cycle and activity of all the connected nets
+is 0 or the instance is connected to power off rails. If this is not the expected behaviour and static power is required, ensure that the instance is connected
+to power on rails and that the duty cycle and activity of at least one net is not 0.
+
+** WARN:  (VOLTUS_POWR-2152): Instance g8283__8246 (XNOR2X1) has no static power. This might be because either the duty cycle and activity of all the connected nets
+is 0 or the instance is connected to power off rails. If this is not the expected behaviour and static power is required, ensure that the instance is connected
+to power on rails and that the duty cycle and activity of at least one net is not 0.
+
+** WARN:  (VOLTUS_POWR-2152): Instance g8284__7098 (NOR2BX1) has no static power. This might be because either the duty cycle and activity of all the connected nets
+is 0 or the instance is connected to power off rails. If this is not the expected behaviour and static power is required, ensure that the instance is connected
+to power on rails and that the duty cycle and activity of at least one net is not 0.
+
+** WARN:  (VOLTUS_POWR-2152): Instance g8285__6131 (OAI31X1) has no static power. This might be because either the duty cycle and activity of all the connected nets
+is 0 or the instance is connected to power off rails. If this is not the expected behaviour and static power is required, ensure that the instance is connected
+to power on rails and that the duty cycle and activity of at least one net is not 0.
+
+** WARN:  (VOLTUS_POWR-2152): Instance g8286__1881 (NOR2BX1) has no static power. This might be because either the duty cycle and activity of all the connected nets
+is 0 or the instance is connected to power off rails. If this is not the expected behaviour and static power is required, ensure that the instance is connected
+to power on rails and that the duty cycle and activity of at least one net is not 0.
+
+** WARN:  (VOLTUS_POWR-2152): Instance g8287__5115 (NAND2XL) has no static power. This might be because either the duty cycle and activity of all the connected nets
+is 0 or the instance is connected to power off rails. If this is not the expected behaviour and static power is required, ensure that the instance is connected
+to power on rails and that the duty cycle and activity of at least one net is not 0.
+
+** WARN:  (VOLTUS_POWR-2152): Instance g8288__7482 (ADDHX1) has no static power. This might be because either the duty cycle and activity of all the connected nets
+is 0 or the instance is connected to power off rails. If this is not the expected behaviour and static power is required, ensure that the instance is connected
+to power on rails and that the duty cycle and activity of at least one net is not 0.
+
+** WARN:  (VOLTUS_POWR-2152): Instance g8289__4733 (ADDFX1) has no static power. This might be because either the duty cycle and activity of all the connected nets
+is 0 or the instance is connected to power off rails. If this is not the expected behaviour and static power is required, ensure that the instance is connected
+to power on rails and that the duty cycle and activity of at least one net is not 0.
+
+** WARN:  (VOLTUS_POWR-2152): Instance g8291__6161 (ADDHX1) has no static power. This might be because either the duty cycle and activity of all the connected nets
+is 0 or the instance is connected to power off rails. If this is not the expected behaviour and static power is required, ensure that the instance is connected
+to power on rails and that the duty cycle and activity of at least one net is not 0.
+
+** WARN:  (EMS-27): Message (VOLTUS_POWR-2152) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+
+*
+
+
+
+Total Power
+-----------------------------------------------------------------------------------------
+Total Internal Power:        0.00000000 	    0.0000%
+Total Switching Power:       0.00000000 	    0.0000%
+Total Leakage Power:         0.00000000 	    0.0000%
+Total Power:                 0.00000000
+-----------------------------------------------------------------------------------------
+
+
+Group                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Sequential                             0           0           0           0           0
+Macro                                  0           0           0           0           0
+IO                                     0           0           0           0           0
+Combinational                          0           0           0           0           0
+Clock (Combinational)                  0           0           0           0           0
+Clock (Sequential)                     0           0           0           0           0
+-----------------------------------------------------------------------------------------
+Total                                  0           0           0           0         100
+-----------------------------------------------------------------------------------------
+ 
+ 
+-----------------------------------------------------------------------------------------
+*	Power Distribution Summary: 
+*              Highest Average Power:               g8271__2398 (NOR2BX1):                0
+*              Highest Leakage Power:               g8271__2398 (NOR2BX1):                0
+*                Total Cap:          0 F
+*                Total instances in design:   188
+*                Total instances in design with no power:   188
+*                Total instances in design with no activty:     0
+
+*                Total Fillers and Decap:   188
+-----------------------------------------------------------------------------------------
+ 
+** INFO:  (VOLTUS_POWR-3465): There are 0 decaps and 188 fillers in the design
+
+Ended Static Power Report Generation: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=2476.13MB/4868.40MB/2476.13MB)
+
+*** Message Summary: 12 warning(s), 7 error(s)
+
+
+*** Memory Usage v#1 (Current mem = 2476.211M, initial mem = 909.344M) ***
+--- Ending "Innovus" (totcpu=0:00:34.6, real=0:02:55, mem=2476.2M) ---

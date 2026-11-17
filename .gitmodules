@@ -1,3 +1,9 @@
 [submodule "asic_45/flow/OpenROAD-flow-scripts"]
-	path = asic_45/flow/OpenROAD-flow-scripts
+	path = old_versions/asic_45/flow/OpenROAD-flow-scripts
 	url = https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts.git
+[submodule "test/OpenROAD-flow-scripts"]
+	path = old_versions/test/OpenROAD-flow-scripts
+	url = https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts.git
+[submodule "archived-project"]
+	path = old_versions/Final-Project
+	url = https://github.com/Sahar4499/Final-Project.git

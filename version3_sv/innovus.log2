@@ -1,0 +1,189 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2025 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v25.11-s102_1, built Wed Aug 27 13:03:08 PDT 2025
+Options:	
+Date:		Sat Aug  1 08:19:47 2026
+Host:		ip-10-10-71-30.il-central-1.compute.internal (x86_64 w/Linux 4.18.0-553.79.1.el8_10.x86_64) (1core*2cpus*Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz 55296KB)
+OS:		Rocky Linux 8.10 (Green Obsidian)
+
+License:
+		[08:19:47.251369] Configured Lic search path (25.01-s002): 5280@ip-10-10-99-197.il-central-1.compute.internal
+
+		invs	Innovus Implementation System	25.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+
+**Info: Common UI will be the default UI for innovus in the next major release. Please use -legacy_ui when invoking innovus if you wish to continue to use legacy UI.
+The soft stacksize limit is either up to the hard limit or larger than 0.2% of RAM. No change is needed.
+Info: Process UID = 26036 / c37bdefb-f6f1-4f63-a87b-f19303356734 / tu4EGMDg3S
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+[INFO] Loading PVS 24.12 fill procedures
+<CMD> win
+<CMD> set init_lef_file {
+    /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/lef/gsclib045_tech.lef
+    /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/lef/gsclib045_macro.lef
+}
+<CMD> set init_verilog ~/RTL_to_GDSII_Project/Final-Project/version3_sv/synthesis/multiplier_netlist.v
+<CMD> set init_top_cell booth_multiplier_8x8
+<CMD> init_design
+
+Loading LEF file /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/lef/gsclib045_tech.lef ...
+Set DBUPerIGU to M2 pitch 400.
+
+Loading LEF file /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/lef/gsclib045_macro.lef ...
+**WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+*** End library_loading (cpu=0.00min, real=0.00min, mem=0.0M, fe_cpu=0.45min, fe_real=2.67min, fe_mem=1959.6M) ***
+#% Begin Load netlist data ... (date=08/01 08:22:27, mem=1958.7M)
+*** Begin netlist parsing (mem=1958.7M) ***
+Created 0 new cells from 0 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '~/RTL_to_GDSII_Project/Final-Project/version3_sv/synthesis/multiplier_netlist.v'
+
+*** Memory Usage v#1 (Current mem = 1963.562M, initial mem = 907.520M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1963.6M) ***
+#% End Load netlist data ... (date=08/01 08:22:27, total cpu=0:00:00.0, real=0:00:00.0, peak res=1963.9M, current mem=1963.9M)
+Set top cell to booth_multiplier_8x8.
+Hooked 0 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell booth_multiplier_8x8 ...
+***** UseNewTieNetMode *****.
+*** Netlist is unique.
+** info: there are 584 modules.
+** info: there are 188 stdCell insts.
+** info: there are 188 stdCell insts with at least one signal pin.
+
+*** Memory Usage v#1 (Current mem = 1998.965M, initial mem = 907.520M) ***
+**WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Start create_tracks
+Extraction setup Started for TopCell booth_multiplier_8x8 
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPFP-3961           2  The techSite '%s' has no related standar...
+*** Message Summary: 3 warning(s), 0 error(s)
+
+<CMD> floorPlan -r 1.0 0.6 5.0 5.0 5.0 5.0
+Adjusting coreMargin bottom  to finFet grid (PlacementGrid) : after adjusting :5.13
+Adjusting coreMargin top     to finFet grid (PlacementGrid) : after adjusting :5.13
+Adjusting core size to PlacementGrid : width :26.6 height : 25.65
+**WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Start create_tracks
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> fit
+<CMD> addRing -nets {VDD VSS} -type core_ring -follow core -layer {top Metal4 bottom Metal4 left Metal3 right Metal3} -width {2.0 2.0} -spacing {1.0 1.0} -offset {2.0 2.0}
+#% Begin addRing (date=08/01 08:23:45, mem=2297.7M)
+**ERROR: (IMPPP-4029):	Unexpected value for the option '-width'. "-width {value | {top value bottom value left value right value}}"
+#% End addRing (date=08/01 08:23:45, total cpu=0:00:00.0, real=0:00:00.0, peak res=2297.7M, current mem=2296.7M)
+<CMD> globalNetConnect VDD -type pin -pin VDD -all
+
+Usage: globalNetConnect [-help] [<globalNetName>] [-all] [-autoTie] [-disconnect] [-hierarchicalInstance <string>]
+                        [-instanceBasename <string>] [-net <string>] [-netlistOverride] [-nonHierarchical] [-override] [-pin <string>]
+                        [-powerDomain <string>] [-region {x1 y1 x2 y2}] [-singleInstance <string>] [-type {pgpin tiehi tielo net}] [-verbose]
+
+**ERROR: (IMPTCM-23):	"pin" is not a valid enum for "-type", the allowed values are {pgpin tiehi tielo net}.
+
+<CMD> globalNetConnect VSS -type pin -pin VSS -all
+
+Usage: globalNetConnect [-help] [<globalNetName>] [-all] [-autoTie] [-disconnect] [-hierarchicalInstance <string>]
+                        [-instanceBasename <string>] [-net <string>] [-netlistOverride] [-nonHierarchical] [-override] [-pin <string>]
+                        [-powerDomain <string>] [-region {x1 y1 x2 y2}] [-singleInstance <string>] [-type {pgpin tiehi tielo net}] [-verbose]
+
+**ERROR: (IMPTCM-23):	"pin" is not a valid enum for "-type", the allowed values are {pgpin tiehi tielo net}.
+
+<CMD> globalNetConnect VDD -type tiehi -all
+**ERROR: (IMPDB-1216):	The global net 'VDD' specified in the global net connection(GNC) rule doesn't exist in the design.
+Type 'man IMPDB-1216' for more detail.
+<CMD> globalNetConnect VSS -type tielo -all
+**ERROR: (IMPDB-1216):	The global net 'VSS' specified in the global net connection(GNC) rule doesn't exist in the design.
+Type 'man IMPDB-1216' for more detail.
+<CMD> globalNetConnect VDD! -type pgpin -pin VDD -all
+**ERROR: (IMPDB-1216):	The global net 'VDD!' specified in the global net connection(GNC) rule doesn't exist in the design.
+Type 'man IMPDB-1216' for more detail.
+<CMD> globalNetConnect VSS! -type pgpin -pin VSS -all
+**ERROR: (IMPDB-1216):	The global net 'VSS!' specified in the global net connection(GNC) rule doesn't exist in the design.
+Type 'man IMPDB-1216' for more detail.
+<CMD> globalNetConnect VDD! -type tiehi -all
+**ERROR: (IMPDB-1216):	The global net 'VDD!' specified in the global net connection(GNC) rule doesn't exist in the design.
+Type 'man IMPDB-1216' for more detail.
+<CMD> globalNetConnect VSS! -type tielo -all
+**ERROR: (IMPDB-1216):	The global net 'VSS!' specified in the global net connection(GNC) rule doesn't exist in the design.
+Type 'man IMPDB-1216' for more detail.
+<CMD> globalNetConnect VDD! -type pgpin -pin VDD -all
+**ERROR: (IMPDB-1216):	The global net 'VDD!' specified in the global net connection(GNC) rule doesn't exist in the design.
+Type 'man IMPDB-1216' for more detail.
+<CMD> globalNetConnect VSS! -type pgpin -pin VSS -all
+**ERROR: (IMPDB-1216):	The global net 'VSS!' specified in the global net connection(GNC) rule doesn't exist in the design.
+Type 'man IMPDB-1216' for more detail.
+<CMD> globalNetConnect VDD! -type tiehi -all
+**ERROR: (IMPDB-1216):	The global net 'VDD!' specified in the global net connection(GNC) rule doesn't exist in the design.
+Type 'man IMPDB-1216' for more detail.
+<CMD> globalNetConnect VSS! -type tielo -all
+**ERROR: (IMPDB-1216):	The global net 'VSS!' specified in the global net connection(GNC) rule doesn't exist in the design.
+Type 'man IMPDB-1216' for more detail.
+invalid command name "query_db"
+invalid command name "create_net"
+invalid command name "create_net"
+<CMD> globalNetConnect VDD -type pgpin -pin VDD -all
+**ERROR: (IMPDB-1216):	The global net 'VDD' specified in the global net connection(GNC) rule doesn't exist in the design.
+Type 'man IMPDB-1216' for more detail.
+<CMD> globalNetConnect VSS -type pgpin -pin VSS -all
+**ERROR: (IMPDB-1216):	The global net 'VSS' specified in the global net connection(GNC) rule doesn't exist in the design.
+Type 'man IMPDB-1216' for more detail.
+<CMD> globalNetConnect VDD -type tiehi -all
+**ERROR: (IMPDB-1216):	The global net 'VDD' specified in the global net connection(GNC) rule doesn't exist in the design.
+Type 'man IMPDB-1216' for more detail.
+<CMD> globalNetConnect VSS -type tielo -all
+**ERROR: (IMPDB-1216):	The global net 'VSS' specified in the global net connection(GNC) rule doesn't exist in the design.
+Type 'man IMPDB-1216' for more detail.
+**ERROR: (IMPDBTCL-247):	'init_pwr_net' is not a recognized object or root attribute. Run 'help root:' to get a list of all root attributes, or 'man get_db' for more information about accessing objects and attributes.
+
+**ERROR: (IMPDBTCL-247):	'init_gnd_net' is not a recognized object or root attribute. Run 'help root:' to get a list of all root attributes, or 'man get_db' for more information about accessing objects and attributes.
+
+**ERROR: (IMPDBTCL-275):	Two values are provided to set_db. Check the command if you forgot '.' at the beginning of the chain.
+
+**ERROR: (IMPDBTCL-275):	Two values are provided to set_db. Check the command if you forgot '.' at the beginning of the chain.
+
+**ERROR: (IMPDBTCL-259):	Invalid value '' is provided for attribute 'design_process_node'. The value must be a 'int' type. 
+
+<CMD> set init_pwr_net VDD
+<CMD> set init_gnd_net VSS
+<CMD> init_design
+**ERROR: (IMPSYT-7329):	Cannot load design with init_design, after design is already in memory.  This command is skipped.
+
+<CMD> globalNetConnect VDD -type pgpin -pin VDD -all
+**ERROR: (IMPDB-1216):	The global net 'VDD' specified in the global net connection(GNC) rule doesn't exist in the design.
+Type 'man IMPDB-1216' for more detail.
+<CMD> globalNetConnect VSS -type pgpin -pin VSS -all
+**ERROR: (IMPDB-1216):	The global net 'VSS' specified in the global net connection(GNC) rule doesn't exist in the design.
+Type 'man IMPDB-1216' for more detail.
+<CMD> globalNetConnect VDD -type tiehi -all
+**ERROR: (IMPDB-1216):	The global net 'VDD' specified in the global net connection(GNC) rule doesn't exist in the design.
+Type 'man IMPDB-1216' for more detail.
+<CMD> globalNetConnect VSS -type tielo -all
+**ERROR: (IMPDB-1216):	The global net 'VSS' specified in the global net connection(GNC) rule doesn't exist in the design.
+Type 'man IMPDB-1216' for more detail.
+
+*** Memory Usage v#1 (Current mem = 2294.285M, initial mem = 907.520M) ***
+*** Message Summary: 6 warning(s), 27 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:38.3, real=0:10:24, mem=2294.3M) ---

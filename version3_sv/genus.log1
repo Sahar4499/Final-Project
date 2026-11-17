@@ -1,0 +1,40 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2025 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[09:49:46.251393] Configured Lic search path (25.01-s002): 5280@ip-10-10-99-197.il-central-1.compute.internal
+
+Version: 25.11-s095_1, built Tue Aug 12 03:59:05 PDT 2025
+Options: 
+Date:    Sat Oct 10 09:49:46 2026
+Host:    ip-10-10-84-131.il-central-1.compute.internal (x86_64 w/Linux 4.18.0-553.79.1.el8_10.x86_64) (1core*2cpus*1physical cpu*Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz 55296KB) (7716948KB)
+PID:     27089
+OS:      Rocky Linux 8.10 (Green Obsidian)
+
+Checking out license: Genus_Synthesis
+[09:49:46.230368] Periodic Lic check successful
+[09:49:46.754681] Feature usage summary:
+[09:49:46.754681] Genus_Synthesis  
+License checkout complete (0 seconds elapsed).
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Finished executable startup (6 seconds elapsed).
+
+Loading tool scripts...
+Finished loading tool scripts (27 seconds elapsed).
+
+WARNING: This version of the tool is 423 days old.
+@genus:root: 1> read_hdl -language sv booth_multiplier_8x8.sv
+@genus:root: 2> elaborate booth_multiplier_8x8
+Error   : Failed to execute command. [LBR-163] [elaborate]
+        : No target technology library was loaded.
+        : Specify libraries using read_libs or read_mmmc.
+UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   elaborate
+1

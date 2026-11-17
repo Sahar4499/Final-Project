@@ -1,0 +1,56 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2025 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[07:32:31.251265] Configured Lic search path (25.01-s002): 5280@ip-10-10-99-197.il-central-1.compute.internal
+
+Version: 25.11-s095_1, built Tue Aug 12 03:59:05 PDT 2025
+Options: -files ../scripts/run_synth.tcl 
+Date:    Sat Jul 18 07:32:31 2026
+Host:    ip-10-10-235-35.il-central-1.compute.internal (x86_64 w/Linux 4.18.0-553.79.1.el8_10.x86_64) (1core*2cpus*1physical cpu*Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz 55296KB) (7716940KB)
+PID:     27060
+OS:      Rocky Linux 8.10 (Green Obsidian)
+
+Checking out license: Genus_Synthesis
+[07:32:31.173008] Periodic Lic check successful
+[07:32:31.697312] Feature usage summary:
+[07:32:31.697314] Genus_Synthesis  
+License checkout complete (0 seconds elapsed).
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Finished executable startup (7 seconds elapsed).
+
+Loading tool scripts...
+Finished loading tool scripts (26 seconds elapsed).
+
+#@ Processing -files option
+@genus:root: 1> source ../scripts/run_synth.tcl
+#@ Begin verbose source ../scripts/run_synth.tcl
+@file(run_synth.tcl) 6: set search_path /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/
+@file(run_synth.tcl) 7: set_db library fast_vdd1v2_basicCells_lvt.lib
+Error   : File error. [FILE-100] [set_db]
+        : Cannot open file 'fast_vdd1v2_basicCells_lvt.lib'
+        : Make sure that the file is a readable regular file and has the specified name.
+Error   : A library file does not exist. [LBR-68] [set_db]
+        : File 'fast_vdd1v2_basicCells_lvt.lib' could not be found. File '<none>' was the last file that was successfully read in.
+        : Make sure that the library file exists or check for a typo in the file name.
+Error   : The data value for this attribute is invalid. [TUI-24] [set_db]
+        : The value 'fast_vdd1v2_basicCells_lvt.lib' cannot be set for attribute 'library'.
+        : To see the usage/description for this attribute, type '::legacy::set_attribute -h <attr_name> *' (in legacy UI mode) or 'help * <attr_name> -detail' (in CUI mode).
+#@ End verbose source ../scripts/run_synth.tcl
+1
+Encountered problems processing file: ../scripts/run_synth.tcl
+WARNING: This version of the tool is 339 days old.
+@genus:root: 2> exit
+
+Lic Summary:
+[07:33:48.164363] Cdslmd servers: ip-10-10-99-197
+[07:33:48.164370] Feature usage summary:
+[07:33:48.164371] Genus_Synthesis  
+Normal exit.

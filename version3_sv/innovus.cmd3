@@ -1,0 +1,50 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Sat Aug  1 08:31:03 2026                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v25.11-s102_1 (64bit) 08/27/2025 13:03 (Linux 4.18.0-305.el8.x86_64)
+#@(#)CDS: NanoRoute 25.11-s102_1 NR250730-0928/25_11-UB (database version 18.20.674) {superthreading v2.20}
+#@(#)CDS: AAE 25.11-s028 (64bit) 08/27/2025 (Linux 4.18.0-305.el8.x86_64)
+#@(#)CDS: CTE 25.11-s034_1 () Aug 18 2025 08:55:47 ( )
+#@(#)CDS: SYNTECH 25.11-s013_1 () Jul 30 2025 05:18:51 ( )
+#@(#)CDS: CPE v25.11-s029
+#@(#)CDS: IQuantus/TQuantus 24.1.0-s290 (64bit) Sun Jul 20 21:40:56 PDT 2025 (Linux 4.18.0-305.el8.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+win
+set init_pwr_net VDD
+set init_gnd_net VSS
+set init_lef_file {
+    /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/lef/gsclib045_tech.lef
+    /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/lef/gsclib045_macro.lef
+}
+set init_verilog ~/RTL_to_GDSII_Project/Final-Project/version3_sv/synthesis/multiplier_netlist.v
+set init_top_cell booth_multiplier_8x8
+init_design
+floorPlan -r 1.0 0.6 5.0 5.0 5.0 5.0
+globalNetConnect VDD -type pgpin -pin VDD -all
+globalNetConnect VSS -type pgpin -pin VSS -all
+globalNetConnect VDD -type tiehi -all
+globalNetConnect VSS -type tielo -all
+addRing -nets {VDD VSS} -type core_ring -follow core -layer {top Metal4 bottom Metal4 left Metal3 right Metal3} -width 2.0 -spacing 1.0 -offset 2.0
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top Metal4 bottom Metal4 left Metal3 right Metal3} -width 2.0 -spacing 1.0 -offset 2.0
+place_design
+routeDesign
+streamOut multiplier_final.gds -mapFile /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/gdsfiles/gds2_layer.map -libName DesignLib -topCell booth_multiplier_8x8 -units 2000 -mode ALL
+fit
+zoomBox -22.07100 -5.44700 59.73900 41.02500
+zoomBox -16.46950 -1.79550 53.06900 37.70550
+zoomBox -7.66150 3.94550 42.58050 32.48550
+zoomBox -4.22200 6.18800 38.48400 30.44700
+selectInst g8332__3680
+fit
+deselectAll
+streamOut multiplier_final.gds -mapFile /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/gdsfiles/gds2_layer.map -libName DesignLib -units 2000 -mode ALL
+streamOut multiplier_final.gds -libName DesignLib -units 2000 -mode ALL
+saveNetlist multiplier_routed.v
+saveDesign booth_multiplier_final_routed

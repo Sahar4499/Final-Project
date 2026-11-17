@@ -1,0 +1,177 @@
+xrun(64): 25.03-s006: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	25.03-s006: Started on Aug 10, 2026 at 16:59:48 UTC
+xrun
+	tb_booth_multiplier_8x8.sv
+	booth_bit_cell.sv
+	booth_encoder.sv
+	booth_multiplier_8x8.sv
+	booth_partial_product_8bit.sv
+	csa_layer_32bit.sv
+	full_adder.sv
+	mult16x16_hierarchical.sv
+	mult8x8.sv
+	pe.sv
+	ripple_adder_32bit.sv
+	systolic_array_2x2.sv
+	tb_booth_multiplier_8x8.sv
+	-access +r
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rccad/RC2SKILL/1.0/cds.site.lib,12): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rccad/RC2SKILL/1.0/cds.site.lib,14): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rccad/RC2SKILL/1.0/cds.site.lib,12): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rccad/RC2SKILL/1.0/cds.site.lib,14): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rccad/RC2SKILL/1.0/cds.site.lib,12): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rccad/RC2SKILL/1.0/cds.site.lib,14): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xmvlog: *W,DLCVAR (/tools/rccad/RC2SKILL/1.0/cds.site.lib,12): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xmvlog: *W,DLCVAR (/tools/rccad/RC2SKILL/1.0/cds.site.lib,14): cds.lib Invalid environment variable ''.
+file: tb_booth_multiplier_8x8.sv
+	module worklib.tb_booth_multiplier_8x8:sv
+		errors: 0, warnings: 0
+file: booth_bit_cell.sv
+	module worklib.booth_bit_cell:sv
+		errors: 0, warnings: 0
+file: booth_encoder.sv
+	module worklib.booth_encoder:sv
+		errors: 0, warnings: 0
+file: booth_multiplier_8x8.sv
+	module worklib.booth_multiplier_8x8:sv
+		errors: 0, warnings: 0
+file: booth_partial_product_8bit.sv
+	module worklib.booth_partial_product_8bit:sv
+		errors: 0, warnings: 0
+file: csa_layer_32bit.sv
+	module worklib.csa_layer_32bit:sv
+		errors: 0, warnings: 0
+file: full_adder.sv
+	module worklib.full_adder:sv
+		errors: 0, warnings: 0
+file: mult16x16_hierarchical.sv
+	module worklib.mult16x16_hierarchical:sv
+		errors: 0, warnings: 0
+file: mult8x8.sv
+	module worklib.mult8x8:sv
+		errors: 0, warnings: 0
+file: pe.sv
+	module worklib.pe:sv
+		errors: 0, warnings: 0
+file: ripple_adder_32bit.sv
+	module worklib.ripple_adder_32bit:sv
+		errors: 0, warnings: 0
+file: systolic_array_2x2.sv
+	module worklib.systolic_array_2x2:sv
+		errors: 0, warnings: 0
+file: tb_booth_multiplier_8x8.sv
+module tb_booth_multiplier_8x8;
+                             |
+xmvlog: *W,RECOME (tb_booth_multiplier_8x8.sv,3|29): recompiling design unit worklib.tb_booth_multiplier_8x8:sv.
+	First compiled from line 3 of tb_booth_multiplier_8x8.sv.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 2
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rccad/RC2SKILL/1.0/cds.site.lib,12): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rccad/RC2SKILL/1.0/cds.site.lib,14): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rccad/RC2SKILL/1.0/cds.site.lib,12): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rccad/RC2SKILL/1.0/cds.site.lib,14): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xmelab: *W,DLCVAR (/tools/rccad/RC2SKILL/1.0/cds.site.lib,12): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xmelab: *W,DLCVAR (/tools/rccad/RC2SKILL/1.0/cds.site.lib,14): cds.lib Invalid environment variable ''.
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb_booth_multiplier_8x8
+		mult16x16_hierarchical
+		systolic_array_2x2
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xmvlog_cg: *W,DLCVAR (/tools/rccad/RC2SKILL/1.0/cds.site.lib,12): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xmvlog_cg: *W,DLCVAR (/tools/rccad/RC2SKILL/1.0/cds.site.lib,14): cds.lib Invalid environment variable ''.
+		worklib.pe:sv <0x7fde3600>
+			streams:   4, words:  1487
+		worklib.pe:sv <0x3a8e2987>
+			streams:   4, words:  1625
+		worklib.pe:sv <0x662df4f9>
+			streams:   4, words:  1625
+		worklib.pe:sv <0x237deb7e>
+			streams:   4, words:  1763
+		worklib.systolic_array_2x2:sv <0x35c16896>
+			streams:  12, words:  3363
+		worklib.mult8x8:sv <0x3afa843a>
+			streams:   6, words:  2907
+		worklib.mult16x16_hierarchical:sv <0x2e434514>
+			streams:  14, words:  3680
+		worklib.full_adder:sv <0x0ceb0224>
+			streams:   1, words:   520
+		worklib.booth_bit_cell:sv <0x49477058>
+			streams:   2, words:   485
+		worklib.booth_encoder:sv <0x1ae8a4dc>
+			streams:   1, words:   651
+		worklib.booth_multiplier_8x8:sv <0x18094ace>
+			streams:  53, words: 20936
+		worklib.tb_booth_multiplier_8x8:sv <0x7ff4fe51>
+			streams:   3, words: 22135
+		worklib.booth_partial_product_8bit:sv <0x47faaa53>
+			streams:   4, words:  1424
+		worklib.csa_layer_32bit:sv <0x3f35118e>
+			streams:   2, words:  1077
+		worklib.ripple_adder_32bit:sv <0x23dc4ba4>
+			streams:   5, words:  2441
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                   Instances  Unique
+		Modules:                 896      12
+		Registers:             2,049      94
+		Scalar wires:          5,007       -
+		Expanded wires:        1,784      58
+		Vectored wires:          284       -
+		Always blocks:            13       3
+		Initial blocks:            1       1
+		Cont. assignments:     1,100      29
+		Pseudo assignments:    1,882       -
+		Assertions:               10      10
+		Process Clocks:            4       1
+		Simulation timescale:    1ps
+	Writing initial simulation snapshot: worklib.tb_booth_multiplier_8x8:sv
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xmsim: *W,DLCVAR (/tools/rccad/RC2SKILL/1.0/cds.site.lib,12): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xmsim: *W,DLCVAR (/tools/rccad/RC2SKILL/1.0/cds.site.lib,14): cds.lib Invalid environment variable ''.
+Loading snapshot worklib.tb_booth_multiplier_8x8:sv .................... Done
+xcelium> source /tools/cadence/XCELIUM/25.03.006/tools/xcelium/files/xmsimrc
+xcelium> run
+All tests completed
+Simulation complete via $finish(1) at time 200 NS + 0
+./tb_booth_multiplier_8x8.sv:123         $finish;
+xcelium> exit
+TOOL:	xrun(64)	25.03-s006: Exiting on Aug 10, 2026 at 16:59:53 UTC  (total: 00:00:05)

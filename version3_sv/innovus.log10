@@ -1,0 +1,537 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2025 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v25.11-s102_1, built Wed Aug 27 13:03:08 PDT 2025
+Options:	
+Date:		Sat Oct 10 11:07:12 2026
+Host:		ip-10-10-84-131.il-central-1.compute.internal (x86_64 w/Linux 4.18.0-553.79.1.el8_10.x86_64) (1core*2cpus*Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz 55296KB)
+OS:		Rocky Linux 8.10 (Green Obsidian)
+
+License:
+		[11:07:12.251233] Configured Lic search path (25.01-s002): 5280@ip-10-10-99-197.il-central-1.compute.internal
+
+		invs	Innovus Implementation System	25.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+
+**Info: Common UI will be the default UI for innovus in the next major release. Please use -legacy_ui when invoking innovus if you wish to continue to use legacy UI.
+The soft stacksize limit is either up to the hard limit or larger than 0.2% of RAM. No change is needed.
+Info: Process UID = 34055 / d7237c26-c82c-404c-8713-176f0d4128f8 / I5opDdqIs5
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+[INFO] Loading PVS 24.12 fill procedures
+<CMD> win
+<CMD> restoreDesign booth_multiplier_final_routed.dat booth_multiplier_8x8
+#% Begin load design ... (date=10/10 11:07:48, mem=1936.8M)
+Loading design 'booth_multiplier_8x8' saved by 'Innovus' '25.11-s102_1' on 'Sat Aug 1 08:38:57 2026'.
+% Begin Load MMMC data ... (date=10/10 11:07:50, mem=1939.9M)
+% End Load MMMC data ... (date=10/10 11:07:50, total cpu=0:00:00.0, real=0:00:00.0, peak res=1941.3M, current mem=1941.3M)
+rc_typ
+
+Loading LEF file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/libs/lef/gsclib045_tech.lef ...
+Set DBUPerIGU to M2 pitch 400.
+
+Loading LEF file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/libs/lef/gsclib045_macro.lef ...
+**WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/viewDefinition.tcl
+Reading fast_lib timing library '/tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_basicCells.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP9'. The cell will only be used for analysis. (File /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP8'. The cell will only be used for analysis. (File /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP7'. The cell will only be used for analysis. (File /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP6'. The cell will only be used for analysis. (File /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP5'. The cell will only be used for analysis. (File /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP4'. The cell will only be used for analysis. (File /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP3'. The cell will only be used for analysis. (File /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP2'. The cell will only be used for analysis. (File /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP10'. The cell will only be used for analysis. (File /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_basicCells.lib)
+Read 489 cells in library 'fast_vdd1v2' 
+Reading fast_lib timing library '/tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_extvdd1v2.lib' ...
+Read 51 cells in library 'fast_vdd1v2_extvdd1v2' 
+Reading fast_lib timing library '/tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_multibitsDFF.lib' ...
+Read 16 cells in library 'fast_vdd1v2' 
+Reading fast_lib timing library '/tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_extvdd1v0.lib' ...
+Read 10 cells in library 'fast_vdd1v2_extvdd1v0' 
+Reading fast_lib timing library '/tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045_lvt/timing/fast_vdd1v2_basicCells_lvt.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNALVT'. The cell will only be used for analysis. (File /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045_lvt/timing/fast_vdd1v2_basicCells_lvt.lib)
+Read 480 cells in library 'fast_vdd1v2' 
+*** End library_loading (cpu=0.04min, real=0.07min, mem=13.7M, fe_cpu=0.48min, fe_real=0.70min, fe_mem=1966.5M) ***
+% Begin Load netlist data ... (date=10/10 11:07:54, mem=1966.6M)
+*** Begin netlist parsing (mem=1966.6M) ***
+Pin 'VDD' of cell 'SDFF4RX2' is declared as power/ground in timing library but as signal in LEF.  Treat it as power/ground.
+Pin 'VSS' of cell 'SDFF4RX2' is declared as power/ground in timing library but as signal in LEF.  Treat it as power/ground.
+Pin 'VDD' of cell 'SDFF4RX1' is declared as power/ground in timing library but as signal in LEF.  Treat it as power/ground.
+Pin 'VSS' of cell 'SDFF4RX1' is declared as power/ground in timing library but as signal in LEF.  Treat it as power/ground.
+Created 1046 new cells from 5 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilogBinary netlist '/data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.v.bin'
+
+*** Memory Usage v#1 (Current mem = 1984.434M, initial mem = 910.609M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1984.4M) ***
+% End Load netlist data ... (date=10/10 11:07:54, total cpu=0:00:00.0, real=0:00:00.0, peak res=1984.5M, current mem=1984.5M)
+Set top cell to booth_multiplier_8x8.
+Hooked 1046 DB cells to tlib cells.
+** Removed 480 unused lib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell booth_multiplier_8x8 ...
+***** UseNewTieNetMode *****.
+*** Netlist is unique.
+** info: there are 584 modules.
+** info: there are 188 stdCell insts.
+** info: there are 188 stdCell insts with at least one signal pin.
+
+*** Memory Usage v#1 (Current mem = 2031.953M, initial mem = 910.609M) ***
+*info: set bottom ioPad orient R0
+**WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Start create_tracks
+Loading preference file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/gui.pref.tcl ...
+Change floorplan default-technical-site to 'CoreSite'.
+*Info: initialize multi-corner CTS.
+Total number of combinational cells: 320
+Total number of sequential cells: 203
+Total number of tristate cells: 10
+Total number of level shifter cells: 10
+Total number of power gating cells: 0
+Total number of isolation cells: 8
+Total number of power switch cells: 6
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 9
+List of usable buffers: CLKBUFX2 BUFX2 CLKBUFX3 BUFX3 CLKBUFX4 BUFX4 CLKBUFX6 BUFX6 CLKBUFX8 BUFX8 CLKBUFX12 BUFX12 CLKBUFX16 BUFX16 CLKBUFX20 BUFX20
+Total number of usable buffers: 16
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INVXL INVX1 INVX2 CLKINVX1 INVX3 CLKINVX2 INVX4 CLKINVX4 CLKINVX3 INVX6 CLKINVX6 INVX8 CLKINVX8 INVX12 CLKINVX12 INVX16 CLKINVX16 INVX20 CLKINVX20
+Total number of usable inverters: 19
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1 DLY1X4 DLY2X1 DLY2X4 DLY3X1 DLY3X4 DLY4X1 DLY4X4
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+Reading floorplan file - /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.fp.gz (mem = 2060.1M).
+% Begin Load floorplan data ... (date=10/10 11:07:57, mem=2060.5M)
+*info: reset 231 existing net BottomPreferredLayer and AvoidDetour
+Deleting old partition specification.
+Set FPlanBox to (0 0 73200 71820)
+**WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+ ... processed partition successfully.
+Reading binary special route file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.fp.spr.gz (Created by Innovus v25.11-s102_1 on Sat Aug  1 08:38:56 2026, version: 1)
+Convert 0 swires and 0 svias from compressed groups
+0 swires and 0 svias were compressed
+0 swires and 0 svias were decompressed from small or sparse groups
+Ending "Read special route file" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2062.1M, current mem=2062.1M)
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+% End Load floorplan data ... (date=10/10 11:07:57, total cpu=0:00:00.1, real=0:00:00.0, peak res=2063.1M, current mem=2063.1M)
+% Begin Load SymbolTable ... (date=10/10 11:07:57, mem=2063.4M)
+Reading congestion map file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.route.congmap.gz ...
+Suppress "**WARN ..." messages.
+Un-suppress "**WARN ..." messages.
+% End Load SymbolTable ... (date=10/10 11:07:57, total cpu=0:00:00.0, real=0:00:00.0, peak res=2064.2M, current mem=2064.2M)
+Loading place ...
+% Begin Load placement data ... (date=10/10 11:07:57, mem=2064.4M)
+Reading placement file - /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.place.gz.
+** Reading stdCellPlacement_binary (Created by Innovus v25.11-s102_1 on Sat Aug  1 08:38:56 2026, version# 2) ...
+Read Views for adaptive view pruning ...
+Read 0 views from Binary DB for adaptive view pruning
+*** Completed restorePlace (cpu=0:00:00.0 real=0:00:00.0 mem=2065.2M) ***
+Total net length = 1.275e+03 (6.444e+02 6.310e+02) (ext = 2.808e+02)
+% End Load placement data ... (date=10/10 11:07:57, total cpu=0:00:00.0, real=0:00:00.0, peak res=2065.3M, current mem=2065.3M)
+Reading PG file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.pg.gz, version#2, (Created by Innovus v25.11-s102_1 on       Sat Aug  1 08:38:56 2026)
+*** Completed restorePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=2065.6M) ***
+% Begin Load routing data ... (date=10/10 11:07:57, mem=2065.7M)
+Reading routing file - /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.route.gz.
+Reading Innovus routing data (Created by Innovus v25.11-s102_1 on Sat Aug  1 08:38:56 2026 Format: 23.1) ...
+*** Total 231 nets are successfully restored.
+*** Completed restoreRoute (cpu=0:00:00.0 real=0:00:00.0 mem=2066.7M) ***
+% End Load routing data ... (date=10/10 11:07:57, total cpu=0:00:00.0, real=0:00:00.0, peak res=2066.1M, current mem=2066.1M)
+TAT_INFO: ::restoreCongMap REAL = 0 : CPU = 0 : MEM = 0.
+Reading property file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.prop
+*** Completed restoreProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2069.1M) ***
+Reading dirtyarea snapshot file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.db.da.gz (Create by Innovus v25.11-s102_1 on Sat Aug  1 08:38:56 2026, version: 8).
+Extraction setup Started for TopCell booth_multiplier_8x8 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+**WARN: (IMPEXT-2773):	The via resistance between layers M0 and M1 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M1 and M2 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M2 and M3 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M3 and M4 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M4 and M5 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M5 and M6 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M6 and M7 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M7 and M8 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M8 and M9 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M9 and M10 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M10 and M11 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M1 is not defined in the cap table. Therefore, the LEF value 0.0736 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M2 is not defined in the cap table. Therefore, the LEF value 0.0604 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M3 is not defined in the cap table. Therefore, the LEF value 0.0604 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M4 is not defined in the cap table. Therefore, the LEF value 0.0604 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M5 is not defined in the cap table. Therefore, the LEF value 0.0604 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M6 is not defined in the cap table. Therefore, the LEF value 0.0604 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M7 is not defined in the cap table. Therefore, the LEF value 0.0604 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M8 is not defined in the cap table. Therefore, the LEF value 0.0214 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M9 is not defined in the cap table. Therefore, the LEF value 0.0214 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M10 is not defined in the cap table. Therefore, the LEF value 0.0214 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M11 is not defined in the cap table. Therefore, the LEF value 0.021 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+Summary of Active RC-Corners : 
+ 
+ Analysis View: av_fast
+    RC-Corner Name        : rc_typ
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from Cap Table]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from Cap Table]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+Updating RC Grid density data for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+% Begin Loading timing constraints ... (date=10/10 11:08:00, mem=2070.8M)
+Reading timing constraints file 'booth.sdc' ...
+Current (total cpu=0:00:33.0, real=0:00:48.0, peak res=2468.5M, current mem=2468.5M)
+**WARN: (TCLCMD-1142):	Virtual clock 'vclk' is being created with no source objects. (File booth.sdc, Line 1).
+
+------------------------------------------------------------------------------------
+CONSTRAINT READING SUMMARY                                                          
+------------------------------------------------------------------------------------
+Constraint                                        | Success        | Fail           
+------------------------------------------------------------------------------------
+set_max_delay                                     | 1              | 0              
+set_output_delay                                  | 1              | 0              
+all_outputs                                       | 2              | 0              
+set_input_delay                                   | 1              | 0              
+all_inputs                                        | 2              | 0              
+create_clock                                      | 1              | 0              
+------------------------------------------------------------------------------------
+INFO (CTE): Reading of timing constraints file booth.sdc completed, with 1 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2501.7M, current mem=2501.7M)
+Current (total cpu=0:00:33.0, real=0:00:48.0, peak res=2501.7M, current mem=2501.7M)
+% End Loading timing constraints ... (date=10/10 11:08:00, total cpu=0:00:00.5, real=0:00:00.0, peak res=2501.7M, current mem=2501.7M)
+av_fast
+dc_fast
+dc_fast
+Start generating vias ..
+#Skip building auto via since it is not turned on.
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+Via generation completed.
+% Begin Load power constraints ... (date=10/10 11:08:01, mem=2508.1M)
+% End Load power constraints ... (date=10/10 11:08:01, total cpu=0:00:00.0, real=0:00:00.0, peak res=2508.2M, current mem=2508.2M)
+% Begin load AAE data ... (date=10/10 11:08:01, mem=2508.2M)
+% End load AAE data ... (date=10/10 11:08:01, total cpu=0:00:00.0, real=0:00:00.0, peak res=2508.2M, current mem=2508.2M)
+Total number of combinational cells: 320
+Total number of sequential cells: 203
+Total number of tristate cells: 10
+Total number of level shifter cells: 10
+Total number of power gating cells: 0
+Total number of isolation cells: 8
+Total number of power switch cells: 6
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 9
+List of usable buffers: CLKBUFX2 BUFX2 CLKBUFX3 BUFX3 CLKBUFX4 BUFX4 CLKBUFX6 BUFX6 CLKBUFX8 BUFX8 CLKBUFX12 BUFX12 CLKBUFX16 BUFX16 CLKBUFX20 BUFX20
+Total number of usable buffers: 16
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INVXL INVX1 INVX2 CLKINVX1 INVX3 CLKINVX2 INVX4 CLKINVX4 CLKINVX3 INVX6 CLKINVX6 INVX8 CLKINVX8 INVX12 CLKINVX12 INVX16 CLKINVX16 INVX20 CLKINVX20
+Total number of usable inverters: 19
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1 DLY1X4 DLY2X1 DLY2X4 DLY3X1 DLY3X4 DLY4X1 DLY4X4
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+#% End load design ... (date=10/10 11:08:01, total cpu=0:00:08.5, real=0:00:13.0, peak res=2511.0M, current mem=2509.0M)
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPFP-3961           4  The techSite '%s' has no related standar...
+WARNING   IMPEXT-2766         11  The sheet resistance for layer %s is not...
+WARNING   IMPEXT-2773         11  The via resistance between layers %s and...
+WARNING   TCLCMD-1142          1  Virtual clock '%s' is being created with...
+WARNING   TECHLIB-302         11  No function defined for cell '%s'. The c...
+*** Message Summary: 39 warning(s), 0 error(s)
+
+<CMD> report_timing > timing_final.rpt
+AAE_INFO: opIsDesignInPostRouteState() is 1
+AAE DB initialization (MEM=2545.671875 CPU=0:00:00.0 REAL=0:00:00.0) 
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: booth_multiplier_8x8
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Extraction called for design 'booth_multiplier_8x8' of instances=188 and nets=231 using extraction engine 'preRoute' .
+**WARN: (IMPEXT-3530):	The process node is not set. Use the command setDesignMode -process <process node> prior to extraction for maximum accuracy and optimal automatic threshold setting.
+Type 'man IMPEXT-3530' for more detail.
+PreRoute RC Extraction called for design booth_multiplier_8x8.
+RC Extraction called in multi-corner(1) mode.
+**WARN: (IMPEXT-6197):	The Cap table file is not specified. This will result in lower parasitic accuracy when using preRoute extraction or postRoute extraction with effort level 'low'. It is recommended to generate the Cap table file using the 'generateCapTbl' command and specify it before extraction using 'create_rc_corner/update_rc_corner -cap_table'.
+Type 'man IMPEXT-6197' for more detail.
+RCMode: PreRoute
+      RC Corner Indexes            0   
+Capacitance Scaling Factor   : 1.00000 
+Resistance Scaling Factor    : 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 
+Clock Res. Scaling Factor    : 1.00000 
+Shrink Factor                : 1.00000
+PreRoute extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Updating RC Grid density data for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+PreRoute RC Extraction DONE (CPU Time: 0:00:00.1  Real Time: 0:00:00.0  MEM: 2547.301M)
+Calculate delays in BcWc mode...
+Start delay calculation (fullDC) (1 T). (MEM=2533.97)
+**WARN: (IMPEXT-2882):	Unable to find the resistance for via 'M2_M1_1x2_HV_N' in Cap table or LEF or OA files. The default value of 4.0 ohms is being assigned. To avoid this, check the Cap table and LEF and OA files, provide the resistance and read the files again.
+**WARN: (IMPEXT-2882):	Unable to find the resistance for via 'M3_M2_2x1_VH_E' in Cap table or LEF or OA files. The default value of 4.0 ohms is being assigned. To avoid this, check the Cap table and LEF and OA files, provide the resistance and read the files again.
+Total number of fetched objects 229
+End delay calculation. (MEM=2569.95 CPU=0:00:00.1 REAL=0:00:01.0)
+End delay calculation (fullDC). (MEM=2544.31 CPU=0:00:00.3 REAL=0:00:02.0)
+<CMD> report_power > power_final.rpt
+env CDS_WORKAREA is set to /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv
+
+Power Net Detected:
+        Voltage	    Name
+             0V	    VSS
+          1.32V	    VDD
+             0V	    VSS
+          1.32V	    VDD
+Using Power View: av_fast.
+
+Begin Power Analysis
+
+             0V	    VSS
+          1.32V	    VDD
+
+Begin Processing Timing Library for Power Calculation
+
+Ended Processing Timing Library for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2563.77MB/5072.46MB/2563.77MB)
+
+
+
+Begin Processing Power Net/Grid for Power Calculation
+
+Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2563.77MB/5072.46MB/2563.77MB)
+
+Begin Processing Timing Window Data for Power Calculation
+
+vclk(200MHz) Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2563.77MB/5072.46MB/2563.77MB)
+
+Begin Processing User Attributes
+
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2563.77MB/5072.46MB/2563.77MB)
+
+Begin Processing Signal Activity
+
+** INFO:  (VOLTUS_POWR-1356): No default input activity has been set. Defaulting to 0.2.
+Use 'set_default_switching_activity -input_activity' command to change the default activity value.
+
+
+Starting Building Netlist
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT)
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 10%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 20%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 30%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 40%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 50%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 60%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 70%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 80%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 90%
+
+Finished Building Netlist
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT)
+
+Starting Levelizing
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT)
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 10%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 20%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 30%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 40%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 50%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 60%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 70%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 80%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 90%
+
+Finished Levelizing
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT)
+
+Starting Activity Propagation
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT)
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 10%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 20%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 30%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 40%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 50%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 60%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 70%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 80%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 90%
+
+Finished Activity Propagation
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT)
+Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2563.77MB/5072.46MB/2563.77MB)
+
+Begin Power Computation
+
+      ----------------------------------------------------------
+      # of cell(s) missing both power/leakage table: 0
+      # of cell(s) missing power table: 0
+      # of cell(s) missing leakage table: 0
+      ----------------------------------------------------------
+
+
+
+Starting Calculating power
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT)
+ ... Calculating switching power
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 10%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 20%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 30%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 40%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 50%
+ ... Calculating internal and leakage power
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 60%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 70%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 80%
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT): 90%
+
+Finished Calculating power
+2026-Oct-10 11:09:48 (2026-Oct-10 11:09:48 GMT)
+      # of MSMV cell(s) missing power_level: 0
+Ended Power Computation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2564.80MB/5072.46MB/2564.80MB)
+
+Begin Processing User Attributes
+
+Begin Processing set_power
+Ended Processing set_power: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=2564.80MB/5072.46MB/2564.80MB)
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2564.80MB/5072.46MB/2564.80MB)
+
+Ended Power Analysis: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2564.80MB/5072.46MB/2564.80MB)
+
+Begin Boundary Leakage Calculation
+Ended Boundary Leakage Calculation: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=2565.93MB/5072.46MB/2565.93MB)
+Begin Static Power Report Generation
+*----------------------------------------------------------------------------------------
+*	Innovus 25.11-s102_1 (64bit) 08/27/2025 13:03 (Linux 4.18.0-305.el8.x86_64)
+*	
+*
+* 	Date & Time:	2026-Oct-10 11:09:49 (2026-Oct-10 11:09:49 GMT)
+*
+*----------------------------------------------------------------------------------------
+*
+*	Design: booth_multiplier_8x8
+*
+*	Liberty Libraries used:
+*	        av_fast: /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_basicCells.lib
+*	        av_fast: /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_extvdd1v2.lib
+*	        av_fast: /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_multibitsDFF.lib
+*	        av_fast: /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_extvdd1v0.lib
+*	        av_fast: /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045_lvt/timing/fast_vdd1v2_basicCells_lvt.lib
+*
+*	Parasitic Files used:
+*
+*	Power Units = 1mW
+*
+*	Time Units = 1e-09 secs
+*
+*       report_power
+*
+-----------------------------------------------------------------------------------------
+*
+
+
+
+Total Power
+-----------------------------------------------------------------------------------------
+Total Internal Power:        0.03468696 	   63.5422%
+Total Switching Power:       0.01985153 	   36.3656%
+Total Leakage Power:         0.00005034 	    0.0922%
+Total Power:                 0.05458882
+-----------------------------------------------------------------------------------------
+
+
+Group                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Sequential                             0           0           0           0           0
+Macro                                  0           0           0           0           0
+IO                                     0           0           0           0           0
+Combinational                    0.03469     0.01985   5.034e-05     0.05459         100
+Clock (Combinational)                  0           0           0           0           0
+Clock (Sequential)                     0           0           0           0           0
+-----------------------------------------------------------------------------------------
+Total                            0.03469     0.01985   5.034e-05     0.05459         100
+-----------------------------------------------------------------------------------------
+
+
+Rail                  Voltage   Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+VDD                      1.32    0.03469     0.01985   5.034e-05     0.05459         100
+ 
+ 
+-----------------------------------------------------------------------------------------
+*	Power Distribution Summary: 
+*              Highest Average Power:               g8289__4733 (ADDFX1):         0.001061
+*              Highest Leakage Power:               g8289__4733 (ADDFX1):         6.83e-07
+*                Total Cap:      2.59373e-13 F
+*                Total instances in design:   188
+*                Total instances in design with no power:     0
+*                Total instances in design with no activty:     0
+
+*                Total Fillers and Decap:     0
+-----------------------------------------------------------------------------------------
+ 
+** INFO:  (VOLTUS_POWR-3465): There are 0 decaps and 0 fillers in the design
+
+Ended Static Power Report Generation: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=2565.93MB/5072.46MB/2565.93MB)
+
+*** Message Summary: 43 warning(s), 0 error(s)
+
+
+*** Memory Usage v#1 (Current mem = 2565.352M, initial mem = 910.609M) ***
+--- Ending "Innovus" (totcpu=0:00:41.2, real=0:05:35, mem=2565.4M) ---

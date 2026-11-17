@@ -1,0 +1,94 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2025 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[13:29:27.251329] Configured Lic search path (25.01-s002): 5280@ip-10-10-99-197.il-central-1.compute.internal
+
+Version: 25.11-s095_1, built Tue Aug 12 03:59:05 PDT 2025
+Options: -files ../scripts/run_synth.tcl 
+Date:    Sat Jul 18 13:29:27 2026
+Host:    ip-10-10-235-35.il-central-1.compute.internal (x86_64 w/Linux 4.18.0-553.79.1.el8_10.x86_64) (1core*2cpus*1physical cpu*Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz 55296KB) (7716940KB)
+PID:     37220
+OS:      Rocky Linux 8.10 (Green Obsidian)
+
+Checking out license: Genus_Synthesis
+[13:29:27.466162] Periodic Lic check successful
+[13:29:27.466179] Feature usage summary:
+[13:29:27.466179] Genus_Synthesis  
+License checkout complete (0 seconds elapsed).
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Finished executable startup (7 seconds elapsed).
+
+Loading tool scripts...
+Finished loading tool scripts (25 seconds elapsed).
+
+#@ Processing -files option
+@genus:root: 1> source ../scripts/run_synth.tcl
+#@ Begin verbose source ../scripts/run_synth.tcl
+@file(run_synth.tcl) 2: set_db library /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045_lvt/timing/fast_vdd1v2_basicCells_lvt.lib
+
+  Message Summary for Library fast_vdd1v2_basicCells_lvt.lib:
+  ***********************************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  ***********************************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.320000, 0.000000) in library 'fast_vdd1v2_basicCells_lvt.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNALVT' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'fast_vdd1v2/ANTENNALVT'.
+        : Specify a valid area value for the libcell.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNALVT' must have an output pin.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'fast_vdd1v2/DFFNSRX4LVT'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'fast_vdd1v2/DFFSX2LVT'.
+  Setting attribute of root '/': 'library' = /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045_lvt/timing/fast_vdd1v2_basicCells_lvt.lib
+@file(run_synth.tcl) 5: read_hdl -sv ../booth_bit_cell.sv
+@file(run_synth.tcl) 6: read_hdl -sv ../booth_encoder.sv
+@file(run_synth.tcl) 7: read_hdl -sv ../full_adder.sv
+@file(run_synth.tcl) 8: read_hdl -sv ../csa_layer_32bit.sv
+@file(run_synth.tcl) 9: read_hdl -sv ../ripple_adder_32bit.sv
+@file(run_synth.tcl) 10: read_hdl -sv ../booth_partial_product_8bit.sv
+@file(run_synth.tcl) 11: read_hdl -sv ../mult8x8.sv
+@file(run_synth.tcl) 12: read_hdl -sv ../mult16x16_hierarchical.sv
+@file(run_synth.tcl) 13: read_hdl -sv ../booth_multiplier_8x8.sv
+@file(run_synth.tcl) 14: read_hdl -sv ../pe.sv
+@file(run_synth.tcl) 15: read_hdl -sv ../systolic_array_2x2.sv
+@file(run_synth.tcl) 18: elaborate systolic_array_2x2
+  Library has 324 usable logic and 128 usable sequential lib-cells.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'systolic_array_2x2' from file '../systolic_array_2x2.sv'.
+Error   : Could not find a port. [CDFG-211] [elaborate]
+        : Unable to find port 'A' of instance 'u_mult' of module 'booth_multiplier_8x8'.  Available ports are 'input a, input b, output p' in file '../pe.sv' on line 13.
+        : Ensure that the desired port is defined in the module definition of the instantiated instance.
+Error   : Could not find a port. [CDFG-211] [elaborate]
+        : Unable to find port 'B' of instance 'u_mult' of module 'booth_multiplier_8x8' in file '../pe.sv' on line 13.
+Error   : Could not find a port. [CDFG-211] [elaborate]
+        : Unable to find port 'P' of instance 'u_mult' of module 'booth_multiplier_8x8' in file '../pe.sv' on line 13.
+Info    : Unable to elaborate the design. [ELAB-4]
+        : Module 'systolic_array_2x2' contains errors and cannot be elaborated.
+UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   elaborate
+#@ End verbose source ../scripts/run_synth.tcl
+1
+Encountered problems processing file: ../scripts/run_synth.tcl
+WARNING: This version of the tool is 340 days old.
+@genus:root: 2> exit
+
+Lic Summary:
+[13:30:55.070418] Cdslmd servers: ip-10-10-99-197
+[13:30:55.594714] Feature usage summary:
+[13:30:55.594715] Genus_Synthesis  
+Normal exit.

@@ -1,0 +1,41 @@
+###############################################################
+#  Updated for proper MMMC and LEF/Netlist loading
+###############################################################
+#
+# Version 1.1
+#
+
+# --- Timing and Analysis Settings ---
+set _timing_constraint_efficient_block_write_sdc 0
+set _timing_constraint_efficient_clock_for_write_sdc 1
+set _timing_constraint_enable_improved_timing_update_flow 1
+set init_design_settop 0
+set init_gnd_net {VSS}
+set init_pwr_net {VDD}
+
+# --- Design Import Paths ---
+set init_verilog {../synthesis/systolic_array_netlist.v}
+set init_lef_file {/tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045_tech/lef/gsclib045_tech.lef /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045_lvt/lef/gsclib045_lvt_macro.lef}
+
+# --- MMMC (Timing) Settings ---
+set init_mmmc_file {../scripts/mmmc.tcl}
+
+# --- General Tool Settings ---
+set defHierChar {/}
+set init_import_mode { -discardFloatingVNets 0 -keepEmptyModule 1}
+set latch_time_borrow_mode max_borrow
+set load_netlist_ignore_undefined_cell 1
+
+# --- Timing Engine Optimization ---
+set timing_constraint_enable_multi_thread_timing_update 1
+set timing_enable_new_power_view_mode 1
+set timing_library_refactor_db_arc_processing 1
+set timing_library_refactor_db_arc_processing3 1
+
+# --- Misc Settings ---
+set pegDefaultResScaleFactor 1
+set pegDetailResScaleFactor 1
+set pegEnableDualViewForTQuantus 1
+set init_lef_check_antenna 1
+set init_verilog_tolerate_port_mismatch 0
+set lefdefInputCheckColoredShape 0

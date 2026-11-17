@@ -1,0 +1,404 @@
+[10/10 10:50:22      0s] 
+[10/10 10:50:22      0s] Cadence Innovus(TM) Implementation System.
+[10/10 10:50:22      0s] Copyright 2025 Cadence Design Systems, Inc. All rights reserved worldwide.
+[10/10 10:50:22      0s] 
+[10/10 10:50:22      0s] Version:	v25.11-s102_1, built Wed Aug 27 13:03:08 PDT 2025
+[10/10 10:50:22      0s] Options:	
+[10/10 10:50:22      0s] Date:		Sat Oct 10 10:50:22 2026
+[10/10 10:50:22      0s] Host:		ip-10-10-84-131.il-central-1.compute.internal (x86_64 w/Linux 4.18.0-553.79.1.el8_10.x86_64) (1core*2cpus*Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz 55296KB)
+[10/10 10:50:22      0s] OS:		Rocky Linux 8.10 (Green Obsidian)
+[10/10 10:50:22      0s] 
+[10/10 10:50:22      0s] License:
+[10/10 10:50:22      0s] 		[10:50:22.251217] Configured Lic search path (25.01-s002): 5280@ip-10-10-99-197.il-central-1.compute.internal
+
+[10/10 10:50:22      0s] 		invs	Innovus Implementation System	25.1	checkout succeeded
+[10/10 10:50:22      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[10/10 10:50:23      0s] 
+[10/10 10:50:23      0s] **Info: Common UI will be the default UI for innovus in the next major release. Please use -legacy_ui when invoking innovus if you wish to continue to use legacy UI.
+[10/10 10:50:37     14s] Memory management switch to non-aggressive memory release mode.
+[10/10 10:50:37     14s] 
+[10/10 10:50:37     14s] OS Mmap count monitoring thread starts. Limit of OS Mmap count is 65530
+[10/10 10:50:37     14s] 
+[10/10 10:50:40     16s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v25.11-s102_1 (64bit) 08/27/2025 13:03 (Linux 4.18.0-305.el8.x86_64)
+[10/10 10:50:44     19s] @(#)CDS: NanoRoute 25.11-s102_1 NR250730-0928/25_11-UB (database version 18.20.674) {superthreading v2.20}
+[10/10 10:50:44     19s] @(#)CDS: AAE 25.11-s028 (64bit) 08/27/2025 (Linux 4.18.0-305.el8.x86_64)
+[10/10 10:50:44     19s] @(#)CDS: CTE 25.11-s034_1 () Aug 18 2025 08:55:47 ( )
+[10/10 10:50:44     19s] @(#)CDS: SYNTECH 25.11-s013_1 () Jul 30 2025 05:18:51 ( )
+[10/10 10:50:44     19s] @(#)CDS: CPE v25.11-s029
+[10/10 10:50:44     19s] @(#)CDS: IQuantus/TQuantus 24.1.0-s290 (64bit) Sun Jul 20 21:40:56 PDT 2025 (Linux 4.18.0-305.el8.x86_64)
+[10/10 10:50:44     19s] @(#)CDS: OA 22.62-p010 Tue Jun 10 08:32:29 2025
+[10/10 10:50:44     19s] @(#)CDS: SGN 23.10-d005 (03-Oct-2023) (64 bit executable, TkQt5.15.9)
+[10/10 10:50:44     19s] @(#)CDS: RCDB 11.15.0
+[10/10 10:50:44     19s] @(#)CDS: STYLUS 25.10-b003_1 (03/20/2025 14:55 PDT)
+[10/10 10:50:44     19s] @(#)CDS: IntegrityPlanner-25.11-186 (25.11) (2025-07-16 18:29:01+0800)
+[10/10 10:50:44     19s] @(#)CDS: SYNTHESIS_ENGINE 25.11-s095
+[10/10 10:50:44     19s] @(#)CDS: TCDB v25.10-b001
+[10/10 10:50:44     19s] Create and set the environment variable TMPDIR to /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/innovus_temp_31642_9b1258f1-1111-4b7c-9365-f81b7f879b45_ip-10-10-84-131.il-central-1.compute.internal_primovs_d44853.
+
+[10/10 10:50:44     19s] The soft stacksize limit is either up to the hard limit or larger than 0.2% of RAM. No change is needed.
+[10/10 10:50:47     21s] Info: Process UID = 31642 / 9b1258f1-1111-4b7c-9365-f81b7f879b45 / 8NX0eDEWWv
+[10/10 10:50:49     24s] 
+[10/10 10:50:49     24s] **INFO:  MMMC transition support version v31-84 
+[10/10 10:50:49     24s] 
+[10/10 10:50:49     24s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[10/10 10:50:49     24s] <CMD> suppressMessage ENCEXT-2799
+[10/10 10:50:50     24s] <CMD> getVersion
+[10/10 10:50:50     24s] [INFO] Loading PVS 24.12 fill procedures
+[10/10 10:50:50     24s] <CMD> win
+[10/10 10:51:04     25s] <CMD> read_db booth_multiplier_final_routed.dat
+[10/10 10:51:04     25s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[10/10 10:51:04     25s] #% Begin load design ... (date=10/10 10:51:04, mem=1939.3M)
+[10/10 10:51:05     26s] Loading design 'booth_multiplier_8x8' saved by 'Innovus' '25.11-s102_1' on 'Sat Aug 1 08:38:57 2026'.
+[10/10 10:51:05     26s] 
+[10/10 10:51:05     26s] Loading LEF file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/libs/lef/gsclib045_tech.lef ...
+[10/10 10:51:05     26s] Set DBUPerIGU to M2 pitch 400.
+[10/10 10:51:05     26s] 
+[10/10 10:51:05     26s] Loading LEF file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/libs/lef/gsclib045_macro.lef ...
+[10/10 10:51:06     26s] **WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[10/10 10:51:06     26s] Type 'man IMPLF-200' for more detail.
+[10/10 10:51:06     26s] 
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+[10/10 10:51:06     26s] *** End library_loading (cpu=0.00min, real=0.00min, mem=0.0M, fe_cpu=0.45min, fe_real=0.73min, fe_mem=1952.9M) ***
+[10/10 10:51:06     26s] % Begin Load netlist data ... (date=10/10 10:51:06, mem=1953.1M)
+[10/10 10:51:06     26s] *** Begin netlist parsing (mem=1953.1M) ***
+[10/10 10:51:06     26s] Created 0 new cells from 0 timing libraries.
+[10/10 10:51:06     26s] Reading netlist ...
+[10/10 10:51:06     26s] Backslashed names will retain backslash and a trailing blank character.
+[10/10 10:51:06     26s] Reading verilogBinary netlist '/data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.v.bin'
+[10/10 10:51:06     26s] 
+[10/10 10:51:06     26s] *** Memory Usage v#1 (Current mem = 1957.664M, initial mem = 909.344M) ***
+[10/10 10:51:06     26s] *** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1957.7M) ***
+[10/10 10:51:06     27s] % End Load netlist data ... (date=10/10 10:51:06, total cpu=0:00:00.0, real=0:00:00.0, peak res=1957.9M, current mem=1957.8M)
+[10/10 10:51:06     27s] Set top cell to booth_multiplier_8x8.
+[10/10 10:51:06     27s] Hooked 0 DB cells to tlib cells.
+[10/10 10:51:06     27s] Ending "BindLib:" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1963.5M, current mem=1963.5M)
+[10/10 10:51:06     27s] Starting recursive module instantiation check.
+[10/10 10:51:06     27s] No recursion found.
+[10/10 10:51:06     27s] Building hierarchical netlist for Cell booth_multiplier_8x8 ...
+[10/10 10:51:06     27s] ***** UseNewTieNetMode *****.
+[10/10 10:51:06     27s] *** Netlist is unique.
+[10/10 10:51:06     27s] Setting Std. cell height to 3420 DBU (smallest netlist inst).
+[10/10 10:51:06     27s] ** info: there are 584 modules.
+[10/10 10:51:06     27s] ** info: there are 188 stdCell insts.
+[10/10 10:51:06     27s] ** info: there are 188 stdCell insts with at least one signal pin.
+[10/10 10:51:06     27s] 
+[10/10 10:51:06     27s] *** Memory Usage v#1 (Current mem = 1991.309M, initial mem = 909.344M) ***
+[10/10 10:51:06     27s] *info: set bottom ioPad orient R0
+[10/10 10:51:06     27s] **WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[10/10 10:51:06     27s] Type 'man IMPFP-3961' for more detail.
+[10/10 10:51:06     27s] **WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[10/10 10:51:06     27s] Type 'man IMPFP-3961' for more detail.
+[10/10 10:51:06     27s] Start create_tracks
+[10/10 10:51:06     27s] Loading preference file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/gui.pref.tcl ...
+[10/10 10:51:06     27s] Change floorplan default-technical-site to 'CoreSite'.
+[10/10 10:51:06     27s] Reading floorplan file - /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.fp.gz (mem = 2269.9M).
+[10/10 10:51:06     27s] % Begin Load floorplan data ... (date=10/10 10:51:06, mem=2270.1M)
+[10/10 10:51:06     27s] *info: reset 231 existing net BottomPreferredLayer and AvoidDetour
+[10/10 10:51:06     27s] Deleting old partition specification.
+[10/10 10:51:06     27s] Set FPlanBox to (0 0 73200 71820)
+[10/10 10:51:06     27s] **WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[10/10 10:51:06     27s] Type 'man IMPFP-3961' for more detail.
+[10/10 10:51:06     27s] **WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[10/10 10:51:06     27s] Type 'man IMPFP-3961' for more detail.
+[10/10 10:51:06     27s]  ... processed partition successfully.
+[10/10 10:51:06     27s] Reading binary special route file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.fp.spr.gz (Created by Innovus v25.11-s102_1 on Sat Aug  1 08:38:56 2026, version: 1)
+[10/10 10:51:06     27s] Convert 0 swires and 0 svias from compressed groups
+[10/10 10:51:06     27s] 0 swires and 0 svias were compressed
+[10/10 10:51:06     27s] 0 swires and 0 svias were decompressed from small or sparse groups
+[10/10 10:51:06     27s] Ending "Read special route file" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2271.3M, current mem=2271.3M)
+[10/10 10:51:07     27s] Extracting standard cell pins and blockage ...... 
+[10/10 10:51:07     27s] Pin and blockage extraction finished
+[10/10 10:51:07     27s] % End Load floorplan data ... (date=10/10 10:51:07, total cpu=0:00:00.1, real=0:00:01.0, peak res=2272.5M, current mem=2272.5M)
+[10/10 10:51:07     27s] % Begin Load SymbolTable ... (date=10/10 10:51:07, mem=2272.8M)
+[10/10 10:51:07     27s] Reading congestion map file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.route.congmap.gz ...
+[10/10 10:51:07     27s] Suppress "**WARN ..." messages.
+[10/10 10:51:07     27s] routingBox: (0 0) (73200 71820)
+[10/10 10:51:07     27s] coreBox:    (10000 10260) (63200 61560)
+[10/10 10:51:07     27s] Un-suppress "**WARN ..." messages.
+[10/10 10:51:07     27s] % End Load SymbolTable ... (date=10/10 10:51:07, total cpu=0:00:00.0, real=0:00:00.0, peak res=2273.6M, current mem=2273.6M)
+[10/10 10:51:07     27s] Loading place ...
+[10/10 10:51:07     27s] % Begin Load placement data ... (date=10/10 10:51:07, mem=2273.8M)
+[10/10 10:51:07     27s] Reading placement file - /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.place.gz.
+[10/10 10:51:07     27s] ** Reading stdCellPlacement_binary (Created by Innovus v25.11-s102_1 on Sat Aug  1 08:38:56 2026, version# 2) ...
+[10/10 10:51:07     27s] Read Views for adaptive view pruning ...
+[10/10 10:51:07     27s] Read 0 views from Binary DB for adaptive view pruning
+[10/10 10:51:07     27s] *** Completed restorePlace (cpu=0:00:00.0 real=0:00:00.0 mem=2274.2M) ***
+[10/10 10:51:07     27s] Total net length = 1.275e+03 (6.444e+02 6.310e+02) (ext = 2.808e+02)
+[10/10 10:51:07     27s] % End Load placement data ... (date=10/10 10:51:07, total cpu=0:00:00.0, real=0:00:00.0, peak res=2274.7M, current mem=2274.6M)
+[10/10 10:51:07     27s] Reading PG file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.pg.gz, version#2, (Created by Innovus v25.11-s102_1 on       Sat Aug  1 08:38:56 2026)
+[10/10 10:51:07     27s] *** Completed restorePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=2274.9M) ***
+[10/10 10:51:07     27s] % Begin Load routing data ... (date=10/10 10:51:07, mem=2274.9M)
+[10/10 10:51:07     27s] Reading routing file - /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.route.gz.
+[10/10 10:51:07     27s] Reading Innovus routing data (Created by Innovus v25.11-s102_1 on Sat Aug  1 08:38:56 2026 Format: 23.1) ...
+[10/10 10:51:07     27s] *** Total 231 nets are successfully restored.
+[10/10 10:51:07     27s] *** Completed restoreRoute (cpu=0:00:00.0 real=0:00:00.0 mem=2276.0M) ***
+[10/10 10:51:07     27s] % End Load routing data ... (date=10/10 10:51:07, total cpu=0:00:00.0, real=0:00:00.0, peak res=2276.0M, current mem=2275.4M)
+[10/10 10:51:07     27s] TAT_INFO: ::restoreCongMap REAL = 0 : CPU = 0 : MEM = 0.
+[10/10 10:51:07     27s] Reading property file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.prop
+[10/10 10:51:07     27s] *** Completed restoreProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2278.6M) ***
+[10/10 10:51:07     27s] Reading dirtyarea snapshot file /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/booth_multiplier_8x8.db.da.gz (Create by Innovus v25.11-s102_1 on Sat Aug  1 08:38:56 2026, version: 8).
+[10/10 10:51:09     29s] eee: Design meta data file: /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv/booth_multiplier_final_routed.dat/extraction/extractionMetaData.gz doesn't exist
+[10/10 10:51:09     29s] Extraction setup Started for TopCell booth_multiplier_8x8 
+[10/10 10:51:09     29s] % Begin Loading timing constraints ... (date=10/10 10:51:09, mem=2280.7M)
+[10/10 10:51:09     29s] % End Loading timing constraints ... (date=10/10 10:51:09, total cpu=0:00:00.0, real=0:00:00.0, peak res=2280.7M, current mem=2280.7M)
+[10/10 10:51:09     29s] Start generating vias ..
+[10/10 10:51:09     29s] ### import design signature (1): route=1 fixed_route=1 flt_obj=0 vio=1905142130 swire=1 shield_wire=1 net_attr=1 dirty_area=0 del_dirty_area=0 cell=0 placement=0 pin_access=1 inst_pattern=1 inst_orient=1 via=610195162 routing_via=1 timing=1 sns=1 ppa_info=1
+[10/10 10:51:09     29s] #Skip building auto via since it is not turned on.
+[10/10 10:51:09     29s] Extracting standard cell pins and blockage ...... 
+[10/10 10:51:09     29s] Pin and blockage extraction finished
+[10/10 10:51:09     29s] Via generation completed.
+[10/10 10:51:09     29s] Extraction setup Started for TopCell booth_multiplier_8x8 
+[10/10 10:51:10     29s] % Begin Load power constraints ... (date=10/10 10:51:09, mem=2285.4M)
+[10/10 10:51:10     29s] % End Load power constraints ... (date=10/10 10:51:10, total cpu=0:00:00.0, real=0:00:00.0, peak res=2286.0M, current mem=2286.0M)
+[10/10 10:51:10     29s] **WARN: (IMPSYT-709):	Innovus use the Multi-Mode/Multi-Corner (MMMC) architecture exclusively for 
+[10/10 10:51:10     29s] configuration and control of some software features. The current configuration is
+[10/10 10:51:10     29s] obsoleted, please migrate your design to an MMMC style configuration. You can refer to
+[10/10 10:51:10     29s] the What's New document for this release for additional information on the
+[10/10 10:51:10     29s] 11.1 migration to MMMC. In addition, you can run restoreDesign with the
+[10/10 10:51:10     29s] -showEolWarnings option to identify specific command and configuration
+[10/10 10:51:10     29s] options that will no longer be supported.
+[10/10 10:51:10     29s] % Begin load AAE data ... (date=10/10 10:51:10, mem=2286.0M)
+[10/10 10:51:10     30s] % End load AAE data ... (date=10/10 10:51:10, total cpu=0:00:00.0, real=0:00:00.0, peak res=2286.0M, current mem=2286.0M)
+[10/10 10:51:10     30s] 
+[10/10 10:51:10     30s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) in restoreDesign Begin ...
+[10/10 10:51:10     30s] Summary for sequential cells identification: 
+[10/10 10:51:10     30s]   Identified SBFF number: 0
+[10/10 10:51:10     30s]   Identified MBFF number: 0
+[10/10 10:51:10     30s]   Identified SB Latch number: 0
+[10/10 10:51:10     30s]   Identified MB Latch number: 0
+[10/10 10:51:10     30s]   Not identified SBFF number: 0
+[10/10 10:51:10     30s]   Not identified MBFF number: 0
+[10/10 10:51:10     30s]   Not identified SB Latch number: 0
+[10/10 10:51:10     30s]   Not identified MB Latch number: 0
+[10/10 10:51:10     30s]   Number of sequential cells which are not FFs: 0
+[10/10 10:51:10     30s] Total number of combinational cells: 0
+[10/10 10:51:10     30s] Total number of sequential cells: 0
+[10/10 10:51:10     30s] Total number of tristate cells: 0
+[10/10 10:51:10     30s] Total number of level shifter cells: 0
+[10/10 10:51:10     30s] Total number of power gating cells: 0
+[10/10 10:51:10     30s] Total number of isolation cells: 0
+[10/10 10:51:10     30s] Total number of power switch cells: 0
+[10/10 10:51:10     30s] Total number of pulse generator cells: 0
+[10/10 10:51:10     30s] Total number of always on buffers: 0
+[10/10 10:51:10     30s] Total number of retention cells: 0
+[10/10 10:51:10     30s] Total number of physical cells: 0
+[10/10 10:51:10     30s] List of usable buffers:
+[10/10 10:51:10     30s] Total number of usable buffers: 0
+[10/10 10:51:10     30s] List of unusable buffers:
+[10/10 10:51:10     30s] Total number of unusable buffers: 0
+[10/10 10:51:10     30s] List of usable inverters:
+[10/10 10:51:10     30s] Total number of usable inverters: 0
+[10/10 10:51:10     30s] List of unusable inverters:
+[10/10 10:51:10     30s] Total number of unusable inverters: 0
+[10/10 10:51:10     30s] List of identified usable delay cells:
+[10/10 10:51:10     30s] Total number of identified usable delay cells: 0
+[10/10 10:51:10     30s] List of identified unusable delay cells:
+[10/10 10:51:10     30s] Total number of identified unusable delay cells: 0
+[10/10 10:51:10     30s] 
+[10/10 10:51:10     30s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) in restoreDesign End ...
+[10/10 10:51:10     30s] No delay cells were detected in the set of buffers. Buffers will be used to fix hold violations.
+[10/10 10:51:10     30s] 
+[10/10 10:51:10     30s] TimeStamp Deleting Cell Server Begin ...
+[10/10 10:51:10     30s] 
+[10/10 10:51:10     30s] TimeStamp Deleting Cell Server End ...
+[10/10 10:51:10     30s] #% End load design ... (date=10/10 10:51:10, total cpu=0:00:04.9, real=0:00:06.0, peak res=2289.4M, current mem=2287.0M)
+[10/10 10:51:10     30s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[10/10 10:51:10     30s] 
+[10/10 10:51:10     30s] 
+[10/10 10:51:10     30s] ERROR : The MMMC configuration specified is incomplete  - a set_analysis_view command
+[10/10 10:51:10     30s]        was not found in the configuration. The software requires at least 1 setup
+[10/10 10:51:10     30s]        and 1 hold analysis view to be defined.  You should remedy this problem and
+[10/10 10:51:10     30s]        restart the software.
+[10/10 10:51:10     30s] 
+[10/10 10:51:10     30s] 
+[10/10 10:51:10     30s] *** Summary of all messages that are not suppressed in this session:
+[10/10 10:51:10     30s] Severity  ID               Count  Summary                                  
+[10/10 10:51:10     30s] WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[10/10 10:51:10     30s] WARNING   IMPFP-3961           4  The techSite '%s' has no related standar...
+[10/10 10:51:10     30s] WARNING   IMPSYT-709           1  Innovus use the Multi-Mode/Multi-Corner ...
+[10/10 10:51:10     30s] *** Message Summary: 6 warning(s), 0 error(s)
+[10/10 10:51:10     30s] 
+[10/10 10:51:15     30s] <CMD> create_library_set -name fast_lib -timing { \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_basicCells.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_extvdd1v2.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_multibitsDFF.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_extvdd1v0.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045_lvt/timing/fast_vdd1v2_basicCells_lvt.lib \
+}
+[10/10 10:51:15     30s] <CMD> create_rc_corner -name rc_typ -T 25
+[10/10 10:51:15     30s] <CMD> create_delay_corner -name dc_fast -library_set fast_lib -rc_corner rc_typ
+[10/10 10:51:15     30s] <CMD> create_constraint_mode -name my_constraints -sdc_files { ../synthesis/systolic_array_constraints.sdc }
+[10/10 10:51:15     30s] **ERROR: (TCLCMD-989):	cannot open SDC file '../synthesis/systolic_array_constraints.sdc' for mode 'my_constraints'
+[10/10 10:51:15     30s] 
+[10/10 10:52:18     31s] <CMD> create_library_set -name fast_lib -timing { \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_basicCells.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_extvdd1v2.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_multibitsDFF.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_extvdd1v0.lib \
+  /tech/cadence/gpdk45/gsclib045_all_v4.4/gsclib045_lvt/timing/fast_vdd1v2_basicCells_lvt.lib \
+}
+[10/10 10:52:18     31s] <CMD> create_rc_corner -name rc_typ -T 25
+[10/10 10:52:18     31s] Extraction setup Started for TopCell booth_multiplier_8x8 
+[10/10 10:52:18     31s] <CMD> create_delay_corner -name dc_fast -library_set fast_lib -rc_corner rc_typ
+[10/10 10:52:18     31s] Extraction setup Started for TopCell booth_multiplier_8x8 
+[10/10 10:52:18     31s] <CMD> create_constraint_mode -name my_constraints -sdc_files { booth.sdc }
+[10/10 10:52:18     31s] <CMD> create_analysis_view -name av_fast -delay_corner dc_fast -constraint_mode my_constraints
+[10/10 10:52:18     31s] <CMD> set_analysis_view -setup { av_fast } -hold { av_fast }
+[10/10 10:52:18     31s] **ERROR: (TCLCMD-1239):	The software has been initialized without timing library information into a physical-only mode of operation. Access to timing analysis related commands and functionality is not available in this mode.  To operate the software with full functionality you must exit or issue the freeDesign command - then reinitialize the system with a design configuration that includes a valid timing library configuration.
+[10/10 10:52:18     31s] {}
+[10/10 10:52:18     31s] <CMD> report_timing > innovus_timing_report.rpt
+[10/10 10:52:18     31s] AAE_INFO: opIsDesignInPostRouteState() is 1
+[10/10 10:52:19     32s] AAE DB initialization (MEM=2323.050781 CPU=0:00:00.0 REAL=0:00:00.0) 
+[10/10 10:52:19     32s] #################################################################################
+[10/10 10:52:19     32s] # Design Stage: PostRoute
+[10/10 10:52:19     32s] # Design Name: booth_multiplier_8x8
+[10/10 10:52:19     32s] # Design Mode: 90nm
+[10/10 10:52:19     32s] # Analysis Mode: Non-MMMC Non-OCV 
+[10/10 10:52:19     32s] # Parasitics Mode: No SPEF/RCDB 
+[10/10 10:52:19     32s] # Signoff Settings: SI Off 
+[10/10 10:52:19     32s] #################################################################################
+[10/10 10:52:19     32s] Extraction called for design 'booth_multiplier_8x8' of instances=188 and nets=231 using extraction engine 'preRoute' .
+[10/10 10:52:19     32s] **WARN: (IMPEXT-3530):	The process node is not set. Use the command setDesignMode -process <process node> prior to extraction for maximum accuracy and optimal automatic threshold setting.
+[10/10 10:52:19     32s] Type 'man IMPEXT-3530' for more detail.
+[10/10 10:52:19     32s] PreRoute RC Extraction called for design booth_multiplier_8x8.
+[10/10 10:52:19     32s] **WARN: (IMPEXT-6197):	The Cap table file is not specified. This will result in lower parasitic accuracy when using preRoute extraction or postRoute extraction with effort level 'low'. It is recommended to generate the Cap table file using the 'generateCapTbl' command and specify it before extraction using 'create_rc_corner/update_rc_corner -cap_table'.
+[10/10 10:52:19     32s] Type 'man IMPEXT-6197' for more detail.
+[10/10 10:52:19     32s] RCMode: PreRoute
+[10/10 10:52:19     32s] Capacitance Scaling Factor   : 1.00000
+[10/10 10:52:19     32s] Resistance Scaling Factor    : 1.00000
+[10/10 10:52:19     32s] Clock Cap Scaling Factor    : 1.00000
+[10/10 10:52:19     32s] Clock Res Scaling Factor     : 1.00000
+[10/10 10:52:19     32s] Shrink Factor                : 1.00000
+[10/10 10:52:19     32s] PreRoute extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+[10/10 10:52:19     32s] eee: RC Grid memory allocated = 2112 (4 X 4 X 11 X 12b)
+[10/10 10:52:19     32s] Updating RC Grid density data for preRoute extraction ...
+[10/10 10:52:19     32s] eee: pegSigSF=1.070000
+[10/10 10:52:19     32s] eee: dbu = 2000, Design = [ll(0.000000, 0.000000) ur(36.600000, 35.910000)], Layers = [f(11) b(0)], Grid size = 17.100000 um, Grid Dim = (3 X 3)
+[10/10 10:52:19     32s] eee: Metal Layers Info:
+[10/10 10:52:19     32s] eee: +----------+-----+---------+---------+---------+--------+--------+---+---+----+
+[10/10 10:52:19     32s] eee: |   Layer  |  Id |    W    |    S    |    P    |   uC   |   uR   | D | T | wS |
+[10/10 10:52:19     32s] eee: +----------+-----+---------+---------+---------+--------+--------+---+---+----+
+[10/10 10:52:19     32s] eee: |   Metal1 |   1 |   0.060 |   0.060 |   0.190 |  0.000 |   0.00 | H | 0 |  1 |
+[10/10 10:52:19     32s] eee: |   Metal2 |   2 |   0.080 |   0.070 |   0.200 |  0.000 |   0.00 | V | 0 |  1 |
+[10/10 10:52:19     32s] eee: |   Metal3 |   3 |   0.080 |   0.070 |   0.190 |  0.000 |   0.00 | H | 0 |  1 |
+[10/10 10:52:19     32s] eee: |   Metal4 |   4 |   0.080 |   0.070 |   0.200 |  0.000 |   0.00 | V | 0 |  1 |
+[10/10 10:52:19     32s] eee: |   Metal5 |   5 |   0.080 |   0.070 |   0.190 |  0.000 |   0.00 | H | 0 |  1 |
+[10/10 10:52:19     32s] eee: |   Metal6 |   6 |   0.080 |   0.070 |   0.200 |  0.000 |   0.00 | V | 0 |  1 |
+[10/10 10:52:19     32s] eee: |   Metal7 |   7 |   0.080 |   0.070 |   0.190 |  0.000 |   0.00 | H | 0 |  1 |
+[10/10 10:52:19     32s] eee: |   Metal8 |   8 |   0.080 |   0.070 |   0.200 |  0.000 |   0.00 | V | 0 |  1 |
+[10/10 10:52:19     32s] eee: |   Metal9 |   9 |   0.080 |   0.070 |   0.190 |  0.000 |   0.00 | H | 0 |  1 |
+[10/10 10:52:19     32s] eee: |  Metal10 |  10 |   0.220 |   0.200 |   0.500 |  0.000 |   0.00 | V | 0 |  1 |
+[10/10 10:52:19     32s] eee: |  Metal11 |  11 |   0.220 |   0.200 |   0.475 |  0.000 |   0.00 | H | 0 |  1 |
+[10/10 10:52:19     32s] eee: +----------+-----+---------+---------+---------+--------+--------+---+---+----+
+[10/10 10:52:19     32s] eee: RC corner data unavailable
+[10/10 10:52:19     32s] eee: +-----------------------NDR Info-----------------------+
+[10/10 10:52:19     32s] eee: NDR Count = 2, Fake NDR = 0
+[10/10 10:52:19     32s] eee: +----------------------------------------------------+
+[10/10 10:52:19     32s] eee: | NDR Name = LEFSpecialRouteSpec  | Id = 1  | isHard = 0 
+[10/10 10:52:19     32s] eee: +----------------------------------------------------+
+[10/10 10:52:19     32s] eee: +----------------------------------------------------+
+[10/10 10:52:19     32s] eee: | NDR Name = VLMDefaultSetup  | Id = 2  | isHard = 0 
+[10/10 10:52:19     32s] eee: +----------------------------------------------------+
+[10/10 10:52:19     32s] PreRoute RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 2324.355M)
+[10/10 10:52:19     32s] Calculate delays in BcWc mode...
+[10/10 10:52:19     32s] **ERROR: (IMPDC-634):	Failed to build the timing graph since timing library files have not yet been loaded. To resolve this, check that timing library files have been correctly specified in the loaded design database.
+[10/10 10:52:19     32s] Topological Sorting (REAL = 0:00:00.0, MEM = 2447.3M, InitMEM = 2446.6M)
+[10/10 10:52:19     32s] Start delay calculation (fullDC) (1 T). (MEM=2447.29)
+[10/10 10:52:19     32s] Start AAE Lib Loading. (MEM=2457.578125)
+[10/10 10:52:19     32s] End AAE Lib Loading. (MEM=2458.382812 CPU=0:00:00.0 Real=0:00:00.0)
+[10/10 10:52:19     32s] End AAE Lib Interpolated Model. (MEM=2458.382812 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[10/10 10:52:19     32s] **WARN: (IMPEXT-2882):	Unable to find the resistance for via 'M2_M1_1x2_HV_N' in Cap table or LEF or OA files. The default value of 4.0 ohms is being assigned. To avoid this, check the Cap table and LEF and OA files, provide the resistance and read the files again.
+[10/10 10:52:19     32s] **WARN: (IMPEXT-2882):	Unable to find the resistance for via 'M3_M2_2x1_VH_E' in Cap table or LEF or OA files. The default value of 4.0 ohms is being assigned. To avoid this, check the Cap table and LEF and OA files, provide the resistance and read the files again.
+[10/10 10:52:19     32s] **WARN: (IMPEXT-2883):	The resistance extracted for a wire belonging to net n_203 is 0 ohms. Therefore, a small value of 0.1 ohms is assigned to it.
+[10/10 10:52:19     32s] **WARN: (IMPEXT-2883):	The resistance extracted for a wire belonging to net n_203 is 0 ohms. Therefore, a small value of 0.1 ohms is assigned to it.
+[10/10 10:52:19     32s] Total number of fetched objects 229
+[10/10 10:52:19     32s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[10/10 10:52:19     32s] End delay calculation. (MEM=2472.01 CPU=0:00:00.0 REAL=0:00:00.0)
+[10/10 10:52:19     32s] End delay calculation (fullDC). (MEM=2472 CPU=0:00:00.2 REAL=0:00:00.0)
+[10/10 10:52:19     32s] *** CDM Built up (cpu=0:00:00.4  real=0:00:00.0  mem= 2467.2M) ***
+[10/10 10:52:21     33s] <CMD> report_power > innovus_power_report.rpt
+[10/10 10:52:21     33s] env CDS_WORKAREA is set to /data/home/primovs/RTL_to_GDSII_Project/Final-Project/version3_sv
+[10/10 10:52:21     33s] 
+[10/10 10:52:21     33s] Begin Power Analysis
+[10/10 10:52:21     33s] 
+[10/10 10:52:21     33s] 
+[10/10 10:52:21     33s] Power Net Detected:
+[10/10 10:52:21     33s]         Voltage	    Name
+[10/10 10:52:21     33s]              0V	    VSS
+[10/10 10:52:21     33s]            3.3V	    VDD
+[10/10 10:52:21     33s] Begin Processing Timing Library for Power Calculation
+[10/10 10:52:21     33s] 
+[10/10 10:52:21     33s] **ERROR: (IMPCTE-348):	Timing library is not loaded yet.
+[10/10 10:52:21     33s] **ERROR: (IMPCTE-348):	Timing library is not loaded yet.
+[10/10 10:52:21     33s] Ended Processing Timing Library for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2475.02MB/4868.40MB/2475.02MB)
+[10/10 10:52:21     33s] 
+[10/10 10:52:21     33s] 
+[10/10 10:52:21     33s] 
+[10/10 10:52:21     33s] Begin Processing Power Net/Grid for Power Calculation
+[10/10 10:52:21     33s] 
+[10/10 10:52:21     33s] Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2475.02MB/4868.40MB/2475.02MB)
+[10/10 10:52:21     33s] 
+[10/10 10:52:21     33s] Begin Processing Timing Window Data for Power Calculation
+[10/10 10:52:21     33s] 
+[10/10 10:52:21     33s] **ERROR: (IMPCTE-348):	Timing library is not loaded yet.
+[10/10 10:52:21     33s] **ERROR: (IMPCTE-348):	Timing library is not loaded yet.
+[10/10 10:52:21     33s] Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2475.02MB/4868.40MB/2475.02MB)
+[10/10 10:52:21     33s] 
+[10/10 10:52:21     33s] Begin Processing User Attributes
+[10/10 10:52:21     33s] 
+[10/10 10:52:21     33s] Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2475.02MB/4868.40MB/2475.02MB)
+[10/10 10:52:21     33s] 
+[10/10 10:52:21     33s] Begin Processing Signal Activity
+[10/10 10:52:21     33s] 
+[10/10 10:52:21     33s] Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2475.61MB/4868.40MB/2475.61MB)
+[10/10 10:52:21     33s] 
+[10/10 10:52:21     33s] Begin Power Computation
+[10/10 10:52:21     33s] 
+[10/10 10:52:21     33s]       ----------------------------------------------------------
+[10/10 10:52:21     33s]       # of cell(s) missing both power/leakage table: 0
+[10/10 10:52:21     33s]       # of cell(s) missing power table: 0
+[10/10 10:52:21     33s]       # of cell(s) missing leakage table: 0
+[10/10 10:52:21     33s]       ----------------------------------------------------------
+[10/10 10:52:21     33s] 
+[10/10 10:52:21     33s] 
+[10/10 10:52:21     33s]       # of MSMV cell(s) missing power_level: 0
+[10/10 10:52:21     33s] Ended Power Computation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2475.61MB/4868.40MB/2475.61MB)
+[10/10 10:52:21     33s] 
+[10/10 10:52:21     33s] Begin Processing User Attributes
+[10/10 10:52:21     33s] 
+[10/10 10:52:21     33s] Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2475.61MB/4868.40MB/2475.61MB)
+[10/10 10:52:21     33s] 
+[10/10 10:52:21     33s] Ended Power Analysis: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2475.61MB/4868.40MB/2475.61MB)
+[10/10 10:52:21     33s] 
+[10/10 10:52:22     33s] *
+
+
+
+[10/10 10:52:22     33s] Total Power
+[10/10 10:52:22     33s] -----------------------------------------------------------------------------------------
+[10/10 10:52:22     33s] Total Internal Power:        0.00000000 	    0.0000%
+[10/10 10:52:22     33s] Total Switching Power:       0.00000000 	    0.0000%
+[10/10 10:52:22     33s] Total Leakage Power:         0.00000000 	    0.0000%
+[10/10 10:52:22     33s] Total Power:                 0.00000000
+[10/10 10:52:22     33s] -----------------------------------------------------------------------------------------
+[10/10 10:53:17     34s] 
+[10/10 10:53:17     34s] *** Summary of all messages that are not suppressed in this session:
+[10/10 10:53:17     34s] Severity  ID               Count  Summary                                  
+[10/10 10:53:17     34s] WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[10/10 10:53:17     34s] WARNING   IMPFP-3961           4  The techSite '%s' has no related standar...
+[10/10 10:53:17     34s] WARNING   IMPEXT-6197          1  The Cap table file is not specified. Thi...
+[10/10 10:53:17     34s] WARNING   IMPEXT-2882          2  Unable to find the resistance for via '%...
+[10/10 10:53:17     34s] WARNING   IMPEXT-2883          2  The resistance extracted for a wire belo...
+[10/10 10:53:17     34s] WARNING   IMPEXT-3530          1  The process node is not set. Use the com...
+[10/10 10:53:17     34s] WARNING   IMPSYT-709           1  Innovus use the Multi-Mode/Multi-Corner ...
+[10/10 10:53:17     34s] ERROR     IMPDC-634            1  Failed to build the timing graph since t...
+[10/10 10:53:17     34s] ERROR     IMPCTE-348           4  Timing library is not loaded yet.        
+[10/10 10:53:17     34s] ERROR     TCLCMD-989           1  cannot open SDC file '%s' for mode '%s'  
+[10/10 10:53:17     34s] ERROR     TCLCMD-1239          1  The software has been initialized withou...
+[10/10 10:53:17     34s] *** Message Summary: 12 warning(s), 7 error(s)
+[10/10 10:53:17     34s] 
+[10/10 10:53:17     34s] 
+[10/10 10:53:17     34s] *** Memory Usage v#1 (Current mem = 2476.211M, initial mem = 909.344M) ***
+[10/10 10:53:17     34s] --- Ending "Innovus" (totcpu=0:00:34.6, real=0:02:55, mem=2476.2M) ---
